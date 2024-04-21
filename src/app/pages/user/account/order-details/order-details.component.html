@@ -1,0 +1,146 @@
+<section class="admin-data-sec">
+
+  <div class="top-data-header">
+    <div class="title">
+      <h2>Order Details</h2>
+    </div>
+  </div> <!-- END TOP DATA HEADER -->
+
+  <hr class="center-square">
+
+  <div class="profile">
+
+    <div class="info">
+      <h2>Checkout Date: {{order?.checkoutDate | date: 'mediumDate'}}</h2>
+      <div class="row">
+        <h2>Payment Status: <span [style.color]="order?.paymentStatus === 'paid' ? 'green' : 'red'">
+          {{order?.paymentStatus}}
+        </span></h2>
+        <h2>Payment Type: {{order?.paymentType}}</h2>
+      </div>
+      <h2>Order Status: {{order?.orderStatus | orderStatus}}</h2>
+      <h2>Last Update: {{order?.updatedAt | date: 'mediumDate'}}</h2>
+    </div>
+  </div>
+
+  <div class="table-wrapper space">
+
+
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Sub Category</th>
+        <th>Brand</th>
+        <th>Sale Price</th>
+        <th>Quantity</th>
+      </tr>
+      <tr
+        *ngFor="let data of order?.orderedItems; let i = index">
+        <td>
+          <img checkImageDefault class="table-image" [src]="data && data?.image ? data.image : ''" [alt]="">
+        </td>
+        <td>{{data.name}} {{data?.color ? '~ Color: ' + data?.color : ''}} {{data?.size ? ' -Size: ' + data?.size : ''}}</td>
+        <td>{{data.category?.name}}</td>
+        <td>{{data.subCategory?.name}}</td>
+        <td>{{data.brand?.name}}</td>
+        <td>{{currency.bdt}}{{data.unitPrice | number : '': 'bn'}}</td>
+        <td>{{data.quantity}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="bottom-view">
+    <div class="action info">
+      <div class="item border-remove" >
+        <div class="left">
+          Name
+        </div>
+        <div class="right">
+          <p>{{order?.name}}</p>
+        </div>
+      </div>
+
+      <div class="item border-remove">
+        <div class="left">
+          Phone No
+        </div>
+        <div class="right">
+          <p>{{order?.phoneNo}}</p>
+        </div>
+      </div>
+
+      <div class="item border-remove" >
+        <div class="left">
+          Email
+        </div>
+        <div class="right">
+          <p>{{order?.email | checkNull  }}</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="left">
+          City
+        </div>
+        <div class="right">
+          <p class="bold">{{order?.city}}</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="left">
+          Shipping Address
+        </div>
+        <div class="right">
+          <p class="bold">{{order?.shippingAddress}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="action calculation">
+      <div class="item border-remove">
+        <div class="left">
+          Sub Total ({{currency.bdt}})
+        </div>
+        <div class="right">
+          <p>{{order?.subTotal}}</p>
+        </div>
+      </div>
+
+      <div class="item border-remove">
+        <div class="left">
+          Delivery Charge ({{currency.bdt}})
+        </div>
+        <div class="right">
+          <p>{{order?.deliveryCharge}}</p>
+        </div>
+      </div>
+
+
+      <div class="item">
+        <div class="left">
+          Grand Total ({{currency.bdt}})
+        </div>
+        <div class="right">
+          <p class="bold">{{order?.grandTotal | number : '' : 'bn'}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="order-timeline" *ngIf="order?.hasOrderTimeline">
+    <div class="view">
+      <div class="title">
+        <h2>Order Timeline</h2>
+      </div>
+      <div class="content">
+        <app-order-timeline [order]="order"></app-order-timeline>
+      </div>
+    </div>
+  </div>
+
+
+</section>

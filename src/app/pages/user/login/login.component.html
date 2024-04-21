@@ -1,0 +1,80 @@
+<div class="main-area">
+  <div class="container">
+    <div class="form-area">
+      <div class="form-area-top">
+        <h6>Login to your account</h6>
+      </div>
+      <!-- End form-area-top -->
+      <form #formElement="ngForm" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+        <div class="form-input-area">
+          <div class="form-input-area-main">
+            <div class="form-input-area-main-header">
+              <label class="label-1" for="username">Email or Phone Number</label>
+              <input [maxlength]="30" formControlName="username" [class.invalid]="
+                  dataForm.get('username').touched &&
+                  dataForm.get('username').invalid
+                " type="text" placeholder="Enter Your email or phone Number" autocomplete="off" />
+              <div class="invalid-text" *ngIf="
+                  dataForm.get('username').touched &&
+                  dataForm.get('username').invalid
+                ">
+                <span>Please enter a valid phone number or a valid email
+                  address</span>
+              </div>
+              <!-- End input email -->
+              <label class="label-2" for="password">Password</label>
+              <input formControlName="password" [class.invalid]="
+                  dataForm.get('password').touched &&
+                  dataForm.get('password').invalid
+                " type="password" placeholder="Enter Your password"
+                     autocomplete="new-password" />
+              <div class="invalid-text" *ngIf="
+                  dataForm.get('password').touched &&
+                  dataForm.get('password').invalid
+                ">
+                <span>
+                  Password must contain at least one uppercase,
+                  digit,character and be at least 8 characters long.
+                </span>
+              </div><!-- End input password -->
+            </div>
+            <!-- End form-input-area-main-header -->
+            <div class="form-input-area-main-header-middle">
+              <div class="check-label">
+                <input type="checkbox" id="checkbox-1" name="rememberMe" value="rememberMe" />
+                <label class="label-3" for="checkbox-1">Remember me</label>
+              </div>
+              <a class="anchor" href="">
+                <p>Forgot Password?</p>
+                <p></p>
+              </a>
+            </div>
+            <!-- End header-middle -->
+            <div class="form-input-area-main-footer-top">
+              <button id="btn-1" type="submit">Login to your account</button>
+            </div>
+            <!-- End footer-top -->
+            <hr />
+            <div class="form-input-area-main-footer-end">
+              <a>
+                <button class="btn-design btn-2" type="submit">
+                  <span class="google-btn"><img src="../../../../assets/images/static/login/icon.svg" alt="icon" />Continue with google</span>
+                </button>
+              </a>
+              <button class="btn-design btn-3" type="button">
+                Don't have an account?
+              </button>
+              <button class="btn-design btn-4" type="button">
+                Login to your account
+              </button>
+            </div>
+            <!-- End footer-end -->
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- End form area -->
+  </div>
+  <!-- End container -->
+</div>
+<!-- End main-area -->

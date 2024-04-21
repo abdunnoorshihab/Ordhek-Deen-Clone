@@ -1,0 +1,31 @@
+<!----Related This Items-->
+<div class="section3" *ngIf="relatedProducts.length">
+  <div class="container">
+    <div class="title-area">
+      <h1>Related This Items</h1>
+    </div>
+    <div class="section3-main">
+      <ng-container *ngIf="isLoadingRelatedProducts">
+        <app-product-car-one-loader
+          [type]="'grid'"
+          *ngFor="let product of [1, 2, 3, 4, 5]"
+        ></app-product-car-one-loader>
+      </ng-container>
+      <ng-container *ngIf="!isLoadingRelatedProducts">
+        <app-product-card-one
+          *ngFor="let product of relatedProducts"
+          [data]="product"
+        >
+        </app-product-card-one>
+      </ng-container>
+    </div>
+
+    <!--view-btn-->
+    <div class="view-btn">
+      <a
+        [routerLink]="['/products']"
+      ><i class="fa fa-eye"></i> View All Related</a
+      >
+    </div>
+  </div>
+</div>

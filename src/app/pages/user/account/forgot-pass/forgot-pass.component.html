@@ -1,0 +1,21 @@
+<div class="container">
+  <form class="form-container" [formGroup]="ForgotPasswordForm" (ngSubmit)="handleForgotPassword()">
+    <h1 class="info-header">Login to your account</h1>
+
+    <div class="input-container forgot-pass-hint">
+      <label>Email / Number<span>*</span></label>
+      <mat-form-field appearance="outline" class="">
+        <input matInput placeholder="" formControlName="email"/>
+        <mat-hint>In case of brides, you must mention whether you wear burqa, hijab, niqab and socks</mat-hint>
+      </mat-form-field>
+    </div><!-- END-->
+
+
+    <div class="btn-area">
+      <button class="verification-btn" type="submit">
+        Send Verification Code
+      </button>
+    </div> <!-- Buton End -->
+
+  </form> <!-- Form Section END-->
+</div>

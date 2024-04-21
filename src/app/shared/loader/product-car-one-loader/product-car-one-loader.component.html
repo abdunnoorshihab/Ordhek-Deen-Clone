@@ -1,0 +1,123 @@
+<div class="product" *ngIf="type === 'grid'">
+  <ngx-skeleton-loader
+    count="1"
+    [theme]="{
+      'border-radius': '5px',
+      height: '25px',
+      width: '55px',
+      'background-color': '#e5e5e5',
+      border: '1px solid white'
+    }"
+  >
+  </ngx-skeleton-loader>
+
+  <ngx-skeleton-loader
+    count="1"
+    [theme]="{
+      'border-radius': '5px',
+      height: '180px',
+      'background-color': '#e5e5e5',
+      border: '1px solid white'
+    }"
+  >
+  </ngx-skeleton-loader>
+
+<div style="text-align: center">
+  <ngx-skeleton-loader
+    count="1"
+    [theme]="{
+      'border-radius': '5px',
+      height: '20px',
+      width: '80%',
+      'background-color': '#e5e5e5',
+      border: '1px solid white'
+    }"
+  >
+  </ngx-skeleton-loader>
+</div>
+
+  <ngx-skeleton-loader
+    count="1"
+    [theme]="{
+      'border-radius': '5px',
+      height: '20px',
+      width: '100%',
+      'background-color': '#e5e5e5',
+      border: '1px solid white'
+    }"
+  >
+  </ngx-skeleton-loader>
+
+  <ngx-skeleton-loader
+    count="1"
+    [theme]="{
+      'border-radius': '10px',
+      height: '40px',
+      width: '100%',
+      'background-color': '#e5e5e5',
+      border: '1px solid white'
+    }"
+  >
+  </ngx-skeleton-loader>
+
+</div>
+
+
+<div class="product"  *ngIf="type === 'list'">
+
+  <div style="display: inline-block; width: 100%; float: left">
+    <ngx-skeleton-loader
+      count="1"
+      [theme]="{
+      'border-radius': '5px',
+      height: '120px',
+      width: '45%',
+      'background-color': '#e5e5e5',
+      border: '1px solid white'
+    }"
+    >
+    </ngx-skeleton-loader>
+    <div class="right" style="width: 50%; float: right">
+
+      <ngx-skeleton-loader
+        count="1"
+        [theme]="{
+      'border-radius': '5px',
+      height: '20px',
+      width: '80%',
+      'background-color': '#e5e5e5',
+      border: '1px solid white'
+    }"
+      >
+      </ngx-skeleton-loader>
+
+
+      <ngx-skeleton-loader
+        count="1"
+        [theme]="{
+      'border-radius': '5px',
+      height: '20px',
+      width: '100%',
+      'background-color': '#e5e5e5',
+      border: '1px solid white'
+    }"
+      >
+      </ngx-skeleton-loader>
+
+      <ngx-skeleton-loader
+        count="1"
+        [theme]="{
+      'border-radius': '10px',
+      height: '40px',
+      width: '100%',
+      'background-color': '#e5e5e5',
+      border: '1px solid white'
+    }"
+      >
+      </ngx-skeleton-loader>
+
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,22 @@
+@import "../../../../../theme/exports/table-one";
+@import"../../../../../theme/base";
+
+.header {
+  h2 {
+    text-align: center;
+    font-family: $font-en-primary;
+  }
+}
+
+
+.img-thumb {
+  width: 85px;
+  height: 85px;
+  object-fit: scale-down;
+}
+
+.table-container{
+  .table-btn1{
+    margin-right: 5px;
+  }
+}

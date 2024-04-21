@@ -1,0 +1,83 @@
+<!---section5-->
+<div class="section-5">
+  <div class="container">
+    <div class="title-area">
+      <h1>Browse By Top Niche</h1>
+    </div>
+    <!---section5-filter-->
+    <div class="filter-area">
+      <ul>
+        <li>
+          <button
+            (click)="onClickShowNiche('topSales')"
+            [class.active-filter-btn]="selectedProductType === 'topSales'"
+          >
+            <i class="fa-solid fa-sack-dollar"></i>Top Sales
+          </button>
+        </li>
+        <li>
+          <button
+            (click)="onClickShowNiche('topRating')"
+            [class.active-filter-btn]="selectedProductType === 'topRating'"
+          >
+            <i class="fa fa-star"></i> Top Rating
+          </button>
+        </li>
+        <li>
+          <button
+            (click)="onClickShowNiche('topDiscount')"
+            [class.active-filter-btn]="selectedProductType === 'topDiscount'"
+          >
+            <i class="fa-solid fa-percent"></i> Top Discount
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!---section5-main-->
+    <div class="section5-main" *ngIf="selectedProductType == 'topSales'">
+      <ng-container *ngIf="isLoadingTopSalesProducts">
+        <app-product-car-one-loader
+          *ngFor="let data of [1,2,3,4,5]"
+          [type]="'grid'"
+        ></app-product-car-one-loader>
+      </ng-container>
+      <ng-container *ngIf="!isLoadingTopSalesProducts">
+        <app-product-card-one
+          [data]="product"
+          *ngFor="let product of browseProducts"
+        ></app-product-card-one>
+      </ng-container>
+    </div>
+
+    <div class="section5-main" *ngIf="selectedProductType == 'topRating'">
+      <ng-container *ngIf="isLoadingTopRatingProducts">
+        <app-product-car-one-loader
+          *ngFor="let data of [1,2,3,4,5]"
+          [type]="'grid'"
+        ></app-product-car-one-loader>
+      </ng-container>
+      <ng-container *ngIf="!isLoadingTopRatingProducts">
+        <app-product-card-one
+          [data]="product"
+          *ngFor="let product of browseProducts"
+        ></app-product-card-one>
+      </ng-container>
+    </div>
+
+    <div class="section5-main" *ngIf="selectedProductType == 'topDiscount'">
+      <ng-container *ngIf="isLoadingTopDiscountProducts">
+        <app-product-car-one-loader
+          *ngFor="let data of [1,2,3,4,5]"
+          [type]="'grid'"
+        ></app-product-car-one-loader>
+      </ng-container>
+      <ng-container *ngIf="!isLoadingTopDiscountProducts">
+        <app-product-card-one
+          [data]="product"
+          *ngFor="let product of browseProducts"
+        ></app-product-card-one>
+      </ng-container>
+    </div>
+  </div>
+</div>

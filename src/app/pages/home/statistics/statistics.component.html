@@ -1,0 +1,25 @@
+<div class="user-statistics">
+    <div class="container">
+      <div class="title">
+        <div class="span-1">Company</div>
+        <div class="span-2">User Statistics</div>
+      </div>
+      <div class="main-content">
+
+
+        <div class="card card-1"
+        *ngFor="let item of data"
+        >
+          <div class="card-body">
+          <div class="card-img">
+            <img src="{{item.icon}}" alt="" />
+          </div>
+            <div class="center-text"><p>{{item.title}}</p></div>
+            <div class="center-text"><h2>{{item.score}}</h2></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!--END USER STATISTICS AREA-->
+  

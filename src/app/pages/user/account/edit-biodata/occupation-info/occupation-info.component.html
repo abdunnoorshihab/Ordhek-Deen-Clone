@@ -1,0 +1,45 @@
+<div class="main-area">
+  <div class="container">
+    <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+      <div class="form-area">
+        <div class="form-area-content">
+          <div class="form-area-content-top">
+            <h6>Occupational Info</h6>
+          </div>
+          <!-- End top -->
+          <div class="form-area-middle">
+            <div class="form-area-middle-content">
+              <span>
+                <p>Occupational<sup>*</sup></p>
+              </span>
+              <mat-form-field class="select" appearance="outline">
+                <mat-label class="select-occupation">Select Occupation</mat-label>
+                <mat-select formControlName="occupation" id="occupationSelect">
+                  <mat-option value="student">Student</mat-option>
+                  <mat-option value="businessman">Businessman</mat-option>
+                  <mat-option value="job-holder">Job holder</mat-option>
+                  <mat-option value="other">Other</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <span><p>Description of profession<sup>*</sup></p></span>
+              <mat-form-field class="text-area" id="description" appearance="outline">
+                <textarea matInput formControlName="professionDescription" id="professionDescription"></textarea>
+              </mat-form-field>
+              <p class="p-tag">You may write where your working place is, which company you are working in, whether your earnings are halal or not, etc</p>
+              <span><p>Monthly income<sup>*</sup></p></span>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <input matInput formControlName="monthlyIncome" id="monthlyIncome">
+              </mat-form-field>
+            </div><!-- End form-area-content-middle -->
+          </div><!-- End form-area-middle-->
+          <div class="form-area-footer">
+            <div class="form-area-footer-content">
+              <a class="primary-button" [routerLink]="['/account/personal-info']"><button class="previous-button"><i id="i-1" class="fa-solid fa-arrow-left"></i>Previous</button></a>
+              <a class="primary-button"><button type="submit" class="next-button">Next<i id="i-2" class="fa-solid fa-arrow-right-long"></i></button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+@import "src/theme/variables";
+@import "src/theme/swipper";
+.section-4 {
+  padding: 5px 0;
+  box-sizing: border-box;
+  margin-bottom: 110px;
+}
+
+@media (max-width: 550px) {
+  .section-4{
+    margin-bottom: 55px;
+  }
+}
+
+.container {
+  display: block;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 15px;
+  margin: auto;
+}

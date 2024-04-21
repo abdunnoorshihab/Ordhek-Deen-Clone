@@ -1,0 +1,164 @@
+@import "src/theme/variables";
+@import "src/theme/exports/primary-btn";
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .sub-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+
+    .edu-form {
+      background: $color-primary2;
+      width: 100%;
+      padding: 30px 60px;
+      border-radius: 8px;
+
+      h1 {
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        padding-bottom: 25px;
+        background: -webkit-linear-gradient(
+          rgba(223, 192, 80, 1),
+          rgba(0, 163, 155, 1)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .form-field {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 16px;
+          padding-bottom: 4px;
+
+          span {
+            color: red;
+          }
+        }
+
+        mat-form-field {
+          width: 100%;
+
+          input {
+            background-color: white;
+          }
+
+          input::placeholder {
+            font-size: 14px;
+          }
+
+          mat-hint {
+            font-size: 14px;
+            line-height: 1em;
+          }
+        }
+      }
+
+      .marital {
+        margin-top: 15px;
+      }
+
+      .check-field {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 16px;
+          padding-bottom: 4px;
+
+          span {
+            color: red;
+          }
+        }
+      }
+
+      .btn-area {
+        margin: 20px 0 20px 0;
+        display: flex;
+        justify-content: end;
+        gap: 50px;
+
+        .primary-button {
+          width: 50%;
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+          }
+        }
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .mat-mdc-icon-button.mat-mdc-button-base {
+  --mdc-icon-button-state-layer-size: 26px;
+}
+
+::ng-deep .mat-mdc-form-field-infix {
+  min-height: 20px;
+}
+
+// ::ng-deep .mat-mdc-icon-button {
+//   --mdc-icon-button-state-layer-size: 16px;
+//   --mdc-icon-button-icon-size: 16px;
+// }
+
+::ng-deep
+  .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+  .mat-mdc-form-field-infix {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background-color: white;
+}
+
+::ng-deep .mdc-radio__background {
+  width: 10px;
+  height: 10px;
+}
+
+::ng-deep .mdc-radio__background {
+  padding: 5px;
+}
+
+@media (max-width: 575px) {
+  .main-div {
+    .sub-div {
+      padding: 0 8px;
+      .edu-form {
+        padding: 30px;
+        .form-field {
+          mat-form-field {
+            mat-hint {
+              font-size: 10px;
+              line-height: 1em;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}

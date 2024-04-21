@@ -1,0 +1,56 @@
+@import "src/theme/variables";
+@import "src/theme/swipper";
+/*** section-6***/
+.section-6 {
+  display: block;
+  margin-bottom: 50px;
+  margin-top: 46px;
+  box-sizing: border-box;
+}
+
+.section6-main {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.container {
+  display: block;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 15px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .category-body a {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .section-6 {
+    margin-bottom: 40px;
+  }
+}
+.section-main-category-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .section-main-category-card {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .section6-main {
+    margin-top: 30px;
+  }
+  .section-6 .view-btn {
+    margin-top: 30px;
+  }
+}

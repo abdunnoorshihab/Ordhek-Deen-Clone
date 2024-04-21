@@ -1,0 +1,266 @@
+[33mcommit 0859607f18a6222e19084fafa2bf310955f263dd[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 25ea5dc e54bee7
+Author: Shahrear-roman <shahrear.aphotic@gmail.com>
+Date:   Sun Sep 24 15:51:36 2023 +0600
+
+    Merge branch 'main' of https://github.com/ikbalsazib/Ordhek-Din-UI
+
+[33mcommit 25ea5dc4036620c9a7dca5b449fe1bf2aba33dd1[m
+Merge: c4b97c0 b4c85c2
+Author: Shahrear-roman <shahrear.aphotic@gmail.com>
+Date:   Sun Sep 24 15:51:16 2023 +0600
+
+    adding brwoser console data and changing design by shahrear
+
+[33mcommit e54bee7b089d22d5e6b1949b7269e611175cffeb[m
+Merge: b4c85c2 5baf718
+Author: Sharif Bhuyan <138512283+Sharif-codes@users.noreply.github.com>
+Date:   Sun Sep 24 15:48:41 2023 +0600
+
+    Merge pull request #39 from Sharif-codes/main
+    
+    responsive contact forms
+
+[33mcommit 5baf718dff0edcc9c475862d8062da7e7769000e[m
+Merge: bb43518 b4c85c2
+Author: Sharif-codes <sharifxenjia@gmail.com>
+Date:   Sun Sep 24 15:47:54 2023 +0600
+
+    Merge branch 'main' of https://github.com/Sharif-codes/Ordhek-Din-UI
+
+[33mcommit bb435188dcb847d996414f0429e7717e07181a2d[m
+Author: Sharif-codes <sharifxenjia@gmail.com>
+Date:   Sun Sep 24 15:47:34 2023 +0600
+
+    responsiveness add
+
+[33mcommit c4b97c0ef7a5029bac273091292855a867271dc1[m
+Author: Shahrear-roman <shahrear.aphotic@gmail.com>
+Date:   Sun Sep 24 15:47:23 2023 +0600
+
+    adding input data field to show in browser console and changing in design by shahrear
+
+[33mcommit b4c85c2c6698ccb0008ff3ef9f3a31d05bb631d7[m
+Merge: 4bab257 1ecd424
+Author: Dibannita Roy <dibannitar@gmail.com>
+Date:   Sun Sep 24 14:38:23 2023 +0600
+
+    Merge pull request #38 from Dibannita/main
+    
+    test
+
+[33mcommit 1ecd424fb2f8bd317977c56cca7b7add6f99d6bf[m
+Author: Dibannita <20103223@iubat.edu>
+Date:   Sun Sep 24 14:37:29 2023 +0600
+
+    test
+
+[33mcommit 4bab25711f30d994d44e218605527cdac15d34be[m
+Author: ikbalsazib <ikbal.sazib@gmail.com>
+Date:   Sun Sep 24 13:25:34 2023 +0600
+
+    Dynamic Card Learn
+
+[33mcommit c3e394c0a3168bafd8b4bc357bdb2cb5133c2840[m
+Merge: 7644ef0 14ce781
+Author: Sharif Bhuyan <138512283+Sharif-codes@users.noreply.github.com>
+Date:   Sun Sep 24 12:19:11 2023 +0600
+
+    Merge pull request #37 from Sharif-codes/main
+    
+    contact page final update
+
+[33mcommit 14ce7810a14438f3bec8a02b7f58b40efd4b0cde[m
+Merge: 61ffa8f 7644ef0
+Author: Sharif-codes <sharifxenjia@gmail.com>
+Date:   Sun Sep 24 12:13:50 2023 +0600
+
+    Merge branch 'main' of https://github.com/Sharif-codes/Ordhek-Din-UI
+
+[33mcommit 61ffa8f4e8207b9eed2090b08f9a04b71b5a789f[m
+Author: Sharif-codes <sharifxenjia@gmail.com>
+Date:   Sun Sep 24 12:12:40 2023 +0600
+
+    contact page modified
+
+[33mcommit 7644ef0738f8853d913ff47860c00ca09bfe18bb[m
+Merge: 36c773f 4da91c7
+Author: Sharif Bhuyan <138512283+Sharif-codes@users.noreply.github.com>
+Date:   Sun Sep 24 11:36:40 2023 +0600
+
+    Merge pull request #36 from Sharif-codes/main
+    
+    contact button style updated
+
+[33mcommit 4da91c79300773da852c84e9b26469e025f8a37b[m
+Merge: 3daead2 36c773f
+Author: Sharif-codes <sharifxenjia@gmail.com>
+Date:   Sun Sep 24 11:35:15 2023 +0600
+
+    Merge branch 'main' of https://github.com/Sharif-codes/Ordhek-Din-UI
+
+[33mcommit 3daead24a68db2a7c863686de3904b5e8e9bb10e[m
+Author: Sharif-codes <sharifxenjia@gmail.com>
+Date:   Sun Sep 24 11:33:38 2023 +0600
+
+    contact btn style updated
+
+[33mcommit 36c773fbf34fafc0e5d4bb5300b618a8f67534d7[m
+Merge: 608d108 08daf6d
+Author: Syed Maaher Hossain <68460320+Maaher01@users.noreply.github.com>
+Date:   Sun Sep 24 11:25:20 2023 +0600
+
+    Merge pull request #35 from Maaher01/main
+    
+    Fixed sidebar and routing problem
+
+[33mcommit 08daf6de706acfe8b9989fa7b9f1840a79359e70[m
+Merge: 2a909c5 608d108
+Author: Maaher01 <maaher1145@gmail.com>
+Date:   Sun Sep 24 11:23:31 2023 +0600
+
+    Merge branch 'main' of https://github.com/Maaher01/Ordhek-Din-UI
+
+[33mcommit 2a909c51d44dcad6b3b66c9042d265854b43876e[m
+Author: Maaher01 <maaher1145@gmail.com>
+Date:   Sun Sep 24 11:23:20 2023 +0600
+
+    Fixed sidebar and routing issue
+
+[33mcommit 608d108c7a7bb2ebbde6e35772d377ff0f79a035[m
+Merge: ce77653 518cc43
+Author: Md. Hasibur Rahman <hasibkyau.cse@gmail.com>
+Date:   Sun Sep 24 11:09:39 2023 +0600
+
+    Merge branch 'main' of github.com:ikbalsazib/Ordhek-Din-UI
+
+[33mcommit 518cc4303384cd7ff59ec22ff0251133371074fc[m
+Merge: 85fa0b0 79fc6fc
+Author: Hasibur Rahman <59811661+hasibkyau@users.noreply.github.com>
+Date:   Sun Sep 24 11:08:51 2023 +0600
+
+    Merge pull request #34 from hasibkyau/main
+    
+    added banner
+
+[33mcommit ce776531a178879c1eec4715707c02ba84da840b[m
+Author: Md. Hasibur Rahman <hasibkyau.cse@gmail.com>
+Date:   Sun Sep 24 11:07:42 2023 +0600
+
+    added banner
+
+[33mcommit 79fc6fcc472887c19a6f20124f945e404512c793[m
+Merge: 13c184c 85fa0b0
+Author: Hasibur Rahman <59811661+hasibkyau@users.noreply.github.com>
+Date:   Sun Sep 24 10:19:44 2023 +0600
+
+    Merge branch 'ikbalsazib:main' into main
+
+[33mcommit e02589f8446f3f8abfe92cead8e3d26fd9485742[m
+Author: Md. Hasibur Rahman <hasibkyau.cse@gmail.com>
+Date:   Sun Sep 24 10:18:39 2023 +0600
+
+    added banner image
+
+[33mcommit 85fa0b0867a440c59301e0cce7864d94cc20b2d6[m
+Merge: efa81e6 a4c81a3
+Author: Reja Kazi <70040672+rejakazi02@users.noreply.github.com>
+Date:   Sat Sep 23 19:33:16 2023 +0600
+
+    Merge pull request #33 from rejakazi02/main
+    
+    faysal work
+
+[33mcommit a4c81a3664e6141b49a6ec5269ba89d13ffbcdfc[m
+Merge: 322e896 efa81e6
+Author: Reja Kazi <70040672+rejakazi02@users.noreply.github.com>
+Date:   Sat Sep 23 19:12:29 2023 +0600
+
+    Merge branch 'ikbalsazib:main' into main
+
+[33mcommit 322e89613bab2cd638a145030c21d8bcf11e374f[m
+Merge: 23347eb b0e3089
+Author: Faisal Ahmed <86138192+webfaisalbd@users.noreply.github.com>
+Date:   Sat Sep 23 19:09:56 2023 +0600
+
+    Merge pull request #1 from webfaisalbd/main
+    
+    search profile added
+
+[33mcommit b0e3089c95899264b67901bef0594e15c2dbc3c7[m
+Merge: 1f2ac05 23347eb
+Author: webfaisalbd <web.faisal.bd@gmail.com>
+Date:   Sat Sep 23 19:07:13 2023 +0600
+
+    git issue solved
+
+[33mcommit 13c184c48de38a0482e62aafb9c3e83fdff90878[m
+Merge: 23347eb efa81e6
+Author: Hasibur Rahman <59811661+hasibkyau@users.noreply.github.com>
+Date:   Sat Sep 23 19:06:37 2023 +0600
+
+    Merge pull request #6 from ikbalsazib/main
+    
+    Added Landing Page
+
+[33mcommit efa81e67e486de079d35d838a91c57ab1f110f01[m
+Merge: c1b68a0 23347eb
+Author: Md. Hasibur Rahman <hasibkyau.cse@gmail.com>
+Date:   Sat Sep 23 18:59:47 2023 +0600
+
+    Merge branch 'main' of github.com:ikbalsazib/Ordhek-Din-UI
+
+[33mcommit c1b68a00973fefe6833c4e2919d743c0f65c2e12[m
+Author: Md. Hasibur Rahman <hasibkyau.cse@gmail.com>
+Date:   Sat Sep 23 18:58:24 2023 +0600
+
+    added company work area
+
+[33mcommit 1f2ac05b01bf3620f85a78fa917b37cd64f3125c[m
+Author: webfaisalbd <web.faisal.bd@gmail.com>
+Date:   Sat Sep 23 18:55:36 2023 +0600
+
+    profile section added and filter section half done
+
+[33mcommit 23347ebbe19cdd74cbbf425d55472efc507bf9cc[m
+Merge: ce0b20f bcb25db
+Author: Syed Maaher Hossain <68460320+Maaher01@users.noreply.github.com>
+Date:   Sat Sep 23 18:47:05 2023 +0600
+
+    Merge pull request #32 from Maaher01/main
+    
+    Did routing and my pages
+
+[33mcommit bcb25db275ec67b4230bc9e1884a010bcf36db31[m
+Merge: 96abc27 ce0b20f
+Author: Maaher01 <maaher1145@gmail.com>
+Date:   Sat Sep 23 18:43:54 2023 +0600
+
+    Routing and pages done
+
+[33mcommit 96abc271be91836d321b499f583fb9c12324f6f2[m
+Merge: 3536de5 921d7cc
+Author: Maaher01 <maaher1145@gmail.com>
+Date:   Sat Sep 23 18:22:06 2023 +0600
+
+    Routing done
+
+[33mcommit ce0b20f31e01f93e011ef88614ee31cd0f09ed6e[m
+Merge: 921d7cc 4d609ba
+Author: M. Rafiul Alam <68193979+RafiulAlam98@users.noreply.github.com>
+Date:   Sat Sep 23 18:00:10 2023 +0600
+
+    Merge pull request #31 from RafiulAlam98/main
+    
+    ADDED: Guide Section
+
+[33mcommit 3536de5f77973a6db17364ef0c76c5faca420128[m
+Author: Maaher01 <maaher1145@gmail.com>
+Date:   Sat Sep 23 17:59:23 2023 +0600
+
+    Did all routing and pages
+
+[33mcommit 921d7cc269cdc2adfa37a91504f799d47d4ea993[m
+Merge: d9cbb7d ab066b0
+Author: Roman Shahrear <86909128+Roman-Shahrear@users.noreply.github.com>
+Date:   Sat Sep 

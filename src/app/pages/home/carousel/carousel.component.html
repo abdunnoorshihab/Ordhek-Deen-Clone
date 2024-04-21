@@ -1,0 +1,30 @@
+<!---banner-data-->
+<div class="banner-data">
+  <!--banner-slider-->
+  <div class="banner-slide-area carousel">
+    <swiper
+      [slidesPerView]="1"
+      [grabCursor]="true"
+      [spaceBetween]="20"
+      [autoplay]="true"
+      [loop]="true"
+      [pagination]="{
+              clickable: true
+            }"
+      class="mySwiper"
+    >
+      <ng-template swiperSlide *ngFor="let data of carousels">
+        <!---banner-start-->
+        <div class="banner">
+          <img
+            [src]="data.image ? data.image : ''"
+            [routerLink]="data.url"
+            alt=""
+          />
+        </div>
+        <!---banner-end-->
+      </ng-template>
+    </swiper>
+  </div>
+</div>
+<!---DATA-END-->

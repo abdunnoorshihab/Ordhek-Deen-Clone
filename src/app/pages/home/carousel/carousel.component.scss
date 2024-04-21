@@ -1,0 +1,65 @@
+@import "src/theme/variables";
+@import "src/theme/swipper";
+
+.banner-data {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+
+
+.banner-slide-area {
+  width: 100%;
+}
+
+.banner {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+    max-height: 411px;
+    // object-fit: contain;
+    object-fit: cover;
+
+  }
+}
+
+::ng-deep.mySwiper {
+  height: 100%;
+}
+
+::ng-deep.banner-slide-area .swiper-slide:nth-child(2) .banner {
+  background-color: #c8e6ff !important;
+}
+
+::ng-deep.banner-slide-area .swiper-slide:nth-child(3) .banner {
+  background-color: #c8ffca;
+}
+
+@media (max-width: 990px) {
+  .banner {
+    img {
+      min-height: 190px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .banner {
+    img {
+      object-fit: cover;
+    }
+  }
+}

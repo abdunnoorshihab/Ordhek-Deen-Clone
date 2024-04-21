@@ -1,0 +1,32 @@
+<div
+  class="section-1"
+  *ngFor="let data of promoOffers"
+  [ngStyle]="getShowOrHide(data)"
+>
+  <div class="container">
+    <div class="section1-top">
+      <!--title-area-->
+      <div class="title-area">
+        <h1>{{ data.title }}</h1>
+      </div>
+      <!--time-area-->
+      <app-time-counter-one
+        [endDate]="data?.endDateTime"
+      ></app-time-counter-one>
+    </div>
+    <!---section4-main-area-->
+    <div class="section1-main">
+      <app-product-card-one
+        [data]="product"
+        *ngFor="let product of data?.products"
+      ></app-product-card-one>
+    </div>
+    <!--view-btn-->
+    <div class="view-btn">
+      <a [routerLink]="['/promo-offer', data?._id]"
+      ><i class="fa fa-eye"></i> View All Promo</a
+      >
+    </div>
+  </div>
+</div>
+<!-- PROMO Offer Section -->

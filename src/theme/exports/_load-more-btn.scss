@@ -1,0 +1,78 @@
+@import 'src/theme/variables';
+
+.load-more {
+  margin: 12px auto;
+  text-align: center;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+}
+
+
+a.button {
+  box-sizing: border-box;
+  display: inline-block;
+
+  width: 12em;
+  height: 3.0em;
+  line-height: 1.8;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  background-color: $color-primary;
+  border-radius: 6px;
+  border: 2px solid $color-primary;
+  font-family: $font-en-primary;
+  text-align: center;
+  color:#fff;
+  white-space: nowrap;
+  text-decoration: none;
+
+  transition:
+  all 0.3s linear;
+
+  &:focus {
+    outline: none;
+    border-color: #DDD;
+  }
+  &:hover {
+    background-color: #fff;
+    color: $color-primary;
+    // i{
+    //   animation: rotation 2s infinite linear;
+    // }
+    // @keyframes rotation {
+    //   from {
+    //     transform: rotate(0deg);
+    //   }
+    //   to {
+    //     transform: rotate(359deg);
+    //   }
+    // }
+  }
+
+  &.loading {
+    height: 48px;
+    width: 48px;
+    padding: 0;
+
+    border-width: 2px;
+    border-radius: 25px;
+    border-color: #e8e8e8 #e8e8e8 #e8e8e8 #0187b9;
+    background: #fff;
+
+    font-size: 0;
+    color: transparent;
+    pointer-events: none;
+
+    animation: spin 1.2s infinite linear;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

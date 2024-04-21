@@ -1,0 +1,111 @@
+<div
+  class="banner-area"
+  [ngStyle]="{ 'background-image': 'url(' + promoOffer?.bannerImage + ')' }"
+>
+  <div class="container">
+    <div class="banner-main">
+      <h1>
+        {{ promoOffer?.title }}
+      </h1>
+    </div>
+  </div>
+</div>
+<!-- END Top Banner -->
+
+<div class="section-1" *ngIf="promoOffer">
+  <div class="container">
+    <div class="section1-top">
+      <app-time-counter-one
+        [endDate]="promoOffer?.endDateTime"
+      ></app-time-counter-one>
+    </div>
+    <!---section4-main-area-->
+    <div class="section1-main">
+      <div class="show-product-header">
+        <div class="icon-menu">
+          <ul>
+            <li>
+              <span
+                (click)="changeViewLayout('grid')"
+                [ngClass]="{ active: selectedViewType == 'grid' }"
+                ><i class="fas fa-th-large"></i
+              ></span>
+            </li>
+            <li>
+              <span
+                (click)="changeViewLayout('list')"
+                [ngClass]="{ active: selectedViewType == 'list' }"
+                ><i class="fas fa-th-list"></i
+              ></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END PRODUCT HEADER ACTION AREA -->
+
+      <div class="show-product-main grid" *ngIf="selectedViewType === 'grid'">
+        <ng-container *ngIf="isLoading">
+          <app-product-car-one-loader
+            [type]="'grid'"
+            *ngFor="let product of [1, 2, 3, 4, 5, 6]"
+          ></app-product-car-one-loader>
+        </ng-container>
+        <ng-container *ngIf="!isLoading">
+          <app-product-card-one
+            *ngFor="
+              let data of promoOffer?.products
+                | paginate
+                  : {
+                      itemsPerPage: productsPerPage,
+                      currentPage: currentPage,
+                      totalItems: totalProducts
+                    };
+              let i = index
+            "
+            [data]="data"
+          >
+          </app-product-card-one>
+        </ng-container>
+      </div>
+      <!-- MAIN PRODUCTS LIST -->
+
+      <div class="show-product-main-list" *ngIf="selectedViewType === 'list'">
+        <ng-container *ngIf="isLoading">
+          <app-product-car-one-loader
+            [type]="'list'"
+            *ngFor="let product of [1, 2, 3, 4, 5, 6]"
+          ></app-product-car-one-loader>
+        </ng-container>
+        <ng-container *ngIf="!isLoading">
+          <app-feature-card
+            *ngFor="
+              let product of promoOffer?.products
+                | paginate
+                  : {
+                      itemsPerPage: productsPerPage,
+                      currentPage: currentPage,
+                      totalItems: totalProducts
+                    };
+              let i = index
+            "
+            [product]="product"
+          >
+          </app-feature-card>
+        </ng-container>
+      </div>
+      <!-- MAIN PRODUCTS LIST -->
+
+      <div class="pagination-container">
+        <pagination-controls
+          class="data-pagination"
+          [autoHide]="true"
+          [maxSize]="15"
+          (pageChange)="onPageChanged($event)"
+        >
+        </pagination-controls>
+      </div>
+      <!-- END PAGINATION -->
+    </div>
+  </div>
+</div>
+<!-- PROMO Offer Section -->

@@ -1,0 +1,217 @@
+<div class="section1">
+  <div class="container">
+
+    <div class="section1-main carousel">
+      <!---section1-left-->
+      <div class="section1-left">
+
+        <div class="product-img-area">
+          <img
+            [src]="image"
+            alt=""
+            (mousemove)="onMouseMove($event)"
+            (mouseleave)="onMouseLeave($event)"
+          />
+          <div class="tag"></div>
+        </div>
+        <!---end-->
+        <div class="product-slide">
+          <swiper
+            [slidesPerView]="3"
+            [spaceBetween]="13"
+            [autoplay]="true"
+            [loop]="true"
+            [grabCursor]="true"
+            [navigation]="true"
+            [breakpoints]="{
+                '520': {
+                  slidesPerView: 3
+                },
+                '768': {
+                  slidesPerView: 3.5
+                },
+                '900': {
+                  slidesPerView: 5
+                },
+                '1000': {
+                  slidesPerView: 5
+                }
+              }"
+            class="mySwiper"
+          >
+            <ng-template swiperSlide *ngFor="let data of product.images">
+              <div class="slide-img">
+                <img
+                  (click)="selectImage(data)"
+                  [src]="
+                      data.length
+                        ? data
+                        : './assets/images/temp/products/01.jpg'
+                    "
+                  alt=""
+                />
+              </div>
+            </ng-template>
+          </swiper>
+        </div>
+      </div>
+
+      <div class="section1-right">
+
+        <div class="zoomimage" #zoomViewer>
+          <div
+            *ngIf="zoomImage"
+            class="zoom-viewer"
+            [ngStyle]="{ 'background-image': 'url(' + zoomImage + ')' }"
+          ></div>
+        </div>
+
+        <div class="product-details">
+
+          <div class="product-title">
+            <a>{{ product?.name }}</a>
+          </div>
+
+
+          <div class="product-left-main">
+            <div class="product-other-info">
+              <div class="product-sku">
+                <ul>
+                  <li *ngIf="product?.unit">
+                    <a class="skucontent" >{{
+                      product?.unit
+                      }}</a>
+                  </li>
+                  <li>
+                    <a>Product Code: {{ product?.sku }}</a>
+                  </li>
+                  <li>
+                    <a
+                      [routerLink]="['/products']"
+                      [queryParams]="{ brands: product?.brand?.slug }"
+                    >BRAND: {{ product?.brand?.name }}</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!---product-review-->
+              <div class="product-rate">
+                <ul>
+                  <li>
+                    <span><i class="fa fa-star"></i></span>
+                  </li>
+                  <li>
+                    <span><i class="fa fa-star"></i></span>
+                  </li>
+                  <li>
+                    <span><i class="fa fa-star"></i></span>
+                  </li>
+                  <li>
+                    <span><i class="fa fa-star"></i></span>
+                  </li>
+                  <li>
+                    <span><i class="fa fa-star"></i></span>
+                  </li>
+                  <li><a href="javascript:">(3 Reviews)</a></li>
+                </ul>
+              </div>
+              <!---end-->
+              <div class="out-stock">
+                <span>Stock Out</span>
+              </div>
+
+              <div class="in-stock">
+                <span>In Stock</span>
+              </div>
+              <div class="product-price">
+                <h3>
+                  <del
+                    *ngIf="
+                        product?.discountAmount && product?.discountAmount > 0
+                      "
+                  >{{currency.bdt}} {{ product?.salePrice }}</del
+                  >
+                  <span
+                  >{{currency.bdt}}{{ product | price : "salePrice" | number : "" : "bn" }}
+                    <!--                           <small>/Per Kilo</small>-->
+                    </span>
+                </h3>
+              </div>
+              <!---end-->
+
+              <div class="product-details-color-select">
+                <div class="collection-all-data collection-color-data">
+                  <ul>
+                    <li
+                      *ngFor="let color of product?.colors"
+                      [class.active]="color.name === selectedColor"
+                    >
+                      <a
+                        (click)="onSelectColor(color)"
+                        [style.background-color]="color.value"
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="collection-all-data collection-size-data">
+                  <ul>
+                    <li
+                      *ngFor="let size of product?.sizes"
+                      [class.active]="size.name === selectedSize"
+                    >
+                      <a (click)="onSelectSize(size)">
+                        {{ size.name.toUpperCase() }}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---product-btn-->
+          <div class="product-btn">
+            <div class="btn-1-container">
+              <div class="btn-1">
+                <div class="cart-btn" *ngIf="!cart">
+                  <button (click)="onAddToCart($event)">
+                    <i class="fa-solid fa-basket-shopping"></i>Add to cart
+                  </button>
+                </div>
+                <div
+                  class="cart-action"
+                  *ngIf="cart"
+                >
+                  <button class="left" (click)="onDecrementQty($event)">
+                    <span class="material-icons">remove</span>
+                  </button>
+                  <p>{{ cart?.selectedQty }} in cart</p>
+                  <button class="right" (click)="onIncrementQty($event)">
+                    <span class="material-icons">add</span>
+                  </button>
+                </div>
+              </div>
+              <a class="buy-now" (click)="onBuy($event)">Buy Now</a>
+            </div>
+            <!-- END CART CONTROL AREA -->
+
+            <div class="wish-btn">
+              <ul>
+                <li>
+                  <button
+                    (click)="onAddToWishList($event)"
+                    [class.active]="wishlist">
+                    <i class="fa fa-heart"></i
+                    >{{ wishlist ? "Remove from wish" : "Add to wish" }}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--section1-end-->

@@ -1,0 +1,107 @@
+@import "src/theme/variables";
+@import "src/theme/exports/primary-btn";
+
+.container {
+    .main-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .submain-div {
+        display: block;
+        margin: 0 auto;
+        padding: 40px;
+        width: 80%;     
+        border-radius: 40px;
+        box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+  
+        .form-container {
+          form {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+  
+            .filter {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              gap: 25px;
+  
+              .filterOpiton {
+                display: grid;
+                grid-template-columns: 1fr;
+                label {
+                  margin: 10px;
+                  color: #00a39b;
+                }
+              }
+            }
+            .primary-button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+  
+              button {
+                width: 30%;
+                font-size: 22px;
+                border-radius: 20px;
+              }
+              button:hover{
+                  background-image:none;
+                  background-color: tomato;
+                  color: black;
+              }
+            }
+          }
+        }//end form
+  
+      }//End Submain div
+  
+    }//End Main div
+  } //END FILTER AREA
+
+
+  @media (max-width:599px){
+    .container {
+        .main-div {
+          .submain-div {
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+
+
+            .form-container {
+              form {
+                display: block;
+                margin: 0, auto;  
+
+                .filter {
+                  grid-template-columns: 1fr;
+                  gap: 5px;     
+
+                  .filterOpiton {
+                    grid-template-columns: 1fr;
+
+                    label {
+                      margin: 0px;
+                    }
+                  }
+                }
+                .primary-button {  
+                       
+                  button {
+                    width: 50%;
+                  }
+                  button:hover{
+                    background-image: none;
+                    background-color: tomato;
+                    color: white;
+                  }
+                }
+              }
+            }//end form
+      
+          }//End Submain div
+      
+        }//End Main div
+      } //END FILTER AREA
+    
+  }

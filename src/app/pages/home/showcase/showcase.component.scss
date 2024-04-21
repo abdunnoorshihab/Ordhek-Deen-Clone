@@ -1,0 +1,40 @@
+@import "src/theme/variables";
+@import "src/theme/exports/primary-btn";
+
+.container {
+  display: block;
+  max-width: 1400px;
+  padding: 0 15px;
+  width: 100%;
+  margin: auto;
+} 
+.banner-area {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 5px 0;
+  margin-bottom: 20px;
+}
+
+.banner-main {
+
+}
+
+@media (max-width: 1200px) {
+  .banner-main {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+
+@media (max-width: 990px) {
+  .banner-main {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-area {
+    margin-top: 5px;
+  }
+}

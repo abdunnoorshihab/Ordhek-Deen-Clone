@@ -1,0 +1,252 @@
+@import "src/theme/variables";
+@import "src/theme/exports/primary-btn";
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  .submain-content {
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .title {
+        font-size: 30px;
+        border-radius: 50px;
+        background-image: $button-color;
+        color: white;
+        padding: 20px;
+      } //END title
+
+      .subtitle {
+        padding: 20px;
+        font-size: 20px;
+        color: rgba(102, 102, 102, 1);
+      } //END Subtitle Section
+    } //END! Header section
+
+    .middle {
+      margin-top: 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+        text-align: center;
+        background-image: $color-primary2;
+        box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+
+        .score {
+          color: #00a39b;
+          font-size: 30px;
+        } //End Score
+
+        .title {
+          color: #666666;
+          font-size: 20px;
+        } //End title
+
+        .subtitle {
+          color: #666666;
+          font-size: 15px;
+        } //End subtitle
+
+        .see-more {
+          color: #00a39b;
+          font-size: 15px;
+        } //End See More
+
+        .status {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          .item {
+            display: block;
+            margin: 0, auto;
+            text-align: center;
+          }
+        } //End Status section
+      } //END Card Section
+    } //END! Middle Section
+
+    .bottom {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+
+      .card {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 10px;
+        text-align: right;
+        background-image: $color-primary2;
+        box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 40px;
+
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          img {
+            height: 45px;
+          }
+        }
+
+        .right {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: right;
+          gap: 10px;
+          text-align: right;
+          .title {
+            color: #666666;
+            font-size: 20px;
+          } //End title
+
+          .subtitle {
+            color: #666666;
+            font-size: 15px;
+          } //End subtitle
+
+          .see-more {
+            color: #00a39b;
+            font-size: 15px;
+          } //End See More
+        }
+      } //END Card Section
+    } //END! Bottom Section
+  }
+}
+
+//For Tablet
+
+
+//Small Screen
+@media (max-width: 950px) {
+
+}
+
+//Small Screen
+@media (max-width: 599px) {
+    .main-content {
+
+        .submain-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+    
+          .header {
+            width: 80%;
+            .title {
+              font-size: 20px;
+              border-radius: 30px;
+              padding: 15px;
+            } //END title
+      
+            .subtitle {
+              padding: 10px;
+              font-size: 10px;
+            } //END Subtitle Section
+          } //END! Header section
+      
+          .middle {  
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            .card {
+             width: 100%;   
+              padding: 20px;
+              gap: 10px;
+              border-radius: 10px;
+      
+              .score {
+                font-size: 20px;
+              } //End Score
+      
+              .title {
+                font-size: 15px;
+              } //End title
+      
+              .subtitle {
+                font-size: 10px;
+              } //End subtitle
+      
+              .see-more {
+                font-size: 10px;
+              } //End See More
+      
+              .status {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                .item {
+                  display: block;
+                  margin: 0, auto;
+                  text-align: center;
+                }
+              } //End Status section
+            } //END Card Section
+          } //END! Middle Section
+      
+          .bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+      
+            .card {
+                width: 100%;   
+                padding: 20px;
+                gap: 10px;
+                border-radius: 10px;
+      
+              .left {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                img {
+                  height: 35px;
+                }
+              }
+      
+              .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: right;
+                gap: 10px;
+                text-align: right;
+                .title {
+                  color: #666666;
+                  font-size: 16px;
+                } //End title
+      
+                .subtitle {
+                  color: #666666;
+                  font-size: 12px;
+                } //End subtitle
+      
+              }
+            } //END Card Section
+          } //END! Bottom Section
+
+
+        }
+      }
+}

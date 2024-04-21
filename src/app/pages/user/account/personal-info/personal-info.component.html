@@ -1,0 +1,243 @@
+<div class="container">
+
+
+  <form
+    class="form-container"
+    [formGroup]="addPersonalInfo"
+    (ngSubmit)="handlePersonalInfo()"
+  >
+    <h1 class="info-header">Personal Info</h1>
+
+
+      <div class="input-container clothes-hint">
+        <label
+          >What kind of clothes do you usually wear outside the house?
+          <span>*</span></label
+        >
+        <mat-form-field appearance="outline" class="">
+          <input matInput placeholder="" formControlName="clothes" />
+          <mat-hint
+            >In case of brides, you must mention whether you wear burqa, hijab,
+            niqab and socks</mat-hint
+          >
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container beard-hint">
+        <label
+          >Do you have beard according to sunnah? Since when?
+          <span>*</span></label
+        >
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="beard" />
+          <mat-hint class="beard-field-hint"
+            >Please clearly write how many years you have been keeping a beard.
+            If you have less beard growth due to biological reasons, it should
+            be mentioned
+          </mat-hint>
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container prayer-hint">
+        <label>Do you pray five times a day? Since when? <span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="prayer" />
+          <mat-hint
+            >Please write a clear answer with "Yes" or "No". It must be
+            mentioned how many years you have been praying five times a day
+          </mat-hint>
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label
+          >Usually how many times(waqt) a week are your prayers missed(Qaza)?
+          <span>*</span></label
+        >
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="qazaWaqt" />
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label>Do you wear clothes above the ankles? <span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="ankleClotes" />
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label>Do you comply with mahram / non-mahram? <span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="mahram" />
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label>Are you able to recite the Quran correctly?<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="recitation" />
+        </mat-form-field>
+
+      </div><!-- END-->
+
+      <!-- END-->
+      <div class="input-container">
+        <label>Which Fiqh do you follow?<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <mat-label>Select</mat-label>
+          <mat-select class="" formControlName="fiqh">
+            <mat-option value="Hanafi">Hanafi</mat-option>
+            <mat-option value="Maliki">Maliki</mat-option>
+            <mat-option value="Sharfi">Sharfi</mat-option>
+            <mat-option value="Hanbali">Hanbali</mat-option>
+            <mat-option value="AhleHadis/Salafi"
+              >Ahle Hadis / Salafi</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label
+          >Do you watch or listen to dramas /movies/serials/songs? *
+          <span>*</span></label
+        >
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="dramas" />
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label
+          >Do you have any mental or physical diseases?<span>*</span></label
+        >
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="disease" />
+        </mat-form-field>
+
+      </div><!-- END-->
+      <div class="input-container">
+        <label>Are you involved in any special work of deen?<span>*</span></label>
+
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label
+          >Are you involved in any special work of deen?<span>*</span></label
+        >
+
+        <mat-form-field appearance="outline">
+          <mat-label>Select</mat-label>
+          <mat-select class="" formControlName="specialWork">
+            <mat-option value="Tablig">Tablig</mat-option>
+            <mat-option value="Tanzeem">Tanzeem</mat-option>
+            <mat-option value="Deobandi">Deobandi</mat-option>
+            <mat-option value="Others">Others</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label
+          >What are your ideas or beliefs about the shrine (Mazar)?<span
+            >*</span
+          ></label
+        >
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="mazarBelief" />
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label
+          >Write the names of at least 3 Islamic books you have read<span
+            >*</span
+          ></label
+        >
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="books" />
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label
+          >Write the names of at least 3 islamic scholars of your choice<span
+            >*</span
+          ></label
+        >
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="" formControlName="scholars" />
+        </mat-form-field>
+
+      </div><!-- END-->
+      <!-- END-->
+      <div class="input-container category-hint">
+        <label
+          >Select the category is applicable to you (Otherwise leave the field
+          blank)<span>*</span></label
+        >
+
+        <mat-form-field appearance="outline">
+          <mat-label>Select</mat-label>
+          <mat-select class="" formControlName="category">
+            <mat-option value="Disabled">Disabled</mat-option>
+            <mat-option value="Infertile">Infertile</mat-option>
+            <mat-option value="Converted">Converted Muslim</mat-option>
+            <mat-option value="Orphan">Orphan</mat-option>
+            <mat-option value="Masna">Interest in being Masna</mat-option>
+            <mat-option value="Tablig">Tablig</mat-option>
+          </mat-select>
+          <mat-hint class="beard-field-hint">
+            Example: If you are a Converted Muslim, select the Converted Muslim
+            category. If you are associated with Tabligh, select the Tabligh
+            category. In this way, you can select one or more of the mentioned
+            categories
+          </mat-hint>
+        </mat-form-field>
+      </div>
+      <!-- END-->
+      <div class="input-container">
+        <label>Other Qualification Information</label>
+        <mat-form-field appearance="outline">
+          <textarea matInput rows="3" cols="30" required formControlName="description"></textarea>
+          <mat-error>This Field Is Required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="input-container phone-hint">
+        <label>Groom's mobile number *<span>*</span></label>
+        <mat-form-field appearance="outline" class="">
+          <input matInput placeholder="" formControlName="mobileNo" />
+          <mat-hint
+            >Groom's personal mobile numbers are being taken for biodata
+            verification. It will not be disclosed to anyone except the
+            authoritiess
+          </mat-hint>
+        </mat-form-field>
+      </div>
+      <!-- END-->
+
+      <div class="input-container">
+        <input type="file"  class="upload-btn"><i class="fa-solid fa-arrow-up-from-bracket upload-btn-icon"></i> <span
+            class="upload-btn-text">Upload
+            Photo</span>/>
+      </div><!-- END-->
+
+      <div class="btn-area">
+        <button class="pre-btn" [routerLink]="['/account/family-info']">
+          <i class="fa-solid fa-arrow-left"></i>Previous
+        </button>
+        <button class="next-btn">
+          Next<i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+      <!-- END Button -->
+  </form>
+  <!-- Form Section END-->
+</div>
+
+
+
+
+

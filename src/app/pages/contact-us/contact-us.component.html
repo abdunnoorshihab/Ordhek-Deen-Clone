@@ -1,0 +1,80 @@
+<section class="section-1">
+  <div class="section1-title">
+    <h2>CONTACT US</h2>
+  </div>
+
+  <div class="section1-description">
+    <p>Feel free to contact us anytime at <a href="tel:0110000000">0110000000</a></p>
+    <p>Or if you prefer, you can drop us a note using the form below. You'll always get a response from a real person -
+      with a real name - within 48 hours.</p>
+  </div>
+</section> <!-- END! HEADER -->
+
+<!---contact-form-area-->
+<section class="contact-form-area">
+  <div class="container">
+    <!--contact-form-main-->
+    <div class="contact-form-main">
+
+      <!--form-->
+      <form #formElement="ngForm" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+
+        <!---name-->
+        <div class="name mb">
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="name" placeholder="write your name please" required>
+            <mat-error>This Field Is Required</mat-error>
+          </mat-form-field>
+        </div>
+        <!---email-->
+        <div class="email mb">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="write your E-mail address please"
+                   required>
+            <mat-error>This Field Is Required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <!---Contact Number-->
+        <div class="number">
+          <mat-form-field appearance="outline">
+            <mat-label>Contact Number</mat-label>
+            <input matInput type="tel" formControlName="phoneNo" placeholder="write your contact number here" required>
+            <mat-error>This Field Is Required</mat-error>
+          </mat-form-field>
+        </div>
+        <!---address-->
+        <div class="email">
+          <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input matInput type="text" formControlName="address" placeholder="write your address here" required>
+            <mat-error>This Field Is Required</mat-error>
+          </mat-form-field>
+        </div>
+
+
+        <!--comment-->
+        <div class="comment-area">
+          <mat-form-field appearance="outline">
+            <mat-label>Your Message</mat-label>
+            <textarea matInput formControlName="message" placeholder="Write your message here" rows="10" cols="40"
+                      required></textarea>
+            <mat-error>This Field Is Required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <!--submit-btn-->
+        <div class="submit-btn">
+          <button type="submit" mat-button>submit</button>
+        </div>
+      </form><!--form-->
+
+    </div>
+  </div>
+</section>
+
+
+
+

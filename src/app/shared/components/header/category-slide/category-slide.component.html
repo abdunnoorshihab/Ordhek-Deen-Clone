@@ -1,0 +1,43 @@
+<div class="overlay" *ngIf="categorySlide" (click)="onHideCategory()"></div>
+<!---category-slide-->
+<div class="category-slide" [class]="categorySlide?'category-slide-active':'inactive'">
+  <!---slide-top-->
+  <div class="slide-top">
+    <h3><i class="fas fa-align-left"></i> Company Logo</h3>
+    <span (click)="onHideCategory()"><i class="fa fa-xmark"></i></span>
+  </div>
+  <div class="category-menu">
+    <ul>
+      <li>
+        <a>
+          Home
+        </a>
+      </li>
+      <li>
+        <a>
+          About Us
+        </a>
+      </li>
+      <li>
+        <a>
+          Guide
+        </a>
+      </li>
+      <li>
+        <a>
+          FAQ
+        </a>
+      </li>
+      <li>
+        <a>
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!--slide-bottom-->
+  <div class="slide-bottom">
+    <p>All Rights Reserved by <a href="#">Soft Commerce</a></p>
+  </div>
+</div>

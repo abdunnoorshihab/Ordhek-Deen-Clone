@@ -1,0 +1,151 @@
+<div class="form-container">
+    <span class="grad-txt mb"> <h2>Family Info</h2></span>
+
+    <div class="form">
+        
+        <form #formElement="ngForm" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+
+           
+            <div class="name mb">
+                <mat-form-field class="name" appearance="outline">
+                    <mat-label>Father's Name</mat-label>
+                    <input matInput type="text" formControlName="fatherName" placeholder="Your father name here..."
+                        required>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>       <!--Father Name-->
+
+            
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>Is your father alive?</mat-label>
+                    <mat-select formControlName="fatherAlive" required>
+                        <mat-option value="yes">Yes</mat-option>
+                        <mat-option value="no">No</mat-option>
+                    </mat-select>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>      <!--Is your father alive-->
+
+
+            
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>Father's Profession--</mat-label>
+                    <input matInput type="text" formControlName="fatherProfession"
+                        placeholder="Your father's profession here..." required>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>      <!--Father Profession-->
+
+            
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>Mother's Name</mat-label>
+                    <input matInput type="text" formControlName="motherName" placeholder="Your mother name here..."
+                        required>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>      <!--Mother Name-->
+
+            
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>Is your mother alive?</mat-label>
+                    <mat-select formControlName="motherAlive" required>
+                        <mat-option value="yes">Yes</mat-option>
+                        <mat-option value="no">No</mat-option>
+                    </mat-select>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>      <!--Is your mother alive-->
+
+            
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>Mother's Profession</mat-label>
+                    <input matInput type="text" formControlName="motherProfession"
+                        placeholder="Your mother's profession here..." required>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>      <!--Mother Profession-->
+
+            
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>How many brothers do you have?</mat-label>
+                    <input matInput type="text" formControlName="brotherCount"
+                        placeholder="How many brothers do you have?" required>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>      <!--Brother Count-->
+
+            
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>How many sisters do you have?</mat-label>
+                    <input matInput type="text" formControlName="sisterCount"
+                        placeholder="How many sisters do you have?" required>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>      <!--Sister Count-->
+
+            
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>Profession of uncles</mat-label>
+                    <input matInput type="text" formControlName="uncleProfession" placeholder="Profession of uncles"
+                        required>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>      <!--Profession of uncles-->
+
+           
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>Financial Status</mat-label>
+                    <mat-select formControlName="financialStatus" required>
+                        <mat-option value="low">Low Class</mat-option>
+                        <mat-option value="lowmiddle">Low-Middle Class</mat-option>
+                        <mat-option value="middle">Middle Class</mat-option>
+                        <mat-option value="highmiddle">High-Middle Class</mat-option>
+                        <mat-option value="high">High Class</mat-option>
+                    </mat-select>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div>       <!--Financial Status-->
+
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>Your Message</mat-label>
+                    <textarea matInput formControlName="financialDescription" rows="5"
+                        placeholder="Type your message here..." required></textarea>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+
+            </div>  <!--Financial Description-->
+
+            
+            <div class="name mb">
+                <mat-form-field appearance="outline">
+                    <mat-label>How is your family's religious condition?</mat-label>
+                    <input matInput type="text" formControlName="religiousCondition"
+                        placeholder="How is your family's religious condition" required>
+                    <mat-error>This Field Is Required</mat-error>
+                </mat-form-field>
+            </div> <!--How is your family's religious condition-->
+
+         
+            <div class="btns mb" >
+                <div class="primary-button left">
+                    <button type="submit" [routerLink]="['/account/edu-info']" mat-button><i class="fa-solid fa-arrow-left"></i> Prev</button>
+                </div>
+
+                <div class="primary-button right">
+                    <button>Submit <i class="fa-solid fa-arrow-right-long"></i></button>
+                </div>
+            </div>   <!--submit-btn-->
+
+        </form>
+    </div>      <!--form-->
+</div>

@@ -1,0 +1,208 @@
+@import "src/theme/variables";
+@import "src/theme/swipper";
+/** section2 ****/
+.section-two {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 50px;
+  padding: 20px 15px 30px 15px;
+  box-sizing: border-box;
+
+  .section-main-two-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    .section-two-child-one {
+      .child-one-img-one {
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .section-two-child-two-child {
+      text-align: center;
+      display: flex;
+      align-items: center;
+
+      .child-two-data {
+        h5{
+          font-family: $font-en-primary;
+          font-size: 16px;
+          font-weight: 400;
+          color: #191919;
+          margin-bottom: 10px !important;
+        }
+
+        h2 {
+          letter-spacing: 0.5px;
+          font-size: 52px;
+          font-weight: 600;
+          line-height: 55px;
+          margin-bottom: 20px !important;
+          font-family: $font-en-primary;
+          color: #191919;
+        }
+
+        p {
+          font-size: 17px;
+          font-weight: 300;
+          font-family: $font-en-primary;
+          line-height: 20px;
+          color: #191919;
+        }
+
+        .child-two-buttons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 24px;
+
+          button {
+            width:170px;
+            height: 50px;
+            font-family: $font-en-primary;
+            font-size: 16px;
+            letter-spacing: 0.4px;
+            background-color: #191919;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: 0;
+            border: 1px solid transparent;
+            transition: all 0.15s linear;
+            border-radius: 6px;
+          }
+
+          button:last-child {
+            margin-left: 22px !important;
+            border: 1px solid #191919;
+            color: #191919;
+            background-color: #fff;
+          }
+
+          button:first-child:hover {
+            background-color: #fff;
+            color: #191919;
+            border: 1px solid #191919;
+          }
+
+          button:last-child:hover {
+            background-color: #191919;
+            color: #fff;
+            border: 1px solid transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-two {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    .section-main-two-main {
+      grid-template-columns: 1fr;
+
+      .section-two-child-one {
+        order: 2;
+
+        .child-one-img-one {
+          width: 100%;
+          min-height: inherit;
+          max-height: inherit;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 474px) {
+  .section-two {
+    .section-main-two-main {
+      .section-two-child-two-child {
+        .child-two-data {
+          h5 {
+            font-size: 16px;
+          }
+          h2 {
+            font-size: 40px;
+            line-height: 42px;
+            margin-bottom: 12px !important;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 446px) {
+  .section-two {
+    .section-main-two-main {
+      .section-two-child-two-child {
+        .child-two-data {
+          .child-two-buttons {
+            button {
+              width: 140px;
+              height: 40px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 382px) {
+  .section-two {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 15px 30px 15px;
+    box-sizing: border-box;
+
+    .section-main-two-main {
+      .section-two-child-two-child {
+        .child-two-data {
+          h2 {
+            font-size: 36px;
+            line-height: 38px;
+            margin-bottom: 5px !important;
+          }
+
+          p {
+            margin-top: 10px !important;
+            font-size: 13px;
+          }
+
+          .child-two-buttons {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  display: block;
+  max-width: 1400px;
+  padding: 0 15px;
+  width: 100%;
+  margin: auto;
+}

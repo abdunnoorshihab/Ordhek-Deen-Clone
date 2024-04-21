@@ -1,0 +1,17 @@
+@import 'src/theme/variables';
+.primary-button {
+  button{
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 17px;
+    padding: 0.1em 2em;
+    line-height: 1.8;
+    font-size: 1.1em;
+    background: $button-color;
+    border: none;
+    font-family: $font-en-primary;
+    text-align: center;
+    color: $color-white;
+    font-weight: 400;
+  }
+}

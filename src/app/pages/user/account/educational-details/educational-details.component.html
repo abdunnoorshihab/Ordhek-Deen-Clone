@@ -1,0 +1,91 @@
+<div class="container">
+  <form class="form-container"  [formGroup]="EducationalInformation"
+        (ngSubmit)="handleEducationalInfo()">
+    <h1 class="info-header">Educational Info</h1>
+
+    <div class="input-container">
+      <label>Education Type<span>*</span></label>
+      <mat-form-field appearance="outline">
+        <mat-label>Select</mat-label>
+        <mat-select formControlName="educationType">
+          <mat-option value="option1">Technical</mat-option>
+          <mat-option value="option2">Honors</mat-option>
+          <mat-option value="option3">University</mat-option>
+          <mat-option value="option3">Others</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div><!-- End -->
+
+    <div class="input-container">
+      <label>SSC / Dakhil / Equivalent Passing Year<span>*</span></label>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="2012" formControlName="secondaryPassingYear"/>
+      </mat-form-field>
+    </div> <!-- End -->
+
+    <div class="input-container">
+      <label>Group<span>*</span></label>
+      <mat-form-field appearance="outline">
+        <mat-label>Select</mat-label>
+        <mat-select class="" formControlName="group">
+          <mat-option value="option1">Science</mat-option>
+          <mat-option value="option2">Arts</mat-option>
+          <mat-option value="option3">Commerce</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div> <!-- End -->
+
+    <div class="input-container">
+      <label>Result<span>*</span></label>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="5.00" formControlName="result" />
+      </mat-form-field>
+    </div><!-- End -->
+
+    <div class="input-container">
+      <label>What is the subject of your Diploma?<span>*</span></label>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Subject name is here..." formControlName="diplomaSubject"/>
+      </mat-form-field>
+    </div> <!-- End -->
+
+    <div class="input-container">
+      <label>Name of educational institution<span>*</span></label>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Institution name..." formControlName="higherInstitution"/>
+      </mat-form-field>
+    </div> <!-- End -->
+
+    <div class="input-container">
+      <label>Passing year<span>*</span></label>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="2012" formControlName="higherPassingYear"/>
+      </mat-form-field>
+    </div> <!-- End -->
+
+    <div class="input-container">
+      <label>Other Qualification Information</label>
+      <mat-form-field appearance="outline">
+        <textarea matInput rows="3" cols="30" formControlName="other"></textarea>
+        <mat-error>This Field Is Required</mat-error>
+      </mat-form-field>
+    </div> <!-- End -->
+
+    <div class="input-container">
+      <label>Islamic education titles<span>*</span></label>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="" formControlName="islamicTitle"/>
+      </mat-form-field>
+    </div><!-- End -->
+
+    <div class="button-area">
+      <button class="previous-button" [routerLink]="['/account/edu-qual']">
+        <i class="fa-solid fa-arrow-left"></i>Previous
+      </button>
+      <button class="next-button">
+        Next<i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </form>
+</div>

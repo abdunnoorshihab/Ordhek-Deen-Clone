@@ -1,0 +1,82 @@
+<div class="main-div">
+  <div class="form-container login-right-part">
+    <div class="div-form">
+      <div class="head-div">
+        <h2>Pledge</h2>
+      </div>
+      <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+        <div class="form-input">
+          <!-- <mat-form-field appearance="outline" class="password"> -->
+          <div class="p">
+            <p>
+              Do your parents know that you are submitting biodata to the Al
+              Aaribah Website? *
+            </p>
+          </div>
+          <mat-form-field class="select" appearance="outline">
+            <mat-label class="select-occupation">Select an option</mat-label>
+            <mat-select formControlName="permission" id="permission">
+              <mat-option value="Yes">Yes</mat-option>
+              <mat-option value="No">No</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- <mat-error>This field is required</mat-error> -->
+          <!-- </mat-form-field> -->
+        </div>
+
+        <div class="form-input">
+          <!-- <mat-form-field appearance="outline" class="password"> -->
+          <div class="p">
+            <p>By Allah, testify that all the information given is true. *</p>
+          </div>
+          <mat-form-field class="select" appearance="outline">
+            <mat-label class="select-occupation">Select an option</mat-label>
+            <mat-select formControlName="truth" id="truth">
+              <mat-option value="1">Yes</mat-option>
+              <mat-option value="2">No</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- <mat-error>This field is required</mat-error> -->
+          <!-- </mat-form-field> -->
+        </div>
+        <div class="form-input">
+          <div class="p">
+            <p>
+              If you provide any false information, Al Aaribah will not take any
+              responsibility for the conventional law and the hereafter. Do you
+              agree? *
+            </p>
+          </div>
+          <!-- <mat-form-field appearance="outline" class="password"> -->
+          <mat-form-field class="select" appearance="outline">
+            <mat-label class="select-occupation">Select an option</mat-label>
+            <mat-select formControlName="confirmation" id="confirmation">
+              <mat-option value="yes">Yes</mat-option>
+              <mat-option value="no">No</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!-- <mat-error>This field is required</mat-error> -->
+          <!-- </mat-form-field> -->
+        </div>
+        <div class="bottom-container">
+          <div
+            class="btn-div primary-button"
+            [routerLink]="['/account/expected-life-partner']"
+          >
+            <button>Previous</button>
+          </div>
+          <div class="bottom-div">
+            <div
+              class="btn-bottom primary-button"
+              [routerLink]="['/account/contact-details']"
+            >
+              <button type="submit" class="next-button">Next</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

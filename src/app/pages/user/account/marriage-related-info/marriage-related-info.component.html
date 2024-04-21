@@ -1,0 +1,163 @@
+<!-- <script src="https://kit.fontawesome.com/88c2427c69.js" crossorigin="anonymous"></script> -->
+<div class="form-container">
+  <div class="form">
+    <div class="title">
+      <h3>Marriage Related Info</h3>
+    </div>
+    <!-- end title -->
+
+    <small>Do your gurdians agree to your marriage?<span>*</span></small>
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <input
+          class="input-field"
+          matInput
+          type="text"
+          formControlName="name"
+          placeholder=""
+          required
+        />
+        <mat-error>This Field Is Required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <small
+      >Will you be able to keep your wife in the veil after marriage?
+      <span>*</span></small
+    >
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          type="email"
+          formControlName="email"
+          placeholder=""
+          required
+        />
+        <mat-error>This Field Is Required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <small
+      >Would you like to allow your wife to study after marriage?
+      <span>*</span></small
+    >
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <input
+          class="input-field"
+          matInput
+          type="text"
+          formControlName="name"
+          placeholder=""
+          required
+        />
+        <mat-error>This Field Is Required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <small
+      >Would you like to allow your wife to do any job after marriage?
+      <span>*</span></small
+    >
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <input
+          class="input-field"
+          matInput
+          type="text"
+          formControlName="name"
+          placeholder=""
+          required
+        />
+        <mat-error>This Field Is Required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <small
+      >Where will you live with your wife after marriage?<span>*</span></small
+    >
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <input
+          class="input-field"
+          matInput
+          type="text"
+          formControlName="name"
+          placeholder=""
+          required
+        />
+        <mat-error>This Field Is Required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <small
+      >Would you or your family expect any gift from the bride's family?
+      <span>*</span></small
+    >
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <input
+          class="input-field"
+          matInput
+          type="text"
+          formControlName="name"
+          placeholder=""
+          required
+        />
+        <mat-error>This Field Is Required</mat-error>
+      </mat-form-field>
+    </div>
+    <small
+      >Why are you getting married? What are your thoughts on marriage?
+      <span>*</span></small
+    >
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <input
+          class="input-field"
+          matInput
+          type="text"
+          formControlName="name"
+          placeholder=""
+          required
+        />
+        <mat-error>This Field Is Required</mat-error>
+      </mat-form-field>
+    </div>
+    <small
+      >Why are you getting married? What are your thoughts on marriage?<span
+        >*</span
+      ></small
+    >
+    <div class="input">
+      <mat-form-field>
+        <textarea class="text-area" matInput></textarea>
+      </mat-form-field>
+    </div>
+    <div class="submit-btn">
+      <a
+        class="primary-button"
+        [routerLink]="['/account/edit-bio/occupation-info']"
+      >
+        <button>
+          <i
+            class="fa-solid fa-arrow-right fa-rotate-180"
+            style="color: #3b3e44"
+          ></i
+          >Previous
+        </button>
+      </a>
+      <a
+        class="primary-button"
+        [routerLink]="['/account/expected-life-partner']"
+      >
+        <button>
+          next<i class="fa-solid fa-arrow-right" style="color: #3b3e44"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+  <!-- end form -->
+</div>
+<!-- end form-container -->

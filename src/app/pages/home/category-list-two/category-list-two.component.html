@@ -1,0 +1,13 @@
+<!---section-6-->
+<div class="section-6">
+  <div class="container">
+    <div class="section6-main">
+      <div class="section-main-category-card">
+        <div *ngFor="let data of categories">
+          <!---category-card-->
+          <app-category-card-one [data]="data"></app-category-card-one>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

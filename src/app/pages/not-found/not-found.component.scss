@@ -1,0 +1,142 @@
+@import 'src/theme/variables';
+
+.not-found-area {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.not-found-main {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+}
+
+.not-found-top {
+  display: block;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  width: 100%;
+  left: 0;
+}
+
+.not-found-top h1 {
+  color: $color-primary;
+  font-family: initial;
+  font-weight: 600;
+  font-size: 78px;
+  letter-spacing: 10px;
+}
+
+.not-found-img {
+  display: block;
+}
+
+.not-found-img img {
+  width: 100%;
+  height: 650px;
+  // filter: opacity(0.9);
+}
+
+@media(max-width: 800px) {
+  .not-found-img img {
+    height: 600px;
+  }
+}
+
+.not-found-bottom {
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+
+.not-found-bottom h3 {
+  color: $color-primary;
+  font-family: initial;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  display: block;
+  line-height: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 15px !important;
+}
+
+.not-found-bottom p {
+  color: #777;
+  font-family: initial;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 30px !important;
+}
+
+@media(max-width: 600px) {
+  .not-found-img img {
+    height: 500px;
+    object-fit: contain;
+  }
+  .not-found-top h1 {
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+  .not-found-bottom h3 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 10px !important;
+    letter-spacing: 2px;
+  }
+  .not-found-bottom p {
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.not-found-bottom button {
+  background-color: $color-primary;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #fff;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+@media(max-width: 500px) {
+  .not-found-img img {
+    height: 400px;
+  }
+  .not-found-bottom h3 {
+    font-size: 27px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px !important;
+  }
+  .not-found-bottom button {
+    font-size: 15px;
+    padding: 8px 20px;
+
+  }
+
+}
+

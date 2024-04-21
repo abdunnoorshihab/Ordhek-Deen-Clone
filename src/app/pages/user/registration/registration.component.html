@@ -1,0 +1,136 @@
+<div class="main-area">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="/assets/images/brand/logo/SoftCommerceLogo500.webp" alt="" />
+      </a>
+    </div>
+
+    <div class="form-area">
+      <div class="form-area-top">
+        <h3>Join Now!</h3>
+        <p>Setup A New Account In A Minute</p>
+      </div>
+
+      <form
+        #formElement="ngForm"
+        [formGroup]="dataForm"
+        (ngSubmit)="onSubmit()"
+        autocomplete="off"
+      >
+        <div class="form-main">
+          <div class="social-area">
+            <ul>
+              <li><a href="javascript:">Welcome to Soft Commerce</a></li>
+                            <li><a routerLink="../login"><i class="fab fa-google"></i>login with google</a></li>
+                            <li><a routerLink="../login"><i class="fab fa-facebook-f"></i>login with facebook</a></li>
+            </ul>
+          </div>
+
+          <div class="or-area">
+            <div class="or">
+              <!--              <span>Or</span>-->
+            </div>
+          </div>
+
+          <div class="form-input-area">
+            <div class="form-input-area-main">
+              <div class="form-input">
+                <input
+                  formControlName="name"
+                  [class.invalid]="name.touched && name.invalid"
+                  type="text"
+                  placeholder="Enter Your Name"
+                  autocomplete="off"
+                />
+                <div class="invalid-txt" *ngIf="name.touched && name.invalid">
+                  <span>This field is required</span>
+                </div>
+              </div>
+              <div class="form-input">
+                <input
+                  digitOnly
+                  [maxlength]="11"
+                  formControlName="phoneNo"
+                  [class.invalid]="phoneNo.touched && phoneNo.invalid"
+                  type="text"
+                  placeholder="Enter Your Phone Number"
+                  autocomplete="off"
+                />
+                <div
+                  class="invalid-txt"
+                  *ngIf="phoneNo.touched && phoneNo.invalid"
+                >
+                  <span>Please enter a valid 11 digit phone number</span>
+                </div>
+              </div>
+              <div class="form-input">
+                <input
+                  formControlName="password"
+                  [minlength]="6"
+                  [class.invalid]="password.touched && password.invalid"
+                  type="password"
+                  placeholder="Enter Your Password"
+                  autocomplete="new-password"
+                />
+                <div
+                  class="invalid-txt"
+                  *ngIf="password.touched && password.invalid"
+                >
+                  <span>Please enter a valid digit 6 minimum number</span>
+                </div>
+              </div>
+              <div class="form-input">
+                <input
+                  formControlName="confirmPassword"
+                  [minlength]="6"
+                  [class.invalid]="
+                    confirmPassword.touched && confirmPassword.invalid
+                  "
+                  type="password"
+                  placeholder="Enter Repeat Password"
+                  autocomplete="new-password"
+                />
+                <div
+                  class="invalid-txt"
+                  *ngIf="confirmPassword.touched && confirmPassword.invalid"
+                >
+                  <span>Please enter a valid digit 6 minimum number</span>
+                </div>
+              </div>
+              <div class="form-input input-check">
+                <mat-checkbox formControlName="isAccept" class="mat-check"
+                  >Accept all the Terms & Conditions</mat-checkbox
+                >
+                <div
+                  class="invalid-txt"
+                  *ngIf="isAccept.touched && isAccept.invalid"
+                >
+                  <span>This field is required</span>
+                </div>
+              </div>
+              <div class="form-sub-btn">
+                <button type="submit">register</button>
+              </div>
+            </div>
+
+             <div class="forget">
+               <p>Forgot Your Password? <a href="#">Reset Here</a></p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="main-bottom">
+      <p>
+        Already Have An Account?
+        <a (click)="onRegistrationNavigate()">Login Here</a>
+      </p>
+    </div>
+
+    <div class="ntt">
+      <p>Copyright © <a href="#">samoleather.com</a></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="main-content">
+        <div class="submain-content">
+            
+            <div class="header">
+                <div class="title">Create Your Biodata</div>
+                <div class="subtitle">Al Aaribah is completely free to create biodata</div>
+            </div><!-- END of header section -->
+            
+            <div class="middle">
+
+                <div class="card card-1"
+                *ngFor="let item of dashboard"
+                >
+                    <div class="score">{{item.score}}</div>
+                    <div class="title">{{item.title}}</div>
+                    <div class="subtitle">{{item.subtitle}}</div>
+                    <a href="#" class="see-more">{{item.see_more}}</a>
+                    <div class="status" *ngIf="item.month">
+
+                        <div class="item">
+                            <div class="see-more">Last 30 Days</div>
+                            <div class="see-more">0</div>
+                        </div>
+
+                        <div class="item">
+                            <div class="see-more">Last 7 Days</div>
+                            <div class="see-more">0</div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="see-more">Today</div>
+                            <div class="see-more">0</div>
+                        </div>
+                    </div>
+                    
+                </div><!-- END of card-1 -->
+    
+            </div><!-- END of Middel Section -->
+            
+            <div class="bottom">
+                <div class="card card-1">
+                    <div class="left">
+                        <img src="../../../../../assets/images/static/sidebar/shortlist.svg" alt="">
+                    </div>
+    
+                    <div class="right">
+                        <h3 class="title">{{dashboard[0].title}}Short List</h3>
+                        <p class="subtitle">All you short listed biodatas</p>
+                    </div>
+    
+                </div><!-- END of card-1 -->
+    
+                <div class="card card-2">
+                    <div class="left">
+                        <img src="../../../../../assets/images/static/sidebar/ignorelist.svg" alt="">
+                    </div>
+    
+                    <div class="right">
+                        <h3 class="title">Ignore List</h3>
+                        <p class="subtitle">All you ignore listed biodatas</p>
+                    </div>
+                </div><!-- END of card-2 -->
+    
+                <div class="card card-3">
+                    <div class="left">
+                        <img src="../../../../../assets/images/static/sidebar/mypurchased.svg" alt="">
+                    </div>
+    
+                    <div class="right">
+                        <h3 class="title">My Purchased</h3>
+                        <p class="subtitle">All Your purchased history</p>
+                    </div>
+                </div><!-- END of card-3 -->
+
+            </div><!-- END of Bottoom section -->
+        </div>
+
+
+<br><br>
+
+    </div>
+</div>

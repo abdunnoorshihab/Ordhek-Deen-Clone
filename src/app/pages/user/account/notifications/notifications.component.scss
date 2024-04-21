@@ -1,0 +1,93 @@
+@import "src/theme/variables";
+
+
+section {
+
+    .notifications {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .notifications-heading {
+            .title {
+                font-size: 22px;
+                text-align: center;
+                padding-bottom: 25px;
+                font-family: $font-en-primary;
+                background: -webkit-linear-gradient(rgba(223, 192, 80, 1),
+                        rgba(0, 163, 155, 1));
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+        }
+
+        .no-notification {
+            p {
+                font-family: $font-en-primary;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 23px;
+                text-align: center;
+                color: #666666;
+            }
+        }
+
+        .notifications-content {
+            .notification-box {
+                min-width: 800px;
+                max-width: 1290px;
+                width: 100%;
+                height: 50px;
+                margin: 10px 0;
+                padding: 5px;
+                border-radius: 10px;
+                border: 1px solid #666666;
+            }
+        }
+    }
+}
+
+
+// responsiveness
+@media (max-width:900px) {
+    .notifications {
+        .notifications-container {
+            .notifications-content {
+                .notification-box {
+                    min-width: 650px;
+                    max-width: 800px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    .notifications {
+        .notifications-container {
+            .notifications-content {
+                .notification-box {
+                    min-width: 450px;
+                    max-width: 600px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .notifications {
+        .notifications-container {
+            .notifications-content {
+                .notification-box {
+                    min-width: 325px;
+                    max-width: 400px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

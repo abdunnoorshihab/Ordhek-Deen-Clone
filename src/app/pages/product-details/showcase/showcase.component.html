@@ -1,0 +1,39 @@
+<div class="section-2">
+  <div class="container">
+    <div class="filter-area">
+      <ul>
+        <li>
+          <button
+            [class]="step == 1 ? 'active-filter-btn' : 'in'"
+            (click)="onStepChange(1)"
+          >
+            DESCRIPTIONS
+          </button>
+        </li>
+        <li>
+          <button
+            [class]="step == 3 ? 'active-filter-btn' : 'in'"
+            (click)="onStepChange(3)"
+          >
+            REVIEWS (5)
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section5-main">
+
+      <div class="descripiton-area" *ngIf="step == 1">
+        <app-description></app-description>
+      </div>
+
+
+      <div class="review-area" *ngIf="step == 3">
+        <app-user-review></app-user-review>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

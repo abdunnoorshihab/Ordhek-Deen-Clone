@@ -1,0 +1,147 @@
+<div class="container-fluid">
+  <div class="side-bar" id="main-sidebar-container-area">
+    <div class="profile-view">
+      <div class="img-thumb">
+        <img [src]="imgPlaceHolder" [alt]="'Picked Image'" />
+
+        <div class="edit-profile-img">
+          <button mat-icon-button (click)="profileImagePicker.click()">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+        <input
+          [hidden]="true"
+          #profileImagePicker
+          type="file"
+          (change)="fileChangeEvent($event)"
+          accept="image/*"
+        />
+      </div>
+      <!--End PROFILE PICTURE-->
+
+      <div class="intro">
+        <div class="row">
+          <p class="name">MD HANNAN</p>
+          <p class="status">Biodata Status</p>
+          <div class="btn-grad-1">
+            <p>Created</p>
+          </div>
+
+          <div class="primary-button">
+            <button>My Biodata</button>
+          </div>
+        </div>
+      </div>
+      <!--End PROFILE INTRO-->
+    </div>
+    <!--  END PROFILE VIEW -->
+
+    <!--SIDEBAR START-->
+    <div class="nav-link">
+      <ul>
+        <li
+          (click)="onLinkChange()"
+          [routerLink]="['dashboard']"
+          routerLinkActive="active-list"
+        >
+          <img
+            src="../../../../assets/images/static/sidebar/dashboard.svg"
+            alt=""
+          />
+          <span> Dashboard</span>
+        </li>
+        <!--Dashboard Menu-->
+
+        <li
+          (click)="onLinkChange()"
+          [routerLink]="['general-info']"
+          routerLinkActive="active-list"
+        >
+          <img
+            src="../../../../assets/images/static/sidebar/editbiodata.svg"
+            alt=""
+          />
+          <span> Edit Biodata</span>
+        </li>
+        <!--Edit Biodata Menu-->
+
+        <li
+          (click)="onLinkChange()"
+          [routerLink]="['short-list']"
+          routerLinkActive="active-list"
+        >
+          <img
+            src="../../../../assets/images/static/sidebar/shortlist.svg"
+            alt=""
+          />
+          <span> Short List</span>
+        </li>
+        <!--Short List Menu-->
+
+        <li
+          (click)="onLinkChange()"
+          [routerLink]="['ignore-list']"
+          routerLinkActive="active-list"
+        >
+          <img
+            src="../../../../assets/images/static/sidebar/ignorelist.svg"
+            alt=""
+          />
+          <span> Ignore List</span>
+        </li>
+        <!--Ignore List Menu-->
+
+        <li
+          (click)="onLinkChange()"
+          [routerLink]="['my-purchased']"
+          routerLinkActive="active-list"
+        >
+          <img
+            src="../../../../assets/images/static/sidebar/mypurchased.svg"
+            alt=""
+          />
+          <span>My Purchased</span>
+        </li>
+        <!--My Purchase Menu-->
+
+        <li
+          (click)="onLinkChange()"
+          [routerLink]="['report']"
+          routerLinkActive="active-list"
+        >
+          <img
+            src="../../../../assets/images/static/sidebar/support&report.svg"
+            alt=""
+          />
+          <span>Support & Report</span>
+        </li>
+        <!--Support & Report Menu-->
+
+        <li
+          (click)="onLinkChange()"
+          [routerLink]="['accountSetting']"
+          routerLinkActive="active-list"
+        >
+          <img
+            src="../../../../assets/images/static/sidebar/setting.svg"
+            alt=""
+          />
+          <span>Setting</span>
+        </li>
+        <!--Setting Menu-->
+
+        <li (click)="onLogout()">
+          <img
+            src="../../../../assets/images/static/sidebar/logout.svg"
+            alt=""
+          />
+          <span>Logout</span>
+        </li>
+      </ul>
+    </div>
+    <!--Sidebar End-->
+  </div>
+  <div class="content-view">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div>
+  <p class="title">Contact us</p>
+</div>
+<div class="details">
+  <p>
+    For any query you may have, please fill out the form below and send it to
+    us.
+  </p>
+  <p class="details-line">We will contact you soon InShaAllah.</p>
+</div>
+
+
+<form class="form" #formElement="ngForm" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+
+
+  <div class="input-field">
+
+    <p class="label">Name</p>
+    <div class="input">
+      <input class="input-box" matInput type="text" formControlName="name" placeholder="your name here.." required />
+    </div>
+
+    <p class="label">Email</p>
+    <div class="input">
+      <input class="input-box" matInput type="email" formControlName="email" placeholder="your E-mail address here.."
+        required />
+    </div>
+    <p class="label">Subject</p>
+    <div class="input">
+      <input class="input-box" matInput type="text" formControlName="subject" placeholder="write your subject.."
+        required />
+    </div>
+
+    <p class="label">Description</p>
+    <div>
+      <textarea class="textarea" formControlName="description" name="description" id="" cols="10" rows="10"
+        placeholder="write description.."></textarea>
+    </div>
+
+
+
+    <div class="submit-btn">
+
+      <button class="btn" type="submit">Send</button>
+    </div>
+  </div>
+</form>
+

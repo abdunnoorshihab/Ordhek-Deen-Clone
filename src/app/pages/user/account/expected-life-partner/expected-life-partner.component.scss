@@ -1,0 +1,170 @@
+@import "src/theme/variables";
+@import "src/theme/exports/primary-btn";
+
+
+section {
+    padding-bottom: 40px;
+
+    .expected-life-partner {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        padding: 0 10px;
+
+        .life-partner-form {
+            background: $color-primary2;
+            min-width: 150px;
+            max-width: 650px;
+            width: 100%;
+            padding: 30px 60px;
+            border-radius: 8px;
+
+            h1 {
+                font-size: 22px;
+                text-align: center;
+                padding-bottom: 25px;
+                font-family: $font-en-primary;
+                background: -webkit-linear-gradient(rgba(223, 192, 80, 1),
+                        rgba(0, 163, 155, 1));
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+
+            .form-field {
+                margin-top: 5px;
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 16px;
+                    padding-bottom: 4px;
+
+                    span {
+                        color: $color-primary;
+                    }
+                }
+
+                .age-input {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    input {
+                        width: 45px;
+                        height: 35px;
+                        padding-left: 13px;
+                        border-radius: 5px;
+                    }
+
+                    input:focus {
+                        border: 2px solid green;
+                        outline: none;
+                    }
+
+                    span {
+                        color: #666666;
+                        font-family: $font-en-secondery;
+                    }
+                }
+
+                mat-form-field {
+                    width: 100%;
+
+                    input {
+                        background-color: $color-white;
+                    }
+
+                    input::placeholder {
+                        font-size: 10px;
+                    }
+
+                    mat-hint {
+                        font-size: 13px;
+                    }
+
+                }
+            }
+
+            .btn-area {
+                margin: 40px 0;
+                display: flex;
+                justify-content: space-between;
+                gap: 50px;
+
+                .pre-btn {
+                    width: 100%;
+                    border-radius: 17px;
+                    border: rgba(102, 102, 102, 1);
+                    background: $color-white;
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                    color: #666666;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+
+                    i {
+                        font-size: 16px;
+                    }
+                }
+
+                .primary-button {
+                    width: 100%;
+
+                    .next-btn {
+                        width: 100%;
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+::ng-deep .mat-mdc-form-field-infix {
+    min-height: 20px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+    background: $color-white;
+}
+
+
+// ResponsiveNess 
+@media (max-width:668px) {
+    section {
+        .expected-life-partner {
+            .life-partner-form {
+                padding: 30px 30px;
+            }
+        }
+    }
+
+
+    .mat-hint-responsive {
+        margin-bottom: 30px;
+    }
+
+    .mat-hint-responsive2 {
+        margin-bottom: 50px;
+    }
+
+
+}

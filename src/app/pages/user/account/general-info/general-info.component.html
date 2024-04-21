@@ -1,0 +1,126 @@
+<section>
+  <section>
+    <div class="main-div">
+      <div class="sub-div">
+        <form
+          class="edu-form"
+          [formGroup]="generalInfoForm"
+          (ngSubmit)="generalInfoSubmit()"
+        >
+          <h1>General Info</h1>
+          <div class="check-field">
+            <label for="gender">Gender<span>*</span></label>
+            <mat-radio-group formControlName="gender">
+              <mat-radio-button value="male">Male</mat-radio-button>
+              <mat-radio-button value="female">Female</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div class="form-field">
+            <label for="birthYear">Birth Year<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <input
+                formControlName="birthYear"
+                id="birthYear"
+                matInput
+                [matDatepicker]="picker"
+                placeholder="DD/MM/YY"
+              />
+              <mat-hint
+                >Please provide your real birth date. If there is a fabricated
+                birth date in NID or Birth Registration, do not approve
+                it</mat-hint
+              >
+              <mat-datepicker-toggle
+                matIconSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker startView="year"></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="form-field marital">
+            <label for="maritalStat">Marital Status<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <mat-select
+                formControlName="maritalStat"
+                id="maritalStat"
+                placeholder="-Select-"
+              >
+                <mat-option value="Single">Single</mat-option>
+                <mat-option value="Married">Married</mat-option>
+                <mat-option value="Widowed">Widowed</mat-option>
+                <mat-option value="Divorced">Divorced</mat-option>
+                <mat-option value="Separated">Separated</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <label for="height">Height<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <input
+                formControlName="height"
+                id="height"
+                matInput
+                placeholder="5'5"
+              />
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <label for="complexion">Complexion<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <mat-select
+                formControlName="complexion"
+                id="complexion"
+                placeholder="-Select-"
+              >
+                <mat-option value="Black">Black</mat-option>
+                <mat-option value="Brown">Brown</mat-option>
+                <mat-option value="Light Brown">Light Brown</mat-option>
+                <mat-option value="Fair">Fair</mat-option>
+                <mat-option value="Very Fair">Brown</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <label for="height">Weight<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <input
+                formControlName="weight"
+                id="weight"
+                matInput
+                placeholder="54kg"
+              />
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <label for="bloodGroup">Blood Group<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <input
+                formControlName="bloodGroup"
+                id="bloodGroup"
+                matInput
+                placeholder="A+"
+              />
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <label for="nationality">Nationality<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <input
+                formControlName="nationality"
+                id="nationality"
+                matInput
+                placeholder="Bangladeshi"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="btn-area">
+            <a class="primary-button">
+              <button>Next <i class="fa-solid fa-arrow-right"></i></button>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>

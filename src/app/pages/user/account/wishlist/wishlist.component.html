@@ -1,0 +1,84 @@
+<div class="header">
+  <h2>Wish List</h2>
+</div>
+
+<hr class="center-square" />
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr class="table-head">
+        <th scope="col">{{ "Image" }}</th>
+        <th scope="col">{{ "Product name" }}</th>
+        <th scope="col">{{ "Brand" }}</th>
+        <th scope="col">{{ "Price" }}</th>
+        <th scope="col">{{ "Availability" }}</th>
+        <th scope="col">{{ "Actions" }}</th>
+      </tr>
+    </thead>
+    <!-- End Table Head -->
+    <tr
+      *ngFor="
+        let data of wishLists
+          | paginate
+            : {
+                itemsPerPage: productsPerPage,
+                currentPage: currentPage,
+                totalItems: wishLists.length
+              };
+        let i = index
+      "
+    >
+      <td [attr.data-label]="'Image'">
+        <img
+          class="img"
+          [src]="
+            data?.product?.images[0]
+              ? data?.product?.images[0]
+              : '/assets/images/png/book-placeholder-sm.jpg'
+          "
+          alt="Cover"
+        />
+      </td>
+      <td [attr.data-label]="'Product Name'">{{ data?.product?.name }}</td>
+      <td [attr.data-label]="'Brand'">
+        {{ data?.product?.brand?.name | slugToNormal }}
+      </td>
+      <td [attr.data-label]="'Price'">
+        {{currency.bdt}} {{ data?.product?.salePrice | number : "" : "bn" }}
+      </td>
+      <td [attr.data-label]="'Availability'">Yes</td>
+      <td [attr.data-label]="'Actions'">
+        <button
+          mat-mini-fab
+          color="primary"
+          matTooltip="View"
+          [routerLink]="['/products/details', data?.product?.slug]"
+        >
+          <mat-icon>remove_red_eye</mat-icon>
+        </button>
+
+        <button class="table-btn1"
+          mat-mini-fab
+          color="warn"
+          matTooltip="View"
+          (click)="removeWishlistById(data?.product?._id)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+    <!-- End Table Body -->
+  </table>
+</div>
+
+<div class="pagination-container">
+  <pagination-controls
+    (pageChange)="onPageChange($event)"
+    class="product-pagination"
+    [autoHide]="true"
+    [maxSize]="15"
+  >
+  </pagination-controls>
+</div>
+<!-- END PAGINATION -->

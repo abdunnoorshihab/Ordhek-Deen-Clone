@@ -1,0 +1,61 @@
+@mixin btnPrimary($color-white,$height,$bg-color,$padding,$btnRadius,$fontSize){
+    color: $color-white;
+    font-family: $font-en-secondery;
+    font-style: normal;
+    font-weight:700;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: $height;
+    background-color: $bg-color;
+    text-transform:uppercase;
+    outline: none;
+    border: none;
+    padding: $padding;
+    border-radius: $btnRadius;
+    font-size: $fontSize;
+    letter-spacing: 0.5px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    i{
+        font-size: 17px;
+    }
+}
+@mixin btnPrimaryHover($bg-color:#00A0DB,$color:#fff){
+    color: $color!important;
+    background-color: $bg-color;
+
+}
+@mixin backArrow(){
+    border: 1px solid $color-border;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: $color-primary;
+    font-size: 17px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; 
+
+    &:hover{
+        color: $color-white;
+        background-color: $color-primary;
+    }
+}

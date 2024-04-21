@@ -1,0 +1,85 @@
+<div
+  *ngIf="data"
+  class="product"
+  [routerLink]="['/products/details', data?.slug]"
+>
+  <!----future-card-img-->
+  <div class="product-image">
+    <img
+      checkImageDefault
+      [src]="data?.images && data.images.length ? data.images[0] : ''"
+      alt=""
+    />
+    <div class="icons">
+      <ul>
+        <li *ngIf="data?.videoUrl">
+          <a (click)="openYoutubeVideoDialog($event, data?.videoUrl)"
+          ><i class="fa fa-play"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <!--tag-->
+    <div class="tag">
+      <span>Feature</span>
+    </div>
+    <!---wish-->
+    <span
+      matTooltip="Wishlist"
+      (click)="onAddToWishList($event)"
+      [class.active-wish-list]="wishlist"
+      class="wish"
+    ><i class="fa fa-heart"></i
+    ></span>
+  </div>
+  <div class="product-body">
+    <a
+      [routerLink]="['/products/details', data?.slug]"
+      routerLinkActive="router-link-active"
+    >{{ data?.name }}</a
+    >
+    <div class="rating-area">
+      <ul>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><span>(3 Reviews)</span></li>
+      </ul>
+    </div>
+    <div class="product-price">
+      <span
+        *ngIf="data?.discountAmount && data?.discountAmount > 0"
+        class="prevPrice"
+      >{{currency.bdt}}{{ data.salePrice }}</span
+      >
+      <span class="currPrice"
+      >{{currency.bdt}}{{ data | price : "salePrice" | number : "" : "bn" }}
+        <small *ngIf="data?.unit">/ {{ data?.unit }}</small>
+      </span>
+    </div>
+
+    <!--product-desc-->
+    <div class="product-desc">
+      <p>Category - {{ data?.category?.name }}</p>
+    </div>
+
+    <button *ngIf="!cart" (click)="onAddToCart($event)" class="product-button">
+      <i class="fa-solid fa-basket-shopping"></i> Add
+    </button>
+    <!-- END MAIN CART BTN -->
+
+    <div class="cart-action" *ngIf="cart">
+      <button class="left" (click)="onDecrementQty($event)">
+        <span class="material-icons">remove</span>
+      </button>
+      <p>{{ cart?.selectedQty }}</p>
+      <button class="right" (click)="onIncrementQty($event)">
+        <span class="material-icons">add</span>
+      </button>
+    </div>
+    <!-- END CART CONTROL AREA -->
+  </div>
+</div>
+<!---end-->

@@ -1,0 +1,103 @@
+<!---section-4-->
+<div class="section-4">
+  <div class="container">
+    <div class="title-area">
+      <h1>Our Featured Items</h1>
+    </div>
+    <div class="section4-main-main sec4-margin">
+      <div
+        class="section4-main-img"
+        [routerLink]="['/products']"
+        [queryParams]="{ categories: 'gents-collections' }"
+      >
+        <img src="./assets/images/Gents Collection.webp" alt="" />
+      </div>
+      <div class="section4-main section4-main4-child carousel">
+        <swiper
+          [slidesPerView]="1"
+          [spaceBetween]="16"
+          [autoplay]="true"
+          [navigation]="true"
+          [breakpoints]="{
+            '0': {
+              slidesPerView: 2,
+              spaceBetween: 14
+            },
+            '768': {
+              slidesPerView: 3
+            },
+            '1000': {
+              slidesPerView: 3
+            },
+            '1200': {
+              slidesPerView: 4
+            }
+          }"
+          class="mySwiper"
+        >
+          <ng-template
+            swiperSlide
+            *ngFor="let product of featureProductsOne"
+          >
+            <ng-container *ngIf="isLoadingFeaturedProducts">
+              <app-product-car-one-loader
+                [type]="'grid'"
+              ></app-product-car-one-loader>
+            </ng-container>
+            <ng-container *ngIf="!isLoadingFeaturedProducts">
+              <app-product-card-one [data]="product"></app-product-card-one>
+            </ng-container>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+
+    <div class="section4-main-main">
+      <div
+        class="section4-main-img"
+        [routerLink]="['/products']"
+        [queryParams]="{ categories: 'ladies-collections' }"
+      >
+        <img src="./assets/images/Ladies Collection.webp" alt="" />
+      </div>
+      <div class="section4-main section4-main4-child carousel">
+        <swiper
+          [slidesPerView]="1"
+          [spaceBetween]="16"
+          [autoplay]="true"
+          [navigation]="true"
+          [breakpoints]="{
+            '0': {
+              slidesPerView: 2,
+              spaceBetween: 14
+            },
+            '768': {
+              slidesPerView: 3
+            },
+            '1000': {
+              slidesPerView: 3
+            },
+            '1200': {
+              slidesPerView: 4
+            }
+          }"
+          class="mySwiper"
+        >
+          <ng-template
+            swiperSlide
+            *ngFor="let product of featureProductsTwo"
+          >
+            <ng-container *ngIf="isLoadingFeaturedProducts">
+              <app-product-car-one-loader
+                [type]="'grid'"
+              ></app-product-car-one-loader>
+            </ng-container>
+            <ng-container *ngIf="!isLoadingFeaturedProducts">
+              <app-product-card-one [data]="product"></app-product-card-one>
+            </ng-container>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</div>

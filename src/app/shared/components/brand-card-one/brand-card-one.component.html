@@ -1,0 +1,12 @@
+<div class="brand-card" [id]="data?._id"
+     [routerLink]="['/products']" [queryParams]="{brand: data?.slug}">
+  <div class="brand-image">
+    <img checkImageDefault [src]="data?.image" [alt]="data?.name">
+    <div class="link">
+      <a><i class="fa fa-link"></i></a>
+    </div>
+  </div>
+  <div class="brand-body">
+    <h4>{{data?.name}}</h4>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+<section>
+  <div class="expected-life-partner">
+    <form
+      [formGroup]="expectedPartnerForm"
+      (ngSubmit)="expectedPartnerSubmit()"
+      class="life-partner-form"
+    >
+      <h1>Expected Life Partner</h1>
+
+      <div class="form-field">
+        <label>Age<span>*</span></label>
+        <div class="age-input">
+          <input formControlName="lowerAge" matInput placeholder="18" />
+          <span>To</span>
+          <input formControlName="upperAge" matInput placeholder="60" />
+        </div>
+      </div>
+
+      <div class="form-field mat-hint-responsive">
+        <label>Complexion<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input formControlName="complexion" matInput />
+          <mat-hint>You may select multiple items as well as write.</mat-hint>
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <label>Height<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input formControlName="height" matInput />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <label>Education Qualification<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input formControlName="qualification" matInput />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <label>District<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input formControlName="district" matInput />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <label>Marital Status<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input formControlName="maritalStatus" matInput />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <label>Profession<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input formControlName="profession" matInput />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <label>Financial condition<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input formControlName="financialCondition" matInput />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field">
+        <label
+          >Expected qualities or attributes of your life partner<span
+            >*</span
+          ></label
+        >
+        <mat-form-field appearance="outline">
+          <input formControlName="expectedQualities" matInput />
+        </mat-form-field>
+      </div>
+
+      <div class="form-field mat-hint-responsive2">
+        <label>Family financial status<span>*</span></label>
+        <mat-form-field appearance="outline">
+          <input formControlName="familyFinance" matInput />
+          <mat-hint
+            >You may write your expectations in detail. Also, you may mention if
+            there is any special condition</mat-hint
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="btn-area">
+        <button
+          class="pre-btn"
+          [routerLink]="['/account/marriage-related-info']"
+        >
+          <i class="fa-solid fa-arrow-left"></i>Previous
+        </button>
+        <a href="" class="primary-button">
+          <button class="next-btn">
+            Next<i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </a>
+      </div>
+    </form>
+  </div>
+</section>

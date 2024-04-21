@@ -1,0 +1,12 @@
+<div
+  class="category-card"
+  [id]="data?._id"
+  [routerLink]="['/products']"
+  [queryParams]="{ categories: data?.slug }"
+>
+  <div class="category-image">
+    <img checkImageDefault [src]="data?.image" alt="" />
+
+  </div>
+  <div class="category-body"></div>
+</div>

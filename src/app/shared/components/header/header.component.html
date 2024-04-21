@@ -1,0 +1,111 @@
+<main>
+  <header
+    (click)="onClickHeader()"
+    appOutSideClick
+    (outsideClick)="handleOutsideClick()"
+  >
+    <div
+      class="header-midle"
+      [ngClass]="{ 'header-fixed': headerFixed == true }"
+    >
+      <div class="container">
+        <div class="header-midle-main">
+          <div class="header-logo">
+            <a routerLink="/">
+              <!-- <img
+                src="/assets/images/brand/logo/SoftCommerceLogo500.webp"
+                alt=""
+              /> -->
+              Company Logo
+            </a>
+          </div>
+          <!-- END! Logo Area -->
+
+          <div class="header-bottom">
+            <div class="container">
+              <div class="header-bottom-main">
+                <!---header-menu-->
+                <div class="header-menu">
+                  <ul>
+                    <li><a routerLink="/">Home </a></li>
+                    <li><a routerLink="/products">About Us</a></li>
+                    <li><a routerLink="/brands">Guide</a></li>
+                    <li><a routerLink="/brands">FAQ</a></li>
+                    <li><a routerLink="/contact">Contact</a></li>
+                  </ul>
+                </div>
+                <!--END Header Menu-->
+              </div>
+            </div>
+          </div>
+          <!--END Header Menu-->
+
+          <div class="header-midle-right">
+            <div class="icon-menu">
+              <ul>
+                <li routerLink="/">
+                  <a matTooltip="notification">
+                    <i
+                      class="fa-regular fa-bell fa-lg"
+                      style="color: #ffffff"
+                    ></i>
+                  </a>
+                </li>
+
+                <li routerLink="/login">
+                  <a matTooltip="Login or Signup">
+                    <i
+                      class="far fa-user-circle fa-lg"
+                      style="color: #ffffff"
+                    ></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END! Icon Menu Area -->
+        </div>
+        <!-- END! Header Main -->
+      </div>
+    </div>
+
+    <!-- END! Haeder Menu Navbar -->
+  </header>
+  <!-- END Main Header -->
+
+  <div class="bottom-nav">
+    <ul>
+      <li>
+        <div class="category" (click)="showCategory()">
+          <h3><i class="fa fa-list"></i></h3>
+        </div>
+      </li>
+      <!-- END CATEGORY -->
+
+      <li class="logo">
+        <a routerLink="/">
+          <h3>Company Logo</h3>
+        </a>
+      </li>
+      <!-- END CATEGORY -->
+
+      <div style="display: flex;">
+        <li class="" routerLink="/">
+          <a matTooltip="notification">
+            <i class="fa-regular fa-bell fa-lg" style="color: #ffffff"></i>
+          </a>
+        </li>
+        <li routerLink="/login">
+          <a matTooltip="Login or Signup">
+            <i class="far fa-user-circle fa-lg" style="color: #ffffff"></i>
+          </a>
+        </li>
+      </div>
+    </ul>
+  </div>
+
+  <!-- END Mobile Bottom Nav -->
+
+  <app-category-slide #categorySlide></app-category-slide>
+  <!-- END Cart Slide Component -->
+</main>

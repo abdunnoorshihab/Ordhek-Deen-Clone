@@ -1,0 +1,79 @@
+
+    <div class="container">
+      <div class="main-div">
+        <div class="submain-div">
+
+          <div class="form-container">
+           
+            <form
+              class="edu-form"
+              [formGroup]="filterForm"
+              (ngSubmit)="filterSubmit()"
+            >
+            
+              <div class="filter">
+                <div class="filterOpiton">
+                  <label for="maritalStat">I am Looking for</label>
+
+                  <mat-form-field appearance="outline">
+                    <mat-select
+                      formControlName="gender"
+                      id="gender"
+                      placeholder="-All-"
+                    >
+                      <mat-option value="all">All</mat-option>
+                      <mat-option value="groom">Groom Biodata</mat-option>
+                      <mat-option value="biodata">Bride Biodata</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+  
+                <div class="filterOpiton">
+                  <label for="maritalStatus">Marital Status</label>
+                  <mat-form-field appearance="outline">
+                    <mat-select
+                      formControlName="status"
+                      id="maritalStatus"
+                      placeholder="-Select-"
+                    >
+                      <mat-option value="All">All</mat-option>
+                      <mat-option value="Single">Single</mat-option>
+                      <mat-option value="Married">Married</mat-option>
+                      <mat-option value="Widowed">Widowed</mat-option>
+                      <mat-option value="Divorced">Divorced</mat-option>
+                      <mat-option value="Separated">Separated</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+  
+                <div class="filterOpiton">
+                  <label for="address">Permanent Address</label>
+                  <mat-form-field appearance="outline">
+                    <mat-select
+                      formControlName="address"
+                      id="address"
+                      placeholder="-Select-"
+                    >
+                      <mat-option value="All">All</mat-option>
+                      <mat-option value="Dhaka">Dhaka</mat-option>
+                      <mat-option value="Chittagong">Chittagong</mat-option>
+                      <mat-option value="Khulna">Khulna</mat-option>
+                      <mat-option value="Rajshahi">Rajshahi </mat-option>
+                      <mat-option value="Sylhet">Sylhet </mat-option>
+                      <mat-option value="Rangpur">Rangpur </mat-option>
+                      <mat-option value="Mymensingh">Mymensingh</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+  
+              <div class="primary-button">
+                <button>Search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--END FILTER AREA-->
+  

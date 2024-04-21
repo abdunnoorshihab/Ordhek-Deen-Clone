@@ -1,0 +1,184 @@
+<!---review-area-->
+<div class="review-main-div">
+  <div class="review-area">
+    <div class="review-main-area">
+      <div class="add-review-area" *ngIf="false">
+        <app-rating-and-review></app-rating-and-review>
+        <div class="line"></div>
+      </div>
+
+      <div class="review-main-cus">
+        <h1>Customer Review (5)</h1>
+        <div class="review-main-cus-child">
+          <h2>{{ ratingCalculation ? ratingCalculation.toFixed(1) : '0.0' }}</h2>
+          <div class="review-main-cus-rat user-review-rating">
+            <ul *ngIf="ratingCalculation">
+              <li><i
+                [class]="(ratingCalculation == 0) ? 'far fa-star' : (ratingCalculation > 0 && ratingCalculation < 1) ? 'fas fa-star-half-alt' : 'fas fa-star'"></i>
+              </li>
+              <li><i
+                [class]="(ratingCalculation > 1 && ratingCalculation < 2) ? 'fas fa-star-half-alt' : (ratingCalculation >= 2) ? 'fas fa-star' : 'far fa-star'"></i>
+              </li>
+              <li><i
+                [class]="(ratingCalculation > 2 && ratingCalculation < 3) ? 'fas fa-star-half-alt' : (ratingCalculation >= 3) ? 'fas fa-star' : 'far fa-star'"></i>
+              </li>
+              <li><i
+                [class]="(ratingCalculation > 3 && ratingCalculation < 4) ? 'fas fa-star-half-alt' : (ratingCalculation >= 4) ? 'fas fa-star' : 'far fa-star'"></i>
+              </li>
+              <li><i
+                [class]="(ratingCalculation > 4 && ratingCalculation < 5) ? 'fas fa-star-half-alt' : (ratingCalculation >= 5) ? 'fas fa-star' : 'far fa-star'"></i>
+              </li>
+            </ul>
+          </div>
+          <p>based on 5 reviews</p>
+        </div>
+        <div class="rating-line-bars">
+          <!-- start -->
+          <div class="rating-line-bar">
+            <p>Excellent</p>
+            <div class="first-bar">
+              <div class="first-bar-child" [style.width]="'50%'"></div>
+            </div>
+          </div>
+          <!-- end -->
+
+          <!-- start -->
+          <div class="rating-line-bar">
+            <p>Good</p>
+            <div class="first-bar">
+              <div
+                class="first-bar-child"
+                bind-style.width="'40%'"
+              ></div>
+            </div>
+          </div>
+          <!-- end -->
+
+          <!-- start -->
+          <div class="rating-line-bar">
+            <p>Average</p>
+            <div class="first-bar">
+              <div
+                class="first-bar-child"
+                bind-style.width="'30%'"
+              ></div>
+            </div>
+          </div>
+          <!-- end -->
+
+          <!-- start -->
+          <div class="rating-line-bar">
+            <p>Below Average</p>
+            <div class="first-bar">
+              <div
+                class="first-bar-child"
+                bind-style.width="'0%'"
+              ></div>
+            </div>
+          </div>
+          <!-- end -->
+
+          <!-- start -->
+          <div class="rating-line-bar">
+            <p>Poor</p>
+            <div class="first-bar">
+              <div
+                class="first-bar-child"
+                bind-style.width="'0%'"
+              ></div>
+            </div>
+          </div>
+          <!-- end -->
+        </div>
+      </div>
+      <div class="review-btn">
+        <button (click)="openReviewDialog()">Write a Review</button>
+      </div>
+      <!---user-review-->
+      <ng-container>
+        <div class="user-review">
+          <!---user-data-->
+          <div class="main-review">
+            <div class="user-data">
+              <div class="user-img user-img-rev">
+                <img src="/assets/images/avatar/alexander-timper.webp"
+                     alt=""
+                />
+              </div>
+              <div class="user-name">
+                <a
+                >
+                  SoftlabIT
+                  <small
+                  ><i class="fa fa-star"></i>Verified Purchase</small
+                  >
+                </a>
+                <div class="user-review-rating">
+                  <ul *ngIf="rating">
+                    <li><i
+                      [class]="(rating == 0) ? 'far fa-star' : (rating > 0 && rating < 1) ? 'fas fa-star-half-alt' : 'fas fa-star'"></i>
+                    </li>
+                    <li><i
+                      [class]="(rating > 1 && rating < 2) ? 'fas fa-star-half-alt' : (rating >= 2) ? 'fas fa-star' : 'far fa-star'"></i>
+                    </li>
+                    <li><i
+                      [class]="(rating > 2 && rating < 3) ? 'fas fa-star-half-alt' : (rating >= 3) ? 'fas fa-star' : 'far fa-star'"></i>
+                    </li>
+                    <li><i
+                      [class]="(rating > 3 && rating < 4) ? 'fas fa-star-half-alt' : (rating >= 4) ? 'fas fa-star' : 'far fa-star'"></i>
+                    </li>
+                    <li><i
+                      [class]="(rating > 4 && rating < 5) ? 'fas fa-star-half-alt' : (rating >= 5) ? 'fas fa-star' : 'far fa-star'"></i>
+                    </li>
+                  </ul>
+                  <span>5.0</span>
+                </div>
+              </div>
+            </div>
+            <div class="user-review-data">
+              <p>Good Product</p>
+              <div class="review-product-image-area">
+                <div class="review-product-img-main">
+                  <img class="" src="/assets/images/temp/products/genuine-leather-purse-for-women-lw-1031-2-7ff10.webp" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!---end-->
+          <!---replay-area-->
+          <div class="replay-review-area">
+            <!---replay-review-->
+            <div class="replay-review">
+              <div class="user-data">
+                <div class="user-img">
+                  <img
+                    src="/assets/images/avatar/alexander-timper.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="user-name">
+                  <a href="javascript:">Soft Commerce</a>
+                  <span>Jul 5,2023</span>
+                </div>
+              </div>
+              <!--user-review-rating-->
+              <div class="user-review-data">
+                <p>Good Product</p>
+              </div>
+            </div>
+            <!--end-->
+          </div>
+        </div>
+      </ng-container>
+      <!---end-user-reivew-->
+    </div>
+    <!---main-end-->
+
+    <!--view-btn-->
+    <div class="view-btn show-more-review">
+      <a href="javascript:">View More Reviews</a>
+    </div>
+  </div>
+</div>
+
+<!---end-->

@@ -1,0 +1,219 @@
+@import "src/theme/variables";
+@import "src/theme/exports/primary-btn";
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    display: block;
+    margin: 0 auto;
+    // border: 2px solid red;
+    text-align: center;
+    margin: 40px;
+    background: -webkit-linear-gradient(
+      rgba(223, 192, 80, 1),
+      rgba(0, 163, 155, 1)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 30px;
+  }
+
+  .sub-div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 90%;
+
+    .subtitle {
+      display: block;
+      margin: 20px;
+      h2 {
+        color: rgba(0, 163, 155, 1);
+        font-size: 27px;
+      }
+    }
+
+    .card {
+      border-radius: 30px;
+      background-image: $color-primary2;
+      box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 40px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .summery {
+        color: #131313;
+        // border: 2px solid red;
+        ul {
+          li {
+            margin: 20px;
+          }
+        }
+      }
+    }
+
+    .card-1 {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      img {
+        height: 173px;
+        width: 173px;
+        border-radius: 250px;
+      }
+    }
+
+    .row-3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .main-div {
+        display:flex;
+        flex-direction: column;
+
+        text-align: center;
+
+        ul {
+          text-align: left;
+          li {
+            color: #666666;
+            margin: 15px;
+          }
+        }
+        .primary-button {
+          margin-top: 40px;
+          button {
+            font-size: 30px;
+            border-radius: 50px;
+          }
+          button:hover{
+            background-image: none;
+            background-color: tomato;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width:599px){
+  .main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .title {
+      display: block;
+      // margin: 0 auto;
+      // border: 2px solid red;
+      text-align: center;
+      margin: 40px;
+      background: -webkit-linear-gradient(
+        rgba(223, 192, 80, 1),
+        rgba(0, 163, 155, 1)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  
+      font-size: 16px;
+      // font-weight: 100;
+    }
+  
+    .sub-div {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 90%;
+  
+      .subtitle {
+        display: block;
+        margin: 20px;
+        h2 {
+          color: rgba(0, 163, 155, 1);
+          font-size: 20px;
+        }
+      }
+  
+      .card {
+        border-radius: 10px;
+        background-image: $color-primary2;
+        box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px;
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        .summery {
+          color: #131313;
+          // border: 2px solid red;
+          ul {
+            li {
+              margin: 20px;
+            }
+          }
+        }
+      }
+  
+      .card-1 {
+        // display: grid;
+        // grid-template-columns: 1fr 3fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        
+        img {
+          height: 120px;
+          width: 120px;
+          border-radius: 120px;
+        }
+      }
+  
+      .row-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .main-div {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+  
+          ul {
+            text-align: left;
+            li {
+              color: #666666;
+              margin: 10px;
+            }
+          }
+          .primary-button {
+            margin-top: 20px;
+            button {
+              font-size: 15px;
+              // border-radius: 50px;
+            }
+            button:hover{
+              background-image: none;
+              background-color: tomato;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  
+  }
+}
+

@@ -1,0 +1,103 @@
+@import "src/theme/variables";
+@import "src/theme/swipper";
+
+/*** section 2 ****/
+.section-2 {
+  display: block;
+  box-sizing: border-box;
+}
+
+.filter-area {
+  display: block;
+  background-color: #fff;
+  padding: 30px 25px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.filter-area ul {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-area ul li {
+  display: inline-block;
+  margin-right: 60px;
+  position: relative;
+}
+
+.filter-area ul li:last-child {
+  margin: 0;
+}
+
+.filter-area ul li::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: $color-border;
+  position: absolute;
+  right: -30px;
+  top: 0;
+}
+
+.filter-area ul li:last-child::after {
+  display: none;
+}
+
+.filter-area ul li button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  color: $heading-color;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.3s linear;
+}
+
+.filter-area ul li:hover button {
+  color: $color-primary;
+}
+
+.filter-area ul li button i {
+  font-size: 15px;
+}
+
+.filter-area ul li .active-filter-btn {
+  color: $color-primary;
+}
+
+.section2-main {
+  display: block;
+  width: 100%;
+}
+
+.descripiton-area {
+  display: block;
+  width: 100%;
+}
+
+.description-main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+  grid-template-rows: auto;
+}
+
+.d-block-100 {
+  grid-template-columns: repeat(1, 1fr) !important;
+}
+

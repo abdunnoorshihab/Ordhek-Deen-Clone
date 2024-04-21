@@ -1,0 +1,23 @@
+<section>
+    <div class="notifications">
+        <div class="notifications-container">
+            <div class="notifications-heading">
+                <h1 class="title">Notifications</h1>
+            </div>
+            <div *ngIf="data.length" class="no-notification">
+                <p>No new notifications available</p>
+            </div>
+            <div *ngIf="!data.length" class="notifications-content">
+                <div class="notification-box">
+                    <h4></h4>
+                </div>
+                <div class="notification-box">
+                    <h4></h4>
+                </div>
+                <div class="notification-box">
+                    <h4></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

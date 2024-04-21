@@ -1,0 +1,77 @@
+@import 'src/theme/variables';
+
+.banner-area {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 40px 10px;
+  // background-image: url(../../assets/images/temp/banner/single-banner.jpg);
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+}
+
+.banner-area::after {
+  content: "";
+  background: linear-gradient(to right, rgba(6, 23, 56, 0.8), rgb(0 0 0 /80%));
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  top: 0px;
+  height: 100%;
+  z-index: -10;
+}
+
+.banner-main {
+  display: block;
+  text-align: center;
+}
+
+.banner-main h1 {
+  color: #fff;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 50px;
+  display: block;
+  margin-bottom: 15px !important;
+  letter-spacing: -0.3px;
+}
+
+.banner-main ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 15px;
+}
+
+.banner-main ul li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0px;
+}
+
+.banner-main ul li a {
+  color: #f5f5f5;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  display: block;
+  transition: all 0.3s linear;
+}
+
+.banner-main ul li a:hover {
+  color: $color-primary;
+  text-decoration: underline;
+}
+
+.banner-main ul li span {
+  color: #f5f5f5;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+}

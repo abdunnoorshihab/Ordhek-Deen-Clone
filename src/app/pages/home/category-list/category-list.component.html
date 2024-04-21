@@ -1,0 +1,55 @@
+<div class="category-area">
+  <div class="banner-category">
+    <div class="banner-category-head">
+      <h3>CATEGORIES</h3>
+    </div>
+    <div class="category-menu">
+      <ul>
+        <ng-container *ngIf="isLoadingCategoryMenu">
+          <li *ngFor="let data of [1, 2, 3, 4, 5, 6, 7, 8]">
+            <app-category-menu-loader></app-category-menu-loader>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="!isLoadingCategoryMenu">
+          <li *ngFor="let data of categoryMenus | sort: 'serial'">
+            <a class="category-section" [routerLink]="['/products']"
+               [queryParams]="{ categories: data.slug }">
+              <div class="category-img">
+                <div class="category-left">
+                  <img [src]="data?.imageIcon" alt=""/>
+                  <a>{{ data?.name }} </a>
+                </div>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </a>
+            <div class="sub-category">
+              <h5>{{ data?.name }}</h5>
+              <div class="sub-category-main">
+                <div class="sub-menu">
+                  <ul>
+                    <li *ngFor="let sub of data.subCategories">
+                      <a
+                        [routerLink]="['/products']"
+                        [queryParams]="{
+                                categories: data.slug,
+                                subCategories: sub?.slug
+                              }"
+                      >{{ sub.name }}</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="all">
+            <a class="all-categories" routerLink="/categories"
+            >All Categories <i class="fa fa-angle-right"></i
+            ></a>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- END Category Area -->

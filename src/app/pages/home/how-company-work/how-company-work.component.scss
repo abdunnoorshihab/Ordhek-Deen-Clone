@@ -1,0 +1,186 @@
+@import "src/theme/variables";
+@import "src/theme/exports/primary-btn";
+
+.work-area {
+  .container {
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      margin: 80px;
+      margin-left: 15px;
+
+      .span-1 {
+        color: black;
+        font-size: 40px;
+      }
+
+      .span-2 {
+        margin: 15px;
+        background: -webkit-linear-gradient(
+          rgba(223, 192, 80, 1),
+          rgba(0, 163, 155, 1)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      font-size: 40px;
+    }
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 40px;
+
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: $color-primary2;
+        box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+
+        .card-body {
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+          //border: 2px solid red;
+          text-align: center;
+          padding: 40px;
+
+          .card-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .center-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          h2 {
+            color: #00a39b;
+            font-size: 27px;
+          }
+
+          p {
+            color: black;
+            font-size: 16px;
+          }
+
+          img {
+            height: 85px;
+            width: 160px;
+          }
+        }
+      }
+    }
+  }
+} //END HOW COMPANY WORK AREA
+
+@media (max-width:990px){
+  .work-area {
+    .container {
+      .title {
+        display: flex;
+        text-align: center;
+        margin: 40px;
+        .span-1{
+          font-size: 30px;
+        }
+        .span-2{
+          font-size: 30px;
+        }
+      }
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 25px;
+        gap: 25px;
+
+        .card {
+          background-image: $color-primary2;
+          box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+
+          .card-body {
+            display: grid;
+            grid-template-rows: 1fr;
+            //border: 2px solid red;
+            gap:20px;
+            text-align: center;
+            padding: 40px;
+
+            h2 {
+              color: #00a39b;
+            }
+
+            p {
+              color: black;
+              font-size: 16px;
+            }
+
+            img {
+              height: 70px;
+              // width: 80;
+            }
+          }
+        }
+      }
+    }
+  } //END HOW COMPANY WORK AREA
+}
+
+@media (max-width: 599px) {
+  .work-area {
+    .container {
+      .title {
+        display: flex;
+        text-align: center;
+        margin: 40px;
+        .span-1{
+          font-size: 30px;
+        }
+        .span-2{
+          font-size: 30px;
+        }
+      }
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 25px;
+        gap: 25px;
+        // width: 80%;
+        // justify-self: center;
+
+        .card {
+          background-image: $color-primary2;
+          box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+
+          .card-body {
+            display: grid;
+            grid-template-rows: 1fr;
+            //border: 2px solid red;
+            gap:20px;
+            text-align: center;
+            padding: 40px;
+
+            h2 {
+              color: #00a39b;
+            }
+
+            p {
+              color: black;
+              font-size: 16px;
+            }
+
+            img {
+              height: 70px;
+              // width: 80;
+            }
+          }
+        }
+      }
+    }
+  } //END HOW COMPANY WORK AREA
+}

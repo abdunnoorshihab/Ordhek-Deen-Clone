@@ -1,0 +1,33 @@
+.dialog-container {
+  max-width: 480px;
+  margin: 5% 5%;
+}
+
+.header {
+  padding: 25px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-radio {
+  margin: 8px 0;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.action-area {
+  width: 85%;
+  margin: 0 auto;
+
+  button {
+    width: 100%;
+  }
+}
+
+.form-input-area{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}

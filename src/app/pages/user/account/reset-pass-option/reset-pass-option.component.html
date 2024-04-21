@@ -1,0 +1,25 @@
+<div class="main-info-container">
+  <form class="form-conatiner" [formGroup]="ResetPasswordOption" (ngSubmit)="handlePasswordOption()">
+    <h1 class="info-header">Reset Your Password</h1>
+
+    <div class="input-container ">
+      <label>How do you want to recive the code to reset your password</label>
+      <mat-radio-group class="radio-group" aria-label="Select an option" formControlName="option">
+        <mat-radio-button value="google">Use my Google account</mat-radio-button>
+        <mat-radio-button value="sms">Send code via SMS</mat-radio-button>
+        <mat-radio-button value="email">Send code via email</mat-radio-button>
+      </mat-radio-group>
+    </div><!-- END-->
+
+
+    <div class="btn-area">
+      <button class="pre-btn" >
+        Cancel
+      </button>
+      <button class="next-btn" type="submit">
+        Continue
+      </button>
+    </div><!-- END Button -->
+
+  </form> <!-- Form Section END-->
+</div>

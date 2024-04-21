@@ -1,0 +1,83 @@
+@import "../../../../../theme/variables";
+
+.content-area {
+  width: 100%;
+  height: auto;
+}
+
+.view-list {
+  min-height: 200px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #3e3e3e;
+    display: grid;
+    place-items: center;
+    color: #FFFFFF;
+  }
+
+  .main {
+    flex: 1;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      font-family: $font-en-primary;
+      font-size: 18px;
+      color: #5d5d5d;
+    }
+  }
+}
+
+/**
+VIEW TABLE
+ */
+
+.data-view {
+  padding-left: 56px;
+}
+
+.data-info-table {
+  margin-top: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+  font-family: $font-en-primary;
+  line-height: 36px;
+}
+
+
+.info-group {
+  position: relative;
+
+  .label {
+    font-weight: bold;
+    margin-right: 46px;
+    display: block;
+    position: relative;
+    color: #5d5d5d;
+  }
+
+  .value {
+    color: #5d5d5d;
+  }
+}
+
+@media only screen and (max-device-width: 599px) {
+  .header {
+    .main {
+      .title {
+        font-size: 14px;
+      }
+    }
+  }
+}

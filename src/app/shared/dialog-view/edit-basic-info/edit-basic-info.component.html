@@ -1,0 +1,50 @@
+<div class="dialog-container">
+
+  <div class="dialog-container">
+
+    <div class="header">
+      <h2>Your Info</h2>
+      <button mat-button mat-dialog-close>Cancel</button>
+    </div>
+
+    <form #formElement="ngForm" [formGroup]="dataForm" (ngSubmit)="onSubmit()" class="form">
+
+      <div class="form-input-area">
+
+        <mat-form-field appearance="outline" class="form-field px-1">
+          <mat-label>Full Name</mat-label>
+          <input formControlName="name" matInput placeholder="Full Name" required>
+          <mat-error>This field is required</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline" class="form-field px-1">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" email="true" matInput placeholder="Email">
+          <mat-error>Please enter a valid email</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline" class="form-field px-1">
+          <mat-label>Gender</mat-label>
+          <mat-select placeholder="Select gender" formControlName="gender">
+            <mat-option *ngFor="let g of genders" [value]="g.value">
+              {{g.viewValue}}
+            </mat-option>
+          </mat-select>
+          <mat-error>Field is required</mat-error>
+        </mat-form-field>
+
+      </div>
+      <div class="action-area">
+        <button mat-raised-button color="primary" type="submit">
+          Update
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+
+</div>
+

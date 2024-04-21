@@ -1,0 +1,35 @@
+@import "src/theme/variables";
+
+.guide-container{
+  max-width: 800px;
+  margin: auto;  padding-bottom: 64px;
+  .info-header{
+    font-size: 32px;
+    padding: 8px 0 48px 0;
+    font-family: $font-en-primary;
+    background-image: linear-gradient(
+        to right,
+        rgba(223, 192, 80, 1),
+        rgba(0, 163, 155, 1)
+    );
+    background-clip: text;
+    color: transparent;
+  }
+
+  .accordion-container{
+    margin: 0 0 16px 0;
+  }
+  mat-expansion-panel{
+    padding: 8px 0 8px 0;
+    border-radius: 12px;
+    mat-panel-title{
+      text-align: left;
+      font-weight: 400;
+    }
+  }
+
+}
+
+::ng-deep .guide-container[_ngcontent-ng-c250485658] mat-panel-title[_ngcontent-ng-c250485658] {
+text-align: left;
+}

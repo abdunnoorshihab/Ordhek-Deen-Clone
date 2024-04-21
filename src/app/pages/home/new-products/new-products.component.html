@@ -1,0 +1,50 @@
+<!---section-4-->
+<div class="section-4">
+  <div class="container">
+    <div class="title-area">
+      <h1>Collected New Items</h1>
+    </div>
+    <div class="section4-main carousel">
+      <swiper
+        [slidesPerView]="1"
+        [spaceBetween]="16"
+        [autoplay]="true"
+        [navigation]="true"
+        [breakpoints]="{
+          '0': {
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          '768': {
+            slidesPerView: 3
+          },
+          '1000': {
+            slidesPerView: 4
+          },
+          '1200': {
+            slidesPerView: 5
+          }
+        }"
+        class="mySwiper"
+      >
+        <ng-template
+          swiperSlide
+          *ngFor="let product of newProducts"
+        >
+          <ng-container *ngIf="isLoadingNewProducts">
+            <app-product-car-one-loader
+              [type]="'grid'"
+            ></app-product-car-one-loader>
+          </ng-container>
+          <ng-container *ngIf="!isLoadingNewProducts">
+            <app-product-card-one [data]="product"></app-product-card-one>
+          </ng-container>
+        </ng-template>
+      </swiper>
+    </div>
+    <!--view-btn-->
+    <div class="view-btn">
+      <a routerLink="/products"><i class="fa fa-eye"></i> View All Item</a>
+    </div>
+  </div>
+</div>

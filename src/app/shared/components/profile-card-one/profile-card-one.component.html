@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="profile-area">
+        <div class="card-section">
+            <!-- Single -->
+            <div class="profile-item" *ngFor="let profile of profileList">
+                <div class="bio">
+                    <img src="{{profile.images[0]}}" alt="">
+                    <span class="profile-name">{{(profile.name).slice(0,12)}}</span>
+                </div>
+                <div class="details">
+                    <div class="description">
+                        <div class="data">Birth Year</div>
+                        <div class="data borderLeft">February, 2000</div>
+                        <div class="data">Height</div>
+                        <div class="data borderLeft">5'6''</div>
+                        <div class="data lastData">Complexion</div>
+                        <div class="data lastData  borderLeft">Fair</div>
+                    </div>
+                    <div class="button">
+                        <a href="" class="primary-button">
+                            <button>
+                                Full Biodata
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

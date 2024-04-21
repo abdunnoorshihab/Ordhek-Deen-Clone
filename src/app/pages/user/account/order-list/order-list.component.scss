@@ -1,0 +1,22 @@
+@import "src/theme/exports/table-scroll";
+@import "src/theme/exports/top-data-header";
+@import "src/theme/exports/ng-class";
+@import "src/theme/variables";
+
+.payment-status {
+  width: 85px;
+  padding: 7px 3px;
+  margin: 0 auto;
+  border-radius: 30px;
+  background: #00cc0d;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+.td-action{
+  a{
+    margin-left: 5px;
+    background-color: #3f51b5;
+  }
+}

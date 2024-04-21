@@ -1,0 +1,317 @@
+@import "src/theme/variables";
+.main-area {
+  display: block;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+.logo {
+  display: block;
+  margin-bottom: 25px;
+}
+.container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: auto;
+}
+.form-area {
+  display: block;
+  background-color: #fff;
+  border: 1px solid $color-border;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.form-area-top {
+  display: block;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.form-area-top h3 {
+  color: $color-primary;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 5px !important;
+  display: block;
+}
+.form-area-top p {
+  color: $text-color;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  text-transform: capitalize;
+}
+.form-main {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0;
+}
+.social-area {
+  display: block;
+}
+.social-area ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.social-area ul li {
+  display: block;
+  margin-bottom: 20px !important;
+}
+.social-area ul li:last-child {
+  margin: 0 !important;
+}
+.social-area ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  color: #fff;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: $color-primary;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  line-height: 25px;
+  border-radius: 8px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+.social-area ul li a i {
+  font-size: 16px;
+}
+.social-area ul li:nth-child(2) a {
+  background-color: #00acee;
+}
+.social-area ul li:nth-child(3) a {
+  background-color: #e60023;
+}
+.social-area ul li:nth-child(4) a {
+  background-color: #f77737;
+}
+.or-area {
+  display: block;
+}
+.or-area .or {
+  width: 1px;
+  height: 240px;
+  display: block;
+  margin: auto;
+  position: relative;
+  background-color: $color-border;
+}
+.or-area .or span {
+  border: 1px solid $color-border;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-align: center;
+  color: $text-color;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.form-input-area {
+  display: block;
+  width: 100%;
+}
+.form-input {
+  display: block;
+  margin-bottom: 20px;
+}
+.input-check{
+  margin-bottom: 15px;
+}
+
+.form-input input {
+  width: 100%;
+  height: 45px;
+  border-radius: 6px;
+  padding: 0 20px 2px;
+  color: $text-color;
+  background: #f5f5f5;
+  border: 1px solid $color-border;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  outline: none;
+  line-height: 1.5;
+  transition: all 0.3s linear;
+}
+.form-input .invalid {
+  border: 1px solid #d51a32;
+  margin-bottom: 5px;
+}
+.invalid-txt {
+  color: #f14242;
+  font-weight: 400;
+  font-family: $font-en-primary;
+}
+
+.form-input input:focus {
+  border-color: $color-primary;
+}
+.form-input mat-checkbox {
+  display: block;
+  color: $text-color;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  font-size: 16px;
+}
+.form-sub-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 13px;
+}
+.form-sub-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  background-color: $color-primary;
+  padding: 0 10px;
+  height: 45px;
+  box-sizing: border-box;
+  line-height: 25px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.forget {
+  display: block;
+  text-align: center;
+}
+.forget p {
+  color: $text-color;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  font-size: 16px;
+  display: block;
+  line-height: 26px;
+}
+.forget p a {
+  color: $color-primary;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.2s linear;
+  margin-left: 3px;
+}
+.forget p a:hover {
+  text-decoration: underline;
+}
+.main-bottom {
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid $color-border;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main-bottom p {
+  color: $text-color;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  font-size: 16px;
+  display: block;
+  line-height: 23px;
+}
+.main-bottom p a {
+  color: $color-primary;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.2s linear;
+  margin-left: 3px;
+}
+.main-bottom p a:hover {
+  text-decoration: underline;
+}
+.ntt {
+  display: block;
+  text-align: center;
+}
+.ntt p {
+  color: $color-light-gray;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+  line-height: 22px;
+}
+.ntt p a {
+  color: $color-primary;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.2s linear;
+  margin-left: 3px;
+}
+.ntt p a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 990px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .form-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .form-area {
+    padding: 30px 20px;
+    margin-bottom: 20px;
+  }
+  .or-area {
+    padding: 40px 0;
+  }
+  .or-area .or {
+    width: 100%;
+    height: 1px;
+  }
+  .or-area .or span {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .main-bottom {
+    padding: 20px 15px;
+    margin-bottom: 15px;
+  }
+  .main-bottom p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,45 @@
+<div class="div">
+  <form class="form" #formElement="ngForm" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+  <div class="input-field">
+    <h2 class="title">Contact</h2>
+    <p class="label">Groom's name*</p>
+    <div class="input">
+      <input class="input-box" matInput type="text" formControlName="groomName">
+    </div>
+    <p class="label">Guardian's mobile no*</p>
+    <div class="input">
+      <input class="input-box" matInput type="number" formControlName="guardiansMobile">
+    </div>
+    <p class="description-text">
+      This number will be given if anyone wants to contact your guardian. After
+      verifying by calling this number, the biodata will be approved. If you write the
+      number of your friend, colleague, cousin, or yourself here, biodata will be
+      permanently banned
+    </p>
+    <p class="label">Relationship with guardian</p>
+    <div class="input">
+      <input class="input-box" matInput type="text" formControlName="relationship">
+    </div>
+    <p class="label">E-mail to receive biodata*</p>
+    <div class="input">
+      <input class="input-box" matInput type="email" formControlName="email">
+    </div>
+    <p class="description-text">
+      To avoid unwanted incidents, enter the guardian's email address if possible
+    </p>
+    <p class="label">
+      Why are you getting married? What are your thoughts on marriage?<span class="star">*</span>
+    </p>
+    <div class="input">
+      <input class="input-box" matInput type="text" formControlName="reason">
+    </div>
+    <div class="btn">
+      <button class="previous-btn" type="button">
+        <img class="previous-arrow" src="assets/images/arrow.png" alt="">
+        <p class="label">Previous</p>
+      </button>
+      <button class="next-btn" type="submit">Done</button>
+    </div>
+  </div>
+</form>
+</div>

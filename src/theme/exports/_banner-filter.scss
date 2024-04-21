@@ -1,0 +1,95 @@
+@import'src/theme/variables';
+@import'src/theme/exports/mixing';
+
+.banner-filter-area{
+    display: block;
+    width: 100%;
+    background-color: #2E384D;
+    padding: 30px 0px 30px 0px;
+    box-sizing: border-box;
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 130px;
+        width: 100%;
+        grid-template-rows: auto;
+        grid-gap:20px 30px;
+        li{
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid rgb(204, 204, 204);
+                width: 100%;
+                padding: 10px 20px;
+                color: darken($color-white,20%);
+                font-family: $font-en-primary;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+            }
+            mat-form-field{
+                display: block;
+                width: 100%;
+                background-color: transparent;
+            }
+            
+            &.apply{
+                button{
+                    @include btnPrimary($color-black, 45px, $color-white, 0px 22px, 4px, 13px);
+
+                    &:hover {
+                        @include btnPrimaryHover($color-primary, $color-white);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:1025px){
+    .banner-filter-area{
+        ul{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media(max-width:450px){
+
+    .banner-filter-area{
+        ul{
+            li{
+                button{
+                    padding: 12px 10px;
+                }
+            }
+        }
+    }
+}
+::ng-deep.form-field .mat-mdc-form-field-subscript-wrapper{
+    display: none;
+}
+
+::ng-deep.form-field .mat-mdc-text-field-wrapper{
+    background: transparent!important;
+}
+::ng-deep.form-field .mat-mdc-select-arrow,::ng-deep.form-field.mat-mdc-form-field.mat-focused.mat-primary .mat-mdc-select-arrow{
+    color: #fff!important;
+}
+::ng-deep.form-field .mat-mdc-text-field-wrapper .mat-mdc-form-field-infix .mat-mdc-floating-label{
+    color: #fff;
+}
+::ng-deep.form-field .mat-mdc-form-field-focus-overlay{
+    background-color: transparent!important;
+}
+::ng-deep.form-field .mat-mdc-select-value{
+    color: #fff;
+}

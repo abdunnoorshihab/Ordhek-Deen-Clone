@@ -1,0 +1,51 @@
+<section>
+  <section>
+    <div class="main-div">
+      <div class="sub-div">
+        <form
+          class="edu-form"
+          [formGroup]="eduQualForm"
+          (ngSubmit)="eduQualSubmit()"
+        >
+          <h1>Educational Qualifications</h1>
+          <div class="form-field">
+            <label for="eduMethod">Your Education Method<span>*</span></label>
+            <mat-form-field appearance="outline">
+              <mat-select
+                formControlName="eduMethod"
+                id="eduMethod"
+                placeholder="-Select-"
+              >
+                <mat-option value="General">General</mat-option>
+                <mat-option value="Qawmi">Qawmi</mat-option>
+                <mat-option value="Alia">Alia</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <label for="islamicTitles">Islamic Education Titles</label>
+            <mat-form-field appearance="outline">
+              <input
+                formControlName="islamicTitles"
+                id="islamicTitles"
+                matInput
+              />
+              <mat-hint
+                >Leave the field blank if you do not have a title</mat-hint
+              >
+            </mat-form-field>
+          </div>
+
+          <div class="btn-area">
+            <button class="pre-btn" [routerLink]="['/account/address']">
+              <i class="fa-solid fa-arrow-left"></i>Previous
+            </button>
+            <a class="primary-button">
+              <button>Next <i class="fa-solid fa-arrow-right"></i></button>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>

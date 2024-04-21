@@ -1,0 +1,135 @@
+@import "src/theme/variables";
+
+.main-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.form-conatiner {
+  background-color: #ebf6f3;
+  min-width: 150px;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px 60px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+      to right,
+      rgba(223, 192, 80, 0.2),
+      rgba(0, 163, 155, 0.2)
+  );
+  .info-header {
+    font-size: 32px;
+    padding: 8px 0 16px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: $font-en-primary;
+    background-image: linear-gradient(
+        to right,
+        rgba(223, 192, 80, 1),
+        rgba(0, 163, 155, 1)
+    );
+    background-clip: text;
+    color: transparent;
+  }
+  .input-container {
+    mat-hint { font-size: 10px;
+      display: flex;
+      justify-content: end;
+      align-items: center ;
+      color:red;}
+    .beard-field-hint{
+      padding-bottom: 8px;
+    }
+    .upload-btn{
+      border: 1px dashed rgba(102, 102, 102, 1);
+      padding: 16px 0 16px 0;
+      width: 100%;
+      font-size: 16px;
+      line-height: 18.75px;
+      text-align: center;
+      font-weight: 400;
+      .upload-btn-text{
+        margin-left: 4px;
+
+      }
+    }
+
+  }
+  label {
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 8px
+  }
+  mat-form-field {
+    width: 100%;
+    input::placeholder {
+      font-size: 12px;
+    }
+  }
+
+
+
+    .btn-area {
+      margin: 10px 0 10px 0;
+      display: flex;
+      gap: 50px;
+
+      .pre-btn {
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        border: rgba(102, 102, 102, 1);
+        background: white;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        color: #666666;
+
+        i {
+          font-size: 16px;
+        }
+      }
+
+      .next-btn {
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background: linear-gradient(
+            to right,
+            rgba(223, 192, 80, 1),
+            rgba(0, 163, 155, 1)
+        );
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+
+  .security-code-hint{
+    padding-bottom: 24px;
+  }
+
+
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    background-color: white;
+  }
+  ::ng-deep .mat-mdc-form-field-infix {
+    min-height: 32px;
+  }
+  ::ng-deep
+  .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+  .mat-mdc-form-field-infix {
+    padding: 12px;
+  }
+}

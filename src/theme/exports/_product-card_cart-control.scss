@@ -1,0 +1,47 @@
+@import "src/theme/variables";
+.cart-action {
+  display: flex;
+  margin-top: 2px;
+  background-color: $color-primary;
+  align-items: center;
+  border-radius: 6px;
+  height: 39px;
+
+  button {
+    background-color: $color-primary;
+    width: 56px;
+    color: #FFFFFF;
+    &:focus {
+      outline: none;
+    }
+    &.left {
+      border-left: none;
+      border-top: none;
+      border-bottom: none;
+      border-right: 1px solid #b9b9b9;
+      border-radius: 6px 0 0 6px;
+    }
+
+    &.right {
+      border-right: none;
+      border-top: none;
+      border-bottom: none;
+      border-left: 1px solid #b9b9b9;
+      border-radius: 0 6px 6px 0;
+    }
+  }
+  p {
+    flex: 1;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 599px){
+  p {
+    span {
+      display: none;
+    }
+  }
+}

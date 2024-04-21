@@ -1,0 +1,160 @@
+<main>
+  <div class="footer-main-top">
+    <div class="container">
+      <div class="footer-main-top-main">
+
+        <div class="footer-main-top-main-child">
+          <a routerLink="/pages/terms-and-conditions">
+            <h5><i class="fa-regular fa-file"></i></h5>
+            <p>Terms & conditions</p>
+          </a>
+        </div>
+
+
+        <!-- footer-main-top-main-child start -->
+        <div class="footer-main-top-main-child">
+          <a routerLink="pages/return-&-refund-policy">
+            <h5><i class="fa-solid fa-rotate-left"></i></h5>
+            <p>Return Policy</p>
+          </a>
+        </div>
+        <!-- footer-main-top-main-child end -->
+
+        <!-- footer-main-top-main-child start -->
+        <div
+          class="footer-main-top-main-child"
+          routerLink="/pages/privacy-policy"
+        >
+          <a>
+            <h5><i class="fa-solid fa-circle-exclamation"></i></h5>
+            <p>Privacy Policy</p>
+          </a>
+        </div>
+        <!-- footer-main-top-main-child end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="footer-medium">
+        <div class="footer-content-left">
+          <div class="footer-left-logo">
+            <img src="/assets/images/brand/logo/SoftCommerceLogo500.webp" alt="" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa delectus sunt ut. Magnam, quaerat vero?
+          </p>
+          <div class="footer-eft-form">
+            <form action="">
+              <input type="text" placeholder="Enter email address" />
+              <button type="submit">{{ "subscribe".toUpperCase() }}</button>
+            </form>
+          </div>
+          <div class="play-store-icon">
+            <a href="">
+              <img src="/assets/images/playstore.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-content">
+          <h1>BUY WITH US</h1>
+          <div class="social-media">
+            <ul>
+              <li>
+                <a routerLink="/contact-us">Contact Us</a>
+              </li>
+              <li><a routerLink="/privacy-policy">Privacy Policy</a></li>
+              <li>
+                <a routerLink="/terms-and-condition"
+                  >Terms and Conditions</a
+                >
+              </li>
+              <li>
+                <a href="javascript:">Return Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="social-media-icons">
+            <ul>
+              <li>
+                <a
+                  href="javascript:"
+                  target="_blank"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:" target="_blank"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-content">
+          <!-- <h1>ABOUT</h1>
+          <div class="content">
+            <p>
+              {{ shopInfo?.shortDescription }}
+            </p>
+          </div> -->
+
+          <h1>{{ "My Account" | uppercase }}</h1>
+          <div class="social-media">
+            <ul>
+              <li><a routerLink="/login">Login</a></li>
+              <!-- <li>
+                <a routerLink="/pages/contact-service-center">Services</a>
+              </li> -->
+              <li>
+                <a routerLink="/account/order-list">Order History</a>
+              </li>
+              <!-- <li><a routerLink="/pages/warranty-policy">FAQs</a></li> -->
+              <li><a routerLink="/account/wishlist">My Wishlist</a></li>
+              <!-- <li><a href="">Cookie Policy</a></li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="footer-content">
+          <h1>CONTACT US</h1>
+          <div class="address-content">
+            <p><span>ADDRESS: </span> {{ address.join() }}</p>
+            <p><span>PHONE: </span>{{ phones?.join() }}</p>
+            <p>
+              <span>DELIVERY TIME<hr/></span>INSIDE DHAKA CITY – 24 Working Hour <br />OUTSIDE DHAKA CITY – 72 Working Hour
+            </p>
+            <p>
+              <span>{{ "DELIVERY Charge" | uppercase }}<hr/></span>
+              INSIDE DHAKA CITY – 24 Working Hour <br />OUTSIDE DHAKA CITY – 72
+              Working Hour</p>
+
+            <p class="email" >
+              <span>E-MAIL: </span><a href="">{{ emails.join() }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-medium-bottom">
+        <img
+          src="../../../../assets/images/BnY0hH5RIUKRMZFuTPIt9QKBHyMUN3aEK375QfHB.webp"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-main-bottom">
+        <p>&COPY; <b>Soft Commerce</b> {{ currentYear }} All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</main>

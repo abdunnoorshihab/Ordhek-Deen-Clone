@@ -1,0 +1,56 @@
+<section>
+  <div class="main-div">
+    <div class="sub-div">
+      <form
+        class="address-form"
+        [formGroup]="addressForm"
+        (ngSubmit)="addressSubmit()"
+      >
+        <h1>Address</h1>
+        <div class="form-field">
+          <label for="permanentAddress">Permanent Address<span>*</span></label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              formControlName="permanentAddress"
+              id="permanentAddress"
+              placeholder="Mohammadpur, Dhaka 1207"
+            />
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <label for="presentAddress">Present Address<span>*</span></label>
+          <mat-checkbox>Same as permanent address</mat-checkbox>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              formControlName="presentAddress"
+              id="presentAddress"
+              placeholder="Mohammadpur, Dhaka 1207"
+            />
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <label for="originCity">Where did you grow up?<span>*</span></label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              formControlName="originCity"
+              id="originCity"
+              placeholder="Chittagong"
+            />
+          </mat-form-field>
+        </div>
+
+        <div class="btn-area">
+          <button class="pre-btn" [routerLink]="['/account/general-info']">
+            <i class="fa-solid fa-arrow-left"></i>Previous
+          </button>
+          <a class="primary-button">
+            <button>Next <i class="fa-solid fa-arrow-right"></i></button>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

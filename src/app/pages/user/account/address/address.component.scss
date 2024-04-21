@@ -1,0 +1,144 @@
+@import "src/theme/variables";
+@import "src/theme/exports/primary-btn";
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .sub-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+
+    .address-form {
+      background: $color-primary2;
+      width: 100%;
+      padding: 30px 60px;
+      border-radius: 8px;
+
+      h1 {
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 25px;
+        background: -webkit-linear-gradient(
+          rgba(223, 192, 80, 1),
+          rgba(0, 163, 155, 1)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .form-field {
+        display: flex;
+        flex-direction: column;
+
+        mat-checkbox {
+          font: 8px;
+        }
+
+        label {
+          font-size: 16px;
+          padding-bottom: 4px;
+
+          span {
+            color: red;
+          }
+        }
+
+        mat-form-field {
+          width: 100%;
+
+          input {
+            background-color: white;
+          }
+
+          input::placeholder {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .btn-area {
+        margin: 10px 0 20px 0;
+        display: flex;
+        gap: 50px;
+
+        .pre-btn {
+          box-sizing: border-box;
+          border-radius: 17px;
+          line-height: 1.8;
+          font-size: 1.1em;
+          background: white;
+          border: none;
+          font-family: $font-en-primary;
+          text-align: center;
+          color: #666666;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          width: 100%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+
+          i {
+            font-size: 16px;
+          }
+        }
+
+        .primary-button {
+          width: 100%;
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+          }
+        }
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .mat-mdc-form-field-infix {
+  min-height: 20px;
+}
+
+::ng-deep
+  .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+  .mat-mdc-form-field-infix {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background-color: white;
+}
+
+::ng-deep .mdc-checkbox__background {
+  height: 8px;
+  width: 8px;
+}
+
+@media (max-width: 575px) {
+  .main-div {
+    .sub-div {
+      padding: 0 8px;
+      .address-form {
+        padding: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="input-area">
+    <div class="rating">
+      <p>Your Rating *</p>
+      <app-star-rating [rating]="rating" (ratingUpdated)="onRatingChanged($event)"
+                       [showSnackbar]="false"></app-star-rating>
+    </div>
+    <form class="form" #formElement="ngForm" (ngSubmit)="onSubmitReview(formElement)">
+      <p>Your Reviews *</p>
+      <mat-form-field class="rating-form-field" appearance="outline">
+        <mat-label>Please write your honest opinion and give a rating</mat-label>
+        <textarea ngModel name="text" matInput rows="5" required></textarea>
+      </mat-form-field>
+      <div class="action">
+        <button mat-raised-button mat-dialog-close type="submit" color="primary">Submit</button>
+      </div>
+    </form>
+  </div> <!-- END REVIEW CARD-->
+</div>

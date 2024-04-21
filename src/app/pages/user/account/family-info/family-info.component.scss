@@ -1,0 +1,101 @@
+@import'src/theme/variables';
+@import 'src/theme/exports/primary-btn';
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        150deg, rgba(223, 192, 80, .25) 16%,
+         rgba(0, 163, 155, .25) 56%);
+    margin: 0px 58px;
+    margin-bottom: 10%;
+    font-family: "Roboto";
+    
+
+    .mb {
+        margin-bottom: 14px;
+    }
+
+    .grad-txt {
+        background: linear-gradient(
+            to right,
+            rgba(223, 192, 80, 1),
+            rgba(0, 163, 155, 1)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline;
+        margin-top: 28px;
+        font-weight:500;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .form {
+        width: 100%;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .name {
+            display: flex;
+            justify-content: center;
+        }
+
+        mat-form-field {
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .left{
+                button{
+                    background-image: none;
+                    background-color: white;
+                    color: black;
+                }  
+            }
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media only screen and (max-width: 420px) {
+    .btns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:10px;
+        margin: 0px auto;
+        padding: 0px;
+
+        .primary-button{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            font-size: 10px;
+            i{
+                font-size: 10px;
+            }
+        }
+
+        .left{
+            button{
+                background-image: none;
+                background-color: white;
+                color: black;
+            }            
+        }
+
+        i{
+            font-size: 10px;
+        }
+    }
+
+  }

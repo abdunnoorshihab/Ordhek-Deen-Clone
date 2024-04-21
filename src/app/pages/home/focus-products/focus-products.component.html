@@ -1,0 +1,36 @@
+<!-- section-two start -->
+<div class="section-two" *ngIf="focusProduct">
+  <div class="container">
+    <div class="section-main-two-main">
+      <!-- slider-parent-start -->
+      <div class="section-two-child-one">
+        <!-- slider-child start-->
+        <div class="child-one-img-one">
+          <img checkImageDefault [src]="focusProduct?.image" alt=""/>
+        </div>
+        <!-- slider-child end-->
+      </div>
+      <!-- slider-parent-end -->
+
+      <!-- data-parent-start -->
+      <div class="section-two-child-two-child">
+        <div class="child-two-data">
+          <h2>{{ focusProduct?.title | uppercase }}</h2>
+          <p>
+            {{ focusProduct?.description }}
+          </p>
+          <div class="child-two-buttons">
+            <button type="button" routerLink="/products/details/leather_office_bag_for_men_ob_1030">
+              {{ "shop now" | uppercase }}
+            </button>
+            <button type="button" routerLink="/products">
+              {{ "view more" | uppercase }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- data-parent-end -->
+    </div>
+  </div>
+</div>
+<!-- section-two end -->

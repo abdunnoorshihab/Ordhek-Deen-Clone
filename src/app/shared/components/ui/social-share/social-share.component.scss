@@ -1,0 +1,188 @@
+@import'src/theme/variables';
+
+.share-area {
+    display: block;
+
+    .share-main {
+        display: block;
+        max-width: 480px;
+        width: 100%;
+        margin: auto;
+        background-color: $color-white;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+}
+
+.share-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+   .share-right{
+     span{
+       cursor: pointer;
+     }
+   }
+
+    .share-left {
+        display: block;
+
+        h3 {
+            color: #000000;
+            font-family: $font-en-primary;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+        }
+    }
+}
+
+.social-share-area {
+    display: block;
+    width: 100%;
+    position: relative;
+
+    .social-share-box {
+        margin-bottom: 40px;
+
+        ul {
+            display: flex;
+            overflow-x:scroll;
+            align-items: center;
+            flex-wrap: nowrap;
+            scroll-behavior: smooth;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            justify-content: flex-start;
+            scrollbar-color: transparent;
+            scrollbar-width: 0;
+            &::-webkit-scrollbar{
+                height: 0;
+            }
+
+            li {
+                min-width: 80px;
+                width: 100px;
+                text-align: center;
+                cursor: pointer;
+
+                .social-icon {
+                    svg {
+                        max-width: 60px;
+                        margin-bottom: 10px;
+                        z-index: 5;
+                        pointer-events: none;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .social-name {
+                    display: block;
+
+                    h3 {
+                        font-family: $font-en-primary;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 15px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.indicator {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    visibility: visible;
+    opacity: 0;
+    span {
+        width: 35px;
+        height: 35px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: #000000;
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        background-color: $color-white;
+        right: -8px;
+        transform: translateY(-50%);
+        z-index: 150;
+    }
+
+    .prev {
+        left: -8px;
+    }
+}
+.social-share-area:hover{
+    .indicator{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.copy-area {
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 10px 10px;
+    border-radius: 10px;
+
+    .copy-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+
+        .copy-input {
+            width: 100%;
+            user-select: none;
+
+            input {
+                width: 100%;
+                border: none;
+                color: #000000;
+                font-family: $font-en-primary;
+                font-weight: 400;
+                font-size: 15px;
+                outline: none;
+
+
+            }
+        }
+
+        .copy-btn {
+            min-width: 70px;
+
+            button {
+                color: $color-white;
+                font-family: $font-en-primary;
+                font-size: 15px;
+                font-weight: 500;
+                font-style: normal;
+                background-color: $color-primary;
+                border: none;
+                outline: none;
+                padding: 8px 15px;
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+    }
+}

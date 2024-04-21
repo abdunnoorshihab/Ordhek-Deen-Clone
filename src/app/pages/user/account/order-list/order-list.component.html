@@ -1,0 +1,52 @@
+<section class="admin-data-sec">
+  <div class="top-data-header">
+    <div class="title">
+      <h2>My Orders</h2>
+    </div>
+  </div>
+  <!-- END TOP DATA HEADER -->
+
+  <hr class="center-square" />
+
+  <div class="table-wrapper space">
+    <table>
+      <tr>
+        <th>Order No</th>
+        <th>Phone No</th>
+        <th>Created Date</th>
+        <th>City</th>
+        <th>Payment Type</th>
+        <th>Payment Status</th>
+        <th>Order Status</th>
+        <th>Grand total</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let data of orders; let i = index">
+        <td>{{ data.orderId }}</td>
+        <td>{{ data.phoneNo }}</td>
+        <td>{{ data.checkoutDate | date : "mediumDate" }}</td>
+        <td>{{ data.city }}</td>
+        <td>{{ data.paymentType | slugToNormal : "_" }}</td>
+        <td>
+          <div class="payment-status">
+            {{ data.paymentStatus }}
+          </div>
+        </td>
+        <td>
+          {{ data.orderStatus | orderStatus }}
+        </td>
+
+        <td>{{currency.bdt}}{{ data.grandTotal | number : "" : "bn" }}</td>
+        <td class="td-action">
+          <a
+            [routerLink]="['../order-details', data.orderId]"
+            mat-icon-button
+            matTooltip="View Details"
+          >
+            <mat-icon>visibility</mat-icon>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>

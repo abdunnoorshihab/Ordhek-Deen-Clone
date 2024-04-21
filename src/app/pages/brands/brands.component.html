@@ -1,0 +1,59 @@
+<div class="banner-area">
+  <div class="container">
+    <div class="banner-main">
+      <h1>
+        {{brands.length ? 'All Brands' : 'No Brands Found'}}
+      </h1>
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><span>/</span></li>
+        <li><a routerLink="/brands">All Brands</a></li>
+      </ul>
+    </div>
+  </div>
+</div> <!-- END Top Banner -->
+
+<!---section-1-->
+<div class="section-1">
+  <div class="container">
+    <div class="section1-main">
+      <div class="show-product-area">
+        <div class="show-product-header">
+          <form class="table-search" #searchForm=ngForm>
+            <input type="text"
+                   #searchInput
+                   [ngModel]="searchQueryProduct"
+                   (ngModelChange)="onChangeInput($event, 'name')"
+                   (ngModelChangeDebounced)="searchQueryProduct = $event"
+                   [ngModelChangeDebounceTime]="100"
+                   autocomplete="off"
+                   name="searchTerm"
+                   ngModel
+                   placeholder="Search">
+            <button><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+
+        <div class="show-product-main grid">
+          <ng-container>
+            <app-brand-card-one
+              *ngFor="let data of  brands | paginate: { itemsPerPage: brandsPerPage, currentPage: currentPage, totalItems: totalBrands } ; let i = index"
+              [data]="data">
+            </app-brand-card-one>
+          </ng-container>
+        </div>
+
+        <div class="pagination-container">
+          <pagination-controls
+            class="data-pagination"
+            [autoHide]="true"
+            [maxSize]="15"
+            (pageChange)="onPageChanged($event)">
+          </pagination-controls>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

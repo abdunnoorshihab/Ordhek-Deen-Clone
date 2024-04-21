@@ -1,0 +1,38 @@
+section {
+padding: 30px 0;
+}
+
+.title {
+    color: #00A39B;
+    font-size: 18px;
+}
+
+.search-profile-container {
+    // border: 1px solid blue;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-gap: 20px;
+
+    .filter-container {
+        // border: 1px solid red;
+
+       .single-accordion {
+            margin: 10px 0;
+
+            
+        }
+    }
+}
+
+@media (max-width: 1100px){
+    .filter-container {
+        display: none;
+    }
+    .search-profile-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+    }
+}

@@ -1,0 +1,91 @@
+
+
+<form  #formElement="ngForm" [formGroup]="dataForm" (ngSubmit)="onSubmit()" class="main-area" >
+
+  <div class="container">
+      <div class="form-area">
+          <div class="form-area-top">
+              <h1>Create your account</h1>
+          </div>
+          <div class="form-input-area">
+          <div class="form-input">
+              <h3>Name</h3>
+              <input matInput type="text" formControlName="name" required
+                 
+                  placeholder="Your Name here..."
+                  autocomplete="off"
+              />
+          </div>
+          <div class="form-input">
+              <h3>Email</h3>
+              <input matInput type="email" formControlName="email" required
+                  
+                  placeholder="Your Email Address..."
+                  autocomplete="off"
+              />
+          </div>
+          <div class="form-input">
+              <h3>Phone</h3>
+              <input matInput type="text" formControlName="phone" required
+                  
+                  placeholder="Enter Your Phone Number"
+                  autocomplete="off"
+              />
+          </div>
+          <div class="form-input">
+              <h3>Choose a Gender</h3>
+              <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Male</mat-radio-button>
+                  <mat-radio-button value="2">Female</mat-radio-button>
+              </mat-radio-group>
+          </div>
+          <div class="form-input">
+              <h3>Password</h3>
+              <input matInput type="text" formControlName="password" required
+                  
+                  placeholder=""
+                  autocomplete="new-password"
+              />
+              <div class="old-para"><p>Minimum 8 characters</p></div>
+          </div>
+          <div class="form-input">
+              <h3>Confirm Password</h3>
+              <input matInput type="text" formControlName="confirmPass" required
+                 
+                  placeholder=""
+                  autocomplete="new-password"
+              />
+              <div class="old-para"><p>Minimum 8 characters</p></div>
+          </div>
+          <div class="main-bottom">
+              
+               <a href="#">By Signing up You Agree to Our Terms & Conditions</a>   
+              
+          </div>
+          <div class="form-sub-btn primary-button">
+              <button type="submit">Create Account</button>
+          </div>
+          <div class="or-div">
+            <p>
+              OR
+            </p>
+          </div>
+          <div class="form-sub-btn">
+            <div class="google-button">
+      
+                <i class="fab fa-google google-icon"></i> Sign Up with Google 
+           
+            </div>
+            
+            
+        </div>
+        <div class=" bottom">
+          <p>
+           Do You Have An Account?
+          </p>
+          <a href="../login">Login</a>
+        </div>
+      </div>
+  </div>
+</div>
+</form>

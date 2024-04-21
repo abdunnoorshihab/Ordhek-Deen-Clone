@@ -1,0 +1,148 @@
+@import "src/theme/variables";
+@import "src/theme/swipper";
+
+/*** section 5 ****/
+.section-5 {
+  display: block;
+  padding: 5px 0;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+}
+
+.filter-area {
+  display: block;
+  background-color: #fff;
+  padding: 30px 25px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.filter-area ul {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-area ul li {
+  display: inline-block;
+  margin-right: 60px;
+  position: relative;
+}
+
+.filter-area ul li:last-child {
+  margin: 0;
+}
+
+.filter-area ul li::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: $color-border;
+  position: absolute;
+  right: -30px;
+  top: 0;
+}
+
+.filter-area ul li:last-child::after {
+  display: none;
+}
+
+.filter-area ul li button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  color: $heading-color;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.3s linear;
+}
+
+.filter-area ul li:hover button {
+  color: $color-primary;
+}
+
+.filter-area ul li button i {
+  font-size: 15px;
+}
+
+.filter-area ul li .active-filter-btn {
+  color: $color-primary;
+}
+
+.section5-main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 16px;
+}
+
+.container {
+  display: block;
+  max-width: 1400px;
+  padding: 0 15px;
+  width: 100%;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .section5-main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 990px) {
+  .section5-main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-5 {
+    padding: 5px 0;
+    box-sizing: border-box;
+  }
+  .section5-main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  .section5-main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+  .section-5 {
+    margin-bottom: 60px;
+  }
+  .filter-area {
+    margin: 25px 6px;
+  }
+  .filter-area ul li {
+    display: block;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+  .filter-area ul li button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .filter-area ul li::after {
+    display: none;
+  }
+}

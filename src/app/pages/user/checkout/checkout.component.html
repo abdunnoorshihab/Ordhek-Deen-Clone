@@ -1,0 +1,446 @@
+<!------ PAYMENT-AREA ------>
+<form class="payment-area"
+      #formElement="ngForm"
+      [formGroup]="dataForm"
+      (ngSubmit)="onSubmit()"
+>
+  <div class="container">
+    <div class="payment-area-main">
+      <div class="pay-right">
+        <div class="cart-area">
+          <div class="cart-main">
+            <div class="cart-table-area">
+              <div class="cart-table">
+                <div class="table-head">
+                  <div class="table-row">
+                    <div class="table-sl-heading">
+                      <h3>SL</h3>
+                    </div>
+                    <div class="table-heading product">
+                      <h3>Product</h3>
+                    </div>
+                    <div class="table-heading price">
+                      <h3>Price</h3>
+                    </div>
+                    <div class="table-heading price">
+                      <h3>Discount</h3>
+                    </div>
+                    <div class="table-heading quantity price">
+                      <h3>Quantity</h3>
+                    </div>
+                    <div class="table-heading total">
+                      <h3>Total</h3>
+                    </div>
+
+                    <div class="table-heading total">
+                      <h3>Action</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-body">
+                  <!---table-row-->
+                  <div
+                    class="table-row"
+                    *ngFor="let data of carts; let index = index"
+                  >
+                    <div class="table-hed" >
+                      <h3>{{ index + 1 }}</h3>
+                    </div>
+                    <div class="table-data product">
+                      <div class="product-area">
+                        <div class="product-img">
+                          <img
+                            checkImageDefault
+                            [src]="data?.product?.images?.[0]"
+                          />
+                        </div>
+                        <div class="product-info">
+                          <div class="product-title">
+                            <a
+                              [routerLink]="[
+                                '/products/details',
+                                data?.product?.slug
+                              ]"
+                              >{{ data?.product?.name }}
+                              {{
+                                data?.product?.color
+                                  ? "~ Color: " + data?.product?.color
+                                  : ""
+                              }}
+                              {{
+                                data?.product?.size
+                                  ? " -Size: " + data?.product?.size
+                                  : ""
+                              }}</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="table-data price">
+                      <h3>
+                        {{ data?.product?.salePrice | number : "" : "bn" }}TK
+                      </h3>
+                    </div>
+
+                    <div class="table-data price">
+                      <h3>
+                        {{
+                          data?.product?.discountAmount | number : "" : "bn"
+                        }}TK
+                      </h3>
+                    </div>
+
+                    <div class="table-data quantity">
+                      <div class="quantity">
+                        <div>
+                          <button
+                            (click)="
+                              onDecrementQty(index)
+                            "
+                          >
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                        <div>
+                          <input
+                            type="text"
+                            [value]="data?.selectedQty"
+                            readonly
+                          />
+                        </div>
+                        <div>
+                          <button
+                            (click)="onIncrementQty(index)"
+                          >
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="table-data tax">
+                      <h4>
+                        {{ data?.product?.salePrice | number : "" : "bn" }}TK
+                      </h4>
+                    </div>
+                    <div class="table-data tax">
+                      <div
+                        class="del"
+                        (click)="
+                          onDeleteCartItem(
+                            data?.product?._id,
+                            data?.product._id
+                          )
+                        "
+                      >
+                        <span><i class="fa fa-trash-alt"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-check">
+              <mat-checkbox class="mat-check" formControlName="acceptTerms"
+                >I agree to the
+                <a routerLink="/terms-and-condition">Terms and conditions</a>,
+                <a routerLink="/pages/return-&-refund-policy">Return Policy</a>
+                & <a routerLink="/privacy-policy">Privacy Policy</a>.
+              </mat-checkbox>
+            </div>
+          </div>
+        </div>
+        <!--end-->
+        <div class="payment-order-summery">
+          <div class="payment-left">
+            <div class="step2-title">
+              <div>
+                <h3>Select payment method</h3>
+              </div>
+              <div>
+                <button type="button"><i class="fa fa-lock"></i> Fully secure payment</button>
+              </div>
+            </div>
+            <div class="pay-area">
+              <mat-radio-group
+                aria-label="Select an option"
+                formControlName="paymentMethod"
+              >
+                <div class="pay-box-area">
+                  <div class="pay-box">
+                    <div class="pay-box-left">
+                      <mat-radio-button value="cash_on_delivery"
+                      >Cash on delivery</mat-radio-button
+                      >
+                    </div>
+                    <div class="pay-box-right"></div>
+                  </div>
+                  <span
+                  ><i class="fa fa-check-circle"></i> Pay the price on
+                    receiving the product</span
+                  >
+                </div>
+              </mat-radio-group>
+            </div>
+          </div> <!--End Payment Method-->
+
+          <div class="payment-summery">
+            <h3>Order-summery</h3>
+            <ul>
+              <li>
+                <div>
+                  <span>Sub Total:</span>
+                </div>
+                <div>
+                  <span> {{cartSubTotal | number: '' : 'bn'}}</span>
+                </div>
+              </li>
+              <li></li>
+              <li>
+                <div>
+                  <span>Delivery Charge:</span>
+                </div>
+                <div>
+                  <span>{{dataForm.value.deliveryCharge}}</span>
+                </div>
+              </li>
+              <hr class="hr" />
+              <li>
+                <div>
+                  <span>Total</span>
+                </div>
+                <div class="stokced-price">
+                  <div class="stock-badge">
+                    <span>Save {{cartDiscountAmount | number: '' : 'bn'}}</span>
+                  </div>
+                  <span>{{grandTotal | number: '' : 'bn'}}</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="payment-check payment-test">
+              <mat-checkbox class="mat-check"
+              >I agree to the
+                <a routerLink="/terms-and-condition">Terms and conditions</a>,
+                <a routerLink="/pages/return-&-refund-policy">Return Policy</a> &
+                <a routerLink="/privacy-policy">Privacy Policy</a>.
+              </mat-checkbox>
+            </div>
+
+            <div class="order-button">
+              <button type="submit">Order</button>
+            </div>
+          </div> <!--End Order Summery-->
+
+        </div>
+      </div>
+
+      <div class="payment-right">
+        <div>
+          <div class="address-area">
+            <h3>
+              Enter your name, mobile number, address and click on the "Order"
+              button to confirm the order.
+            </h3>
+
+            <div class="form-input">
+              <h3>Name:</h3>
+              <!---form-field-->
+              <div class="form-field-area">
+                <mat-form-field appearance="outline" class="form-field">
+                  <input
+                    formControlName="name"
+                    matInput
+                    placeholder="Enter your name.."
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="form-input">
+              <h3>Phone Number:</h3>
+              <!---form-field-->
+              <div class="form-field-area">
+                <mat-form-field appearance="outline" class="form-field">
+                  <input
+                    digitOnly
+                    [maxlength]="11"
+                    value=""
+                    maxlength="11"
+                    formControlName="phone"
+                    matInput
+                    required="true"
+                    placeholder="Enter your phone number.."
+                    type="text"
+                  />
+                  <mat-error
+                    >Please enter a valid 11 digit phone number.</mat-error
+                  >
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="form-input">
+              <h3>Address</h3>
+              <!---form-field-->
+              <div class="form-field-area">
+                <mat-form-field appearance="outline" class="form-field">
+                  <!-- <mat-label>Textarea</mat-label> -->
+                  <textarea
+                    formControlName="address"
+                    matInput
+                    rows="5"
+                    cols="10"
+                    placeholder="Write Your Address.."
+                  ></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="delivery-charge">
+              <button type="button">Delivery charges</button>
+              <div class="radio-box-area">
+                <mat-radio-group
+                  aria-label="Select an option"
+                  formControlName="deliveryCharge"
+                >
+                  <mat-radio-button [value]="insideCity"
+                    >Inside City
+                    {{ insideCity }}
+                 </mat-radio-button
+                  >
+                  <mat-radio-button [value]="outsideCity"
+                    >Outside City{{
+                    outsideCity
+                    }}
+                    </mat-radio-button
+                  >
+                </mat-radio-group>
+              </div>
+            </div>
+          </div>
+          <div class="payment-left mobile">
+            <div class="step2-title">
+              <div>
+                <h3>Select payment method</h3>
+              </div>
+              <div>
+                <button type="button"><i class="fa fa-lock"></i> Fully secure payment</button>
+              </div>
+            </div>
+
+            <div class="pay-area">
+              <mat-radio-group
+                aria-label="Select an option"
+                formControlName="paymentMethod"
+              >
+                <div class="pay-box-area">
+                  <div class="pay-box">
+                    <div class="pay-box-left">
+                      <mat-radio-button value="cash_on_delivery"
+                        >Cash on delivery</mat-radio-button
+                      >
+                    </div>
+                    <div class="pay-box-right"></div>
+                  </div>
+                  <span
+                    ><i class="fa fa-check-circle"></i> Pay the price on
+                    receiving the product</span
+                  >
+                </div>
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-responsive-product-area">
+          <div
+            class="responsive-cart-product"
+            *ngFor="let data of carts; let index = index"
+          >
+            <!--res-cart-left-->
+            <div class="res-cart-left">
+              <div class="responsive-product-img">
+                <img checkImageDefault [src]="data?.product?.images[0]" />
+                <div class="res-cart-delete">
+                  <span><i class="fa fa-trash"></i></span>
+                </div>
+              </div>
+            </div>
+            <!--end-->
+            <!---res-cart-right-->
+            <div class="res-cart-right">
+              <div class="res-product-title">
+                <a>{{ data?.product?.name }}</a>
+              </div>
+              <div class="res-cart-right-bottom">
+                <!--cart-price-->
+                <div class="res-cart-price">
+                  <h3>{{ data?.product?.salePrice }}TK</h3>
+                </div>
+                <!--res-cart-quantity--area-->
+                <div class="res-car-quantity-area">
+                  <div class="quantity-info">
+                    <div>
+                      <p>Quantity: {{ data?.selectedQty }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---end-->
+          </div>
+        </div>
+        <div class="payment-summery mobile">
+          <h3>Order-summery</h3>
+          <ul>
+            <li>
+              <div>
+                <span>Sub Total:</span>
+              </div>
+              <div>
+                <span> {{cartSubTotal | number: '' : 'bn'}}</span>
+              </div>
+            </li>
+            <li></li>
+            <li>
+              <div>
+                <span>Delivery Charge:</span>
+              </div>
+              <div>
+                <span>{{dataForm.value.deliveryCharge}}</span>
+              </div>
+            </li>
+            <hr class="hr" />
+            <li>
+              <div>
+                <span>Total</span>
+              </div>
+              <div class="stokced-price">
+                <div class="stock-badge">
+                  <span>Save {{cartDiscountAmount | number: '' : 'bn'}}</span>
+                </div>
+                <span>{{grandTotal | number: '' : 'bn'}}</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="payment-check payment-test">
+            <mat-checkbox class="mat-check"
+            >I agree to the
+              <a routerLink="/terms-and-condition">Terms and conditions</a>,
+              <a routerLink="/pages/return-&-refund-policy">Return Policy</a> &
+              <a routerLink="/privacy-policy">Privacy Policy</a>.
+            </mat-checkbox>
+          </div>
+
+          <div class="order-button">
+            <button type="submit">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,50 @@
+@import "../../../../../theme/exports/table-one";
+
+.header {
+  h2 {
+    text-align: center;
+    font-family: $font-en-primary;
+  }
+}
+
+.pagination-container {
+  text-align: center;
+}
+
+.unpaid {
+  background: #ff6e7b;
+  text-transform: uppercase;
+  color: #57030a;
+}
+.italic {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.paid {
+  background: #01ca75;
+  text-transform: uppercase;
+  color: #00351c;
+}
+
+.cancel {
+  color: #ad0228;
+}
+
+.processing {
+  color: #70c33200;
+}
+.confirm {
+  color: #00c14c;
+}
+.delivered, .refund, .shipping {
+  color: #00c14c;
+}
+
+
+.table-container{
+  .table-btn1{
+    margin-left: 5px;
+  }
+}
+

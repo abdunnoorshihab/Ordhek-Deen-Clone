@@ -1,0 +1,60 @@
+<div class="form-container login-right-part">
+  <div class="div-form">
+    <div class="head-div">
+      <h2>Account Setting</h2>
+      <p>Change Password</p>
+    </div>
+    <form #formElement="ngForm" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-input">
+        <!-- <mat-form-field appearance="outline" class="password"> -->
+            <label>Old Password</label>
+            <input matInput type="password" formControlName="oldpassword" required  placeholder="Enter old password" />
+            <div class="old-para"><p>Forget your password?</p></div>
+            <!-- <mat-error>This field is required</mat-error> -->
+          <!-- </mat-form-field> -->
+        </div>
+        <div class="form-input">
+      <!-- <mat-form-field appearance="outline" class="password"> -->
+        <label>New Password</label>
+        <input matInput type="password" formControlName="password" required  placeholder="Enter new password" />
+        <!-- <mat-error>This field is required</mat-error> -->
+      <!-- </mat-form-field> -->
+        </div>
+        <div class="form-input">
+      <!-- <mat-form-field appearance="outline" class="password"> -->
+        <label>Confirm Password</label>
+        <input matInput type="password" formControlName="confirmPassword" required  placeholder="Enter confirm password" />
+        <!-- <mat-error>This field is required</mat-error> -->
+      <!-- </mat-form-field> -->
+       </div>
+     
+     
+    <div class="bottom-container">
+
+      <div class="btn-div primary-button">
+        <button type="submit">Confirm</button>
+      </div>
+   
+      <div class="bottom-div">
+        <h3>Delete Biodata</h3>
+
+        <div class="p">
+          <p>
+            If it is temporary you can hide it from the sidebar menu. This
+            action will be permanently deleted your biodata.
+          </p>
+        </div>
+        <label class="checkbox-button">
+          <input type="checkbox" id="termsCheckbox" /> Accept all the Terms &
+          Conditions
+        </label>
+
+        <div class="btn-bottom primary-button">
+          <button type="submit">Delete biodata</button>
+        </div>
+
+      </div>
+    </div>
+  <!-- </div> -->
+<!-- </form> -->

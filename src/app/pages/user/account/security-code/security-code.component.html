@@ -1,0 +1,22 @@
+<div class="main-info-container">
+  <form class="form-conatiner" [formGroup]="SecurityCodeForm" (ngSubmit)="handleSecurityCode()">
+    <h1 class="info-header">Enter Security Code</h1>
+
+    <div class="input-container security-code-hint">
+      <label>Please check your emails for a message with your code. Your code is 6 numbers long.</label>
+      <mat-form-field appearance="outline" class="">
+        <input matInput placeholder="" formControlName="code"/>
+        <mat-hint>Didn't get a code?</mat-hint>
+      </mat-form-field>
+    </div><!-- END-->
+    <div class="btn-area">
+      <button class="pre-btn" >
+       Cancel
+      </button>
+      <button class="next-btn" type="submit">
+        Continue
+      </button>
+    </div><!-- END Button -->
+
+  </form> <!-- Form Section END-->
+</div>

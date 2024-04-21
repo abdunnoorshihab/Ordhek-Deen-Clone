@@ -1,0 +1,460 @@
+
+@import "src/theme/variables";
+
+.banner-area {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 60px 10px;
+  background-image: url(../../../assets/images/temp/image/category_banner.jpg);
+  position: relative;
+  z-index: 10;
+}
+
+.banner-area::after {
+  content: "";
+  background: linear-gradient(to right, rgba(6, 23, 56, 0.8), rgb(0 0 0 /80%));
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  z-index: -10;
+}
+
+.banner-main {
+  display: block;
+  text-align: center;
+}
+
+.banner-main h1 {
+  color: #fff;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 50px;
+  display: block;
+  margin-bottom: 15px !important;
+  letter-spacing: -0.3px;
+}
+
+.banner-main ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.banner-main ul li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0;
+}
+
+.banner-main ul li a {
+  color: #f5f5f5;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  display: block;
+  transition: all 0.3s linear;
+}
+
+.banner-main ul li a:hover {
+  color: $color-primary;
+  text-decoration: underline;
+}
+
+.banner-main ul li span {
+  color: #f5f5f5;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+.product-list-area {
+  display: block;
+  margin: 30px 0 80px 0;
+}
+
+.product-list-main {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-gap: 30px;
+  width: 100%;
+}
+
+.product-filter-offer {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.product-filter-offer img {
+  transition: all 0.4s linear;
+  transform: scale(1);
+  width: 100%;
+}
+
+.product-filter-offer:hover img {
+  transform: scale(1.08);
+}
+
+.filtered {
+  display: block;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  margin-bottom: 25px;
+}
+
+.filter-title {
+  display: block;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.filter-title h3 {
+  color: $heading-color;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  display: block;
+  margin: 0 !important;
+}
+
+.filter-search {
+  display: block;
+  margin-top: 10px;
+}
+
+.filter-search input {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  background: #f5f5f5;
+  outline: none;
+  border: 1px solid $color-border;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0 15px;
+  box-sizing: border-box;
+  color: $text-color;
+  font-size: 15px;
+}
+
+.filter-body {
+  display: block;
+  margin: 15px 0;
+}
+
+.price {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.price input {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  background: #f5f5f5;
+  text-align: center;
+  outline: none;
+  border: 1px solid transparent;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  font-style: normal;
+  color: $text-color;
+  font-size: 15px;
+}
+
+.filter-btn {
+  display: block;
+}
+
+.filter-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  color: $heading-color;
+  font-size: 16px;
+  padding: 12px 6px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid $color-border;
+  background-color: $color-border;
+  outline: none;
+  font-family: $font-en-primary;
+  font-weight: 400;
+  transition: all 0.3s linear;
+}
+
+.filter-btn button:hover {
+  color: #fff;
+  background-color: $color-primary;
+}
+
+.filter-btn button i {
+  font-size: 16px;
+}
+
+.filter-body {
+  display: block;
+}
+
+.filter-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-body ul li {
+  display: block;
+  margin-bottom: 15px !important;
+}
+
+::ng-deep.data-check {
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+}
+
+.filter-body ul li mat-checkbox {
+  display: block;
+}
+
+.filter-body ul li mat-checkbox div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
+}
+
+.filter-body ul li mat-checkbox i {
+  color: $color-yellow;
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 1px;
+}
+
+.filter-body ul li mat-checkbox span {
+  color: #777777;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  display: block;
+  transition: all 0.3s linear;
+}
+
+.filter-body ul li mat-checkbox:hover span {
+  color: $color-primary;
+}
+
+::ng-deep.mat-check.mat-checkbox {
+  display: block;
+}
+
+::ng-deep.mat-check .mat-checkbox-layout {
+  width: 100%;
+}
+
+::ng-deep.mat-check .mat-checkbox-layout .mat-checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.show-product-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.select h3 {
+  font-family: $font-en-primary;
+  font-weight: 500;
+  color: $text-color;
+  font-size: 15px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.select select {
+  border: 1px solid $color-border;
+  background-color: transparent;
+  color: $text-color;
+  font-family: $font-en-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  display: block;
+  outline: none;
+  padding: 9px 10px;
+  min-width: 80px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.icon-menu {
+  display: block;
+}
+
+.icon-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-menu ul li {
+  display: inline-block;
+}
+
+.icon-menu ul .filter {
+  display: none;
+}
+
+.icon-menu ul li span {
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: $text-color;
+  font-size: 17px;
+  transition: all 0.3s linear;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &.active {
+    background-color: $color-primary;
+    color: #fff;
+  }
+}
+
+.show-product-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  width: 100%;
+}
+
+.show-product-main-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 25px;
+  margin-top: 50px;
+}
+
+.overlay {
+  background-color: rgb(0 0 0 / 60%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 290;
+  display: none;
+  backdrop-filter: blur(1px);
+}
+
+@media (max-width: 990px) {
+  .product-list-main {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px 30px;
+  }
+  .show-product-main {
+    grid-gap: 20px;
+  }
+  .product-filter-area {
+    width: 310px;
+    height: 100vh;
+    display: block;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #fff;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    z-index: 300;
+    border-left: 2px solid $color-border;
+    transition: all 0.3s linear;
+  }
+  .filter-slide-active {
+    left: 0 !important;
+  }
+  .overlay {
+    display: block;
+  }
+  .icon-menu ul .filter {
+    display: inline-block;
+  }
+  .filtered {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .show-product-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .icon-menu ul li {
+    display: none;
+  }
+  .icon-menu ul .filter {
+    display: block;
+  }
+  .select h3 {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .show-product-main {
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 990px) {
+  .show-product-main-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
