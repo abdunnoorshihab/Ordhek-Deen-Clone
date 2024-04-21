@@ -1,0 +1,50 @@
+<div class="banner-section" #banner *ngIf="banners && banners.length">
+  <!--banner-start-->
+  <div
+    class="banner-area"
+    *ngFor="let data of banners; index as i"
+    [style.background-image]="
+      'url(' + (windowWidth < 600 ? data?.mobileImage : data?.image) + ')'
+    "
+    [class]="slideIndex === i ? 'active-slide' : 'inactive-slide'"
+  >
+    <div class="container">
+      <div class="banner-main">
+        <div
+          class="banner-title"
+          [class]="
+            slideIndex === i
+              ? 'banner-title-main-active'
+              : 'banner-title-main-inactive'
+          "
+        >
+          <!-- <p>{{ data?.subTitle }}</p> -->
+          <h2>{{ data?.name }}</h2>
+        </div>
+
+        <div
+          class="banner-btn"
+          [class]="
+            slideIndex === i
+              ? 'banner-btn-area-active'
+              : 'banner-btn-area-inactive'
+          "
+        >
+          <button type="button">Our History</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--banner-end-->
+  <!--indicator-area-->
+  <div class="banner-indicator-area">
+    <ul>
+      <li class="prev">
+        <span (click)="prevSlide()"><i class="fa fa-angle-left"></i></span>
+      </li>
+      <li class="next">
+        <span (click)="nextSlide()"><i class="fa fa-angle-right"></i></span>
+      </li>
+    </ul>
+  </div>
+</div>

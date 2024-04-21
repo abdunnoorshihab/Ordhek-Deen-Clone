@@ -1,26 +1,22 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule, Meta, Title} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule, Meta, Title } from '@angular/platform-browser';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {SwiperModule} from 'swiper/angular';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { environment } from 'src/environments/environment';
+import { SwiperModule } from 'swiper/angular';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+
 // Import your library
-import {SlickCarouselModule} from 'ngx-slick-carousel';
-import {HttpClientModule} from '@angular/common/http';
-import {SharedModule} from './shared/shared.module';
-import {PagesComponent} from './pages/pages.component';
-import {HeaderModule} from './shared/components/header/header.module';
-import {FooterModule} from './shared/components/footer/footer.module';
-import {OccupationInfoComponent} from "./pages/user/account/edit-biodata/occupation-info/occupation-info.component";
-import {FormsModule} from "@angular/forms";
-
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PagesComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,15 +24,14 @@ import {FormsModule} from "@angular/forms";
     SwiperModule,
     BrowserAnimationsModule,
     SlickCarouselModule,
-    HeaderModule,
-    FooterModule,
     SharedModule,
+    ReactiveFormsModule,
+
+    // Angular Firebase Config
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth()),
   ],
-  providers: [
-    Title,
-    Meta,
-  ],
-  bootstrap: [AppComponent]
+  providers: [Title, Meta],
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

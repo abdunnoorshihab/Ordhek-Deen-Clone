@@ -1,26 +1,32 @@
-import {Component, Inject, PLATFORM_ID} from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import localeBn from '@angular/common/locales/bn';
-import {isPlatformBrowser, isPlatformServer, registerLocaleData} from '@angular/common';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  @ViewChild('scroll') scroll: ElementRef;
 
-  // Check Browser & Server
-  isBrowser: boolean;
-  isServer: boolean;
-
-
-  constructor(
-    @Inject(PLATFORM_ID) private platformId: any,
-  ) {
+  constructor(private router: Router) {
     registerLocaleData(localeBn, 'bn');
-    this.isBrowser = isPlatformBrowser(platformId);
-    this.isServer = isPlatformServer(platformId);
   }
 
-
+  /**
+   * scrollTop();
+   */
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
+  @HostListener('window:scroll')
+  hideShowScrollBtn() {
+    if (window.scrollY > 400) {
+      this.scroll.nativeElement.style.display = 'flex';
+    } else {
+      this.scroll.nativeElement.style.display = 'none';
+    }
+  }
 }

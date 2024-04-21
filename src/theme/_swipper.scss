@@ -1,4 +1,5 @@
 @import "./variables";
+
 /*** swipper ***/
 ::ng-deep.carousel .swiper-pagination-bullet-active {
   background-color: $color-primary !important;
@@ -31,7 +32,6 @@
 
 ::ng-deep.swiper-button-next,
 ::ng-deep.swiper-button-prev {
-  // background-color: #fff;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -62,8 +62,8 @@
   background-color: $color-primary;
 }
 
-.mySwiper:hover ::ng-deep.swiper-button-next,
-.mySwiper:hover ::ng-deep.swiper-button-prev {
+.mySwiper ::ng-deep.swiper-button-next,
+.mySwiper ::ng-deep.swiper-button-prev {
   visibility: visible;
   opacity: 1;
 }
@@ -125,6 +125,88 @@
 }
 
 ::ng-deep.carousel .swiper-slide {
-  padding: 0px 1px 0px 1px;
+  padding: 0px 1px;
   box-sizing: border-box;
+}
+
+::ng-deep.categoryCarousel ::ng-deep.swiper-button-next {
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  top: 70%;
+  background-color: #e1e1e1;
+
+  &::after {
+    font-size: 16px;
+  }
+}
+
+::ng-deep.categoryCarousel ::ng-deep.swiper-button-prev {
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  top: 70%;
+  background-color: #e1e1e1;
+
+  &::after {
+    font-size: 16px;
+  }
+}
+
+::ng-deep.cardCarousel ::ng-deep.swiper-button-next {
+  right: 14px;
+  width: 35px;
+  height: 35px;
+  top: 52%;
+  background-color: #e1e1e1;
+
+  &::after {
+    font-size: 17px;
+  }
+}
+
+::ng-deep.cardCarousel ::ng-deep.swiper-button-prev {
+  left: 14px;
+  width: 35px;
+  height: 35px;
+  top: 52%;
+  background-color: #e1e1e1;
+
+  &::after {
+    font-size: 17px;
+  }
+}
+
+/* --- popular-shop --- */
+::ng-deep.popular-shop {
+  padding: 10px;
+}
+
+::ng-deep.popular-shop ::ng-deep.swiper-button-next {
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  top: 65%;
+  background-color: #e1e1e1;
+
+  &::after {
+    font-size: 16px;
+  }
+}
+
+::ng-deep.popular-shop ::ng-deep.swiper-button-prev {
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  top: 65%;
+  background-color: #e1e1e1;
+
+  &::after {
+    font-size: 16px;
+  }
+}
+
+::ng-deep.cardCarouselSecond {
+  padding: 10px 10px;
+  background-color: #fff;
 }

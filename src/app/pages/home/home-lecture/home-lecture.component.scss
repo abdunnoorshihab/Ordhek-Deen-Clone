@@ -1,0 +1,356 @@
+@import "src/theme/variables";
+
+/* --- main-container --- */
+.main-container {
+  margin: 53px 0;
+}
+
+@media (max-width: 556px) {
+  .main-container {
+    margin: 35px 0;
+  }
+}
+
+/* --- header-bottom-tittle --- */
+.header-bottom-tittle {
+  h2 {
+    font-family: $font-en-primary;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: $heading-color;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-bottom-tittle {
+    h2 {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header-bottom-tittle {
+    h2 {
+      font-size: 24px;
+      padding-bottom: 18px;
+    }
+  }
+}
+
+.division-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  background-color: #e4e4e4;
+  margin-top: 24px;
+  text-align: center;
+  overflow: hidden;
+  overflow-x: auto;
+
+  a {
+    color: #da3925;
+    font-family: $font-en-primary;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    padding: 6px 0;
+    border: none;
+    width: 100%;
+    letter-spacing: 0.5px;
+  }
+}
+
+.subject-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  gap: 16px;
+  overflow-x: auto;
+
+  a {
+    font-family: $font-en-primary;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #e4e4e4;
+    color: $color-secondary;
+    padding: 4px 20px;
+    border-radius: 20px;
+    white-space: nowrap;
+
+    &.active {
+      background-color: $color-secondary;
+      color: #fff;
+    }
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  .card-section {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    img {
+      width: 194px;
+      height: 226px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+
+    .description-section {
+      padding: 9px 15px;
+      border-radius: 0 9px 9px 0;
+      border-width: 1px 1px 1px 0;
+      border-style: solid;
+      border-color: #e4e4e4;
+      margin-left: -4px;
+
+      h3 {
+        font-family: $font-en-primary;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 30px;
+        color: #524f4f;
+      }
+
+      h4 {
+        font-family: $font-en-primary;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        padding-bottom: 10px;
+        letter-spacing: 0.5px;
+        color: rgb(61 57 57 / 84%);
+      }
+
+      p {
+        font-family: $font-en-primary;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px;
+        color: rgb(61 57 57 / 84%);
+      }
+    }
+  }
+}
+
+.btn {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+
+  .formal {
+    font-family: $font-en-primary;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    background-color: #ff5a45;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 9px;
+    float: inline-end;
+  }
+}
+
+@media (max-width: 1220px) {
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+
+    .card-section {
+      .description-section {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1220px) {
+  .card-container {
+    .card-section {
+      flex-direction: column;
+      align-items: flex-start;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+
+      .description-section {
+        padding: 0;
+        border: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 908px) {
+  .btn {
+    .formal {
+      font-size: 14px;
+      padding: 10px 25px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .subject-section {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 668px) {
+  .subject-section {
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    .card-section {
+      .description-section {
+        h3 {
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        h4 {
+          font-size: 16px;
+          line-height: 22px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .card-container {
+    .card-section {
+      .description-section {
+        h3 {
+          font-size: 22px;
+          line-height: 28px;
+        }
+
+        h4 {
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 4px;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .division-section {
+    grid-template-columns: repeat(2, 1fr);
+
+    a {
+      font-size: 14px;
+      line-height: 22px;
+      padding: 9px 0;
+
+      &:last-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .card-container {
+    .card-section {
+      gap: 8px;
+
+      .description-section {
+        h3 {
+          font-size: 16px;
+          line-height: 18px;
+        }
+
+        h4 {
+          font-size: 11px;
+        }
+
+        p {
+          font-size: 10px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: $color-secondary !important;
+}
+
+::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+  font-family: $font-en-primary;
+  font-size: 16px;
+}
+
+::ng-deep .mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: $color-secondary !important;
+}
+
+::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__ripple::before,
+.mat-mdc-tab.mdc-tab--active .mat-ripple-element {
+  background-color: $color-secondary !important;
+}
+
+::ng-deep .mat-mdc-tab .mdc-tab__ripple::before {
+  background-color: $color-secondary !important;
+}
+
+::ng-deep.mat-mdc-tab-body {
+  overflow: hidden !important;
+}
+
+::ng-deep.mat-mdc-tab-body-content {
+  overflow: hidden !important;
+}
+
+::ng-deep.mat-mdc-tab-labels {
+  width: 100%;
+  justify-content: space-between;
+  background: #ebebeb;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+::ng-deep.mat-mdc-tab.mdc-tab {
+  flex-grow: 1 !important;
+}

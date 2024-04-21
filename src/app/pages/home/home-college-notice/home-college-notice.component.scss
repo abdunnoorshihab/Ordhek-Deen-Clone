@@ -1,0 +1,167 @@
+@import "src/theme/variables";
+@import "src/theme/swipper";
+
+/* --- home-teachers-title --- */
+.home-teachers-title {
+  h2 {
+    font-family: $font-en-primary;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: $heading-color;
+    padding-top: 48px;
+  }
+}
+
+/* --- content --- */
+.content {
+  margin-top: 53px;
+  display: flex;
+  gap: 20px;
+
+  .notice {
+    border: 2px solid #da3925;
+    border-radius: 15px;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .date-time {
+      margin-bottom: 19px;
+      border: 1px solid #da3925;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 13px;
+      padding: 10px;
+      background: #fff;
+      transition: all 0.12s linear;
+
+      &:hover {
+        box-shadow: 0px 0px 11px 0px rgba(218, 58, 37, 0.2);
+      }
+
+      .notice-date {
+        position: relative;
+
+        img {
+          width: 56px;
+          height: 56px;
+        }
+
+        p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          font-family: $font-en-primary;
+          font-size: 14px;
+          font-weight: 500;
+          color: #000000;
+
+          span {
+            line-height: 14px;
+          }
+        }
+      }
+
+      p {
+        font-family: $font-en-primary;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+        color: #050505;
+        width: 100%;
+      }
+    }
+
+    .btn {
+      button {
+        font-family: $font-en-primary;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        background-color: #ff5a45;
+        color: #ffffff;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 9px;
+        float: inline-end;
+      }
+    }
+  }
+}
+
+@media (max-width: 908px) {
+  .content {
+    flex-direction: column;
+
+    .notice {
+      width: 100%;
+      order: 2;
+    }
+
+    .information {
+      align-items: center;
+      width: 100%;
+
+      .date-time {
+        width: 100%;
+        margin-bottom: 21px;
+      }
+
+      .btn {
+        button {
+          font-size: 14px;
+          padding: 10px 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .home-teachers-title {
+    h2 {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 556px) {
+  .content {
+    .information {
+      .date-time {
+        margin-bottom: 21px;
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .home-teachers-title {
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  .content {
+    margin-top: 45px;
+  }
+}

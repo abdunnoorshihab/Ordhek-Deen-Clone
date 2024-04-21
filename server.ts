@@ -18,6 +18,7 @@ const template = fs.readFileSync(path.join(distFolder1, 'index.html')).toString(
 const win = domino.createWindow(template.toString());
 
 global['localStorage'] = localStorage;
+// global['sessionStorage'] = sessionStorage;
 global['window'] = win;
 global['document'] = win.document;
 global['self'] = win;
@@ -56,7 +57,7 @@ export function app(): express.Express {
 }
 
 function run(): void {
-  const port = process.env['PORT'] || 1004;
+  const port = process.env['PORT'] || 1800;
 
   // Start up the Node server
   const server = app();

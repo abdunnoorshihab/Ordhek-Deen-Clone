@@ -1,35 +1,20 @@
-import {MatIconModule} from '@angular/material/icon';
-import {RouterModule} from '@angular/router';
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {HeaderComponent} from './header.component';
-import {FormsModule} from '@angular/forms';
-import {SharedModule} from '../../shared.module';
-import {PipesModule} from '../../pipes/pipes.module';
-import {CategorySlideComponent} from './category-slide/category-slide.component';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './header.component';
+import { HeaderSidebarComponent } from './header-sidebar/header-sidebar.component';
+
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    CategorySlideComponent
+    HeaderSidebarComponent
   ],
   imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule,
-    SharedModule,
-    PipesModule,
-    MatIconModule,
-    MatButtonModule,
-    MatTooltipModule,
+    CommonModule
   ],
-  exports: [
-    HeaderComponent,
-    MatIconModule
+  exports:[
+    HeaderComponent
   ]
 })
-export class HeaderModule {
-}
+export class HeaderModule { }

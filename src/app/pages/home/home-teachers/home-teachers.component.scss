@@ -1,0 +1,288 @@
+@import "src/theme/variables";
+
+/* --- home-teachers-main --- */
+.home-teachers-main {
+  width: 100%;
+}
+
+/* --- home-teachers-title --- */
+.home-teachers-title {
+  h2 {
+    font-family: $font-en-primary;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: $heading-color;
+    padding-top: 35px;
+  }
+}
+
+/* --- principle --- */
+.principle {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 250px calc(100% - (250px + 50px));
+  grid-gap: 50px;
+  align-items: center;
+
+  &.principle-second {
+    grid-template-columns: calc(100% - (250px + 50px)) 250px;
+  }
+
+  .image {
+    img {
+      width: 100%;
+      height: 250px;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .text {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-family: $font-en-primary;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      color: #050505;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 28px;
+
+      span {
+        color: $color-primary;
+      }
+    }
+
+    .title {
+      display: flex;
+      padding-bottom: 24px;
+
+      .title-main {
+        display: flex;
+      }
+
+      h3 {
+        font-family: $font-en-primary;
+        font-size: 19px;
+        font-weight: 700;
+        color: #050505;
+        padding-top: 13px;
+      }
+
+      .left {
+        padding-top: 27px;
+      }
+
+      .img-left {
+        width: 35px;
+        height: 45px;
+        margin-right: 7px;
+      }
+
+      .img-right {
+        width: 35px;
+        height: 45px;
+        margin-left: 7px;
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 12px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+
+    button.formal {
+      font-family: $font-en-primary;
+      font-size: 15px;
+      font-weight: 400;
+      text-align: center;
+      background-color: $color-secondary;
+      color: #ffffff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 9px;
+      border: 2px solid $color-secondary;
+      transition: all 0.12s linear;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        border: 2px solid $color-secondary;
+        background-color: #fff;
+        color: $color-secondary;
+      }
+    }
+
+    button.see-more {
+      font-family: $font-en-primary;
+      font-size: 15px;
+      font-weight: 400;
+      text-align: center;
+      color: $color-primary;
+      background-color: transparent;
+      padding: 10px 40px;
+      border: 2px solid $color-primary;
+      border-radius: 9px;
+      transition: all 0.12s linear;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        border: 2px solid transparent;
+        background-color: $color-primary;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .principle {
+    margin-top: 16px;
+    grid-template-columns: 180px calc(100% - (180px + 32px));
+    grid-gap: 32px;
+
+    &.principle-second {
+      grid-template-columns: calc(100% - (180px + 32px)) 180px;
+    }
+
+    .image {
+      img {
+        height: 180px;
+      }
+    }
+
+    .text {
+      p {
+        font-size: 12px;
+        line-height: 24px;
+      }
+
+      .title {
+        padding-bottom: 15px;
+
+        h3 {
+          font-size: 17px;
+          padding-top: 11px;
+        }
+
+        .left {
+          padding-top: 21px;
+        }
+
+        .img-left {
+          width: 30px;
+          height: 40px;
+          margin-right: 6px;
+        }
+
+        .img-right {
+          width: 30px;
+          height: 40px;
+          margin-left: 6px;
+        }
+      }
+    }
+
+    .btn {
+      button.formal {
+        font-size: 13px;
+        padding: 9px 12px;
+      }
+
+      button.see-more {
+        font-size: 13px;
+        padding: 9px 36px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .home-teachers-title {
+    h2 {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 646px) {
+  .principle {
+    margin-top: 34px;
+    grid-template-columns: 100%;
+    grid-gap: 0;
+
+    &.principle-second {
+      grid-template-columns: 100%;
+
+      .text {
+        order: 2;
+      }
+    }
+
+    .image {
+      img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    .text {
+      margin-top: 20px;
+
+      .title {
+        padding-bottom: 13px;
+      }
+    }
+
+    .btn {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .home-teachers-title {
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .principle {
+    .text {
+      margin-top: 16px;
+
+      .title {
+        flex-direction: column;
+        padding-bottom: 11px;
+
+        h3 {
+          padding-top: 6px;
+        }
+
+        .left {
+          padding-top: 8px;
+        }
+
+        .img-left {
+          width: 25px;
+          height: 35px;
+        }
+
+        .img-right {
+          width: 25px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}

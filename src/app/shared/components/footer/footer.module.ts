@@ -1,26 +1,10 @@
-import {SwiperModule} from 'swiper/angular';
-import {RouterModule} from '@angular/router';
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FooterComponent} from './footer.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import {SharedModule} from '../../shared.module';
-
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FooterComponent } from './footer.component';
 
 @NgModule({
-  declarations: [
-    FooterComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    SwiperModule,
-    ReactiveFormsModule,
-    SharedModule
-  ],
-  exports: [
-    FooterComponent
-  ]
+  declarations: [FooterComponent],
+  imports: [CommonModule],
+  exports: [FooterComponent],
 })
-export class FooterModule {
-}
+export class FooterModule {}

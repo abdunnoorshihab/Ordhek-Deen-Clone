@@ -1,7 +1,8 @@
-<div class="loading" *ngIf="!isBrowser">
-  <img src="/assets/images/gif/loading.gif" alt="">
+<div class="root-area">
+  <router-outlet></router-outlet>
 </div>
 
-<div class="page-render-root">
-  <router-outlet></router-outlet>
+<!----scroll-->
+<div class="scroll">
+ <span  #scroll (click)="scrollTop()"><i class="fa fa-arrow-up"></i></span>
 </div>

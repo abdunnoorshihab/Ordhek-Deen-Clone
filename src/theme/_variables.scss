@@ -1,24 +1,64 @@
+@import "./fonts";
+
 /*** font-family ****/
 $font-en-primary: "Rubik", sans-serif;
+$font-en-primary1: "Poppins", sans-serif;
+$font-en-primary2: "Roboto", sans-serif;
+$font-en-primary3: "Open Sans", sans-serif;
 $font-en-secondery: "Barlow", sans-serif;
+$font-en-secondery1: "Baloo Da 2", sans-serif;
 
-/* main color - start */
-$color-primary: #00A39B;
-$color-secondary:#021945;
-$color-primary2:linear-gradient(135deg, hsla(47, 69%, 59%, .10) 0%, hsla(177, 100%, 32%, .10) 65%);
-$button-color:linear-gradient(135deg, hsla(47, 69%, 59%, 1) 0%, hsla(177, 100%, 32%, 1) 70%);
-/* main color - end */
-$heading-color: #39404a;
-$color-border: #e8e8e8;
-$text-color: #555555;
-$color-yellow: #ffab10;
-$icon-default-color: #ffffff;
-$color-white: #ffffff;
-$box-shadow-primary: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+$bank-gothic-medium: "bank_gothic_medium", "arial", sans-serif;
+$nexa-bold: "nexa_bold", "arial", sans-serif;
+$nexa-light: "nexa_light", "arial", sans-serif;
+$cocon-regular: "cocon_regular", "arial", sans-serif;
+$shorif-jonota: "shorif_jonota", sans-serif;
+$segoe_ui_regular: "segoe_ui_regular", sans-serif;
+$segoe_ui_bold: "segoe_ui_bold", sans-serif;
+$shorif-jonota: "shorif_jonota", sans-serif;
 
-/**** Container ***/
-$container-max-width: 1400px;
+/**** containerr ***/
+$container-max-width: 1300px;
+
+// MAT TOOLBAR, SIDENAV & LIST
+$toolbar-height: 85px;
+$toolbar-height-sm: 65px;
+$mat-sidenav-width: 295px;
+$list-hover-color: #c8d5e4;
+$list-text-color: #4a4a4a;
+$list-text-size: 15.5px;
+
+// BREAKPOINTS
+$max-tablet-width: 899px;
+
+$color-primary: #00abe4;
+$color-secondary: #ff5a45;
 
 // COLOR
 $color-light-gray: #777777;
-
+$color-primary-hover: #54e112;
+$color-primary-opacity: #e2fdd5;
+$heading-color: #da3925;
+$sub-heading-color: #565765;
+$color-danger: #ff3838;
+$color-border: #e8e8e8;
+$text-color: #555555;
+$color-yellow: #ffab10;
+$color-primary-2: #143161;
+$icon-default-color: #ffffff;
+$table-bg-color: #fbae01;
+$table-text-color: #6a4a02;
+$table-sm-color: #fe7b03;
+$box-shadow-primary: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+$box-shadow-secondary: 0px 6px 40px 0px rgba(0, 0, 0, 0.0509803922);
+$color-white: #fff;
+$font-icon-color: #d9d9d9;
+$color-block: #151515;
+$text-color-secondary: #c1c1c1;
+$box-background-color: #f9f9f9;
+$border-color: #d0d0d0;
+// FONT SIZE
+$font-title-size: 38px;
+$font-title--md-size: 18px;
+$font-dis-size: 16px;
+$font-h4-size: 14px;

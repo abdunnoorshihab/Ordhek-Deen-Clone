@@ -1,0 +1,72 @@
+<main class="main-container">
+  <header>
+    <div class="header-bottom">
+      <div class="container">
+        <div class="header-bottom-main">
+          <div
+            class="header-bottom-tittle wow animate__fadeInUp animate__delay-1s bounceInUp"
+          >
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <!-- END! header-bottom-main -->
+
+        <div class="main-img-container">
+          <div class="left-img">
+            <div
+              class="left-img-top wow animate__fadeInUp animate__delay-1s bounceInUp"
+              (click)="onShowPop(0)"
+            >
+              <img src="./assets/images/galery.png" alt="" />
+            </div>
+
+            <div
+              class="left-img-bottom wow animate__fadeInUp animate__delay-1s bounceInUp"
+              (click)="onShowPop(1)"
+            >
+              <img src="./assets/images/galery1.png" alt="" />
+            </div>
+          </div>
+          <div class="right-img">
+            <div class="right-img-top">
+              <div class="right-img-top-start">
+                <div
+                  class="start1 wow animate__fadeInUp animate__delay-1s bounceInUp"
+                  (click)="onShowPop(2)"
+                >
+                  <img src="./assets/images/Rectangle 22.png" alt="" />
+                </div>
+
+                <div
+                  class="start2 wow animate__fadeInUp animate__delay-1s bounceInUp"
+                  (click)="onShowPop(3)"
+                >
+                  <img src="./assets/images/galery5.png" alt="" />
+                </div>
+              </div>
+              <div
+                class="right-img-top-end wow animate__fadeInUp animate__delay-1s bounceInUp"
+                (click)="onShowPop(4)"
+              >
+                <img src="./assets/images/galery4.png" alt="" />
+              </div>
+            </div>
+            <div
+              class="right-img-bottom wow animate__fadeInUp animate__delay-1s bounceInUp"
+              (click)="onShowPop(5)"
+            >
+              <div>
+                <img src="./assets/images/galery3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn wow animate__fadeInUp animate__delay-1s bounceInUp">
+          <a class="formal">See More</a>
+        </div>
+      </div>
+    </div>
+  </header>
+</main>
+
+<app-gallery [galleryData]="dummyImage" #galleryPop></app-gallery>

@@ -1,5 +1,4 @@
-import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
-import {isPlatformBrowser} from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pages',
@@ -8,14 +7,7 @@ import {isPlatformBrowser} from '@angular/common';
 })
 export class PagesComponent implements OnInit {
 
-  // Check Browser
-  isBrowser: boolean;
-
-  constructor(
-    @Inject(PLATFORM_ID) private platformId: any,
-  ) {
-    this.isBrowser = isPlatformBrowser(platformId);
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

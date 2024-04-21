@@ -1,0 +1,140 @@
+<div class="home-collage-notice">
+  <div class="container">
+    <div
+      class="home-teachers-title wow animate__fadeInUp animate__delay-1s bounceInUp"
+    >
+      <h2>Important Notices and Information</h2>
+    </div>
+    <!-- END! home-teachers-title -->
+
+    <div class="content">
+      <div class="notice wow animate__delay-4s animate__backInLeft">
+        <swiper
+          [autoplay]="true"
+          [navigation]="false"
+          [slidesPerView]="'auto'"
+          [pagination]="{
+            clickable: true
+          }"
+          [breakpoints]="{
+            '0': {
+              slidesPerView: 1,
+              spaceBetween: 10
+            },
+          }"
+          class="mySwiper feature-carousel"
+        >
+          <ng-template swiperSlide *ngFor="let data of [0, 0, 0]">
+            <img src="./assets/images/notice.png" alt="" />
+          </ng-template>
+        </swiper>
+      </div>
+      <!-- END of notice -->
+
+      <div class="information wow animate__delay-4s animate__backInRight">
+        <a class="date-time">
+          <div class="notice-date">
+            <img src="./assets/images/date.png" alt="date-bg" />
+            <p>
+              <span>{{ "July".length > 3 ? "July".slice(0, 3) : "July" }}</span>
+              <span>18</span>
+            </p>
+          </div>
+
+          <p>
+            ২০২৩ সালের উচ্চ মাধ্যমিক সার্টিফিকেট পরীক্ষার ফরম পূরণ সংক্রান্ত
+            বিজ্ঞপ্তি
+          </p>
+        </a>
+
+        <a class="date-time">
+          <div class="notice-date">
+            <img src="./assets/images/date.png" alt="date-bg" />
+            <p>
+              <span>{{ "July".length > 3 ? "July".slice(0, 3) : "July" }}</span>
+              <span>18</span>
+            </p>
+          </div>
+
+          <p>
+            ২০২৩ সালের উচ্চ মাধ্যমিক সার্টিফিকেট পরীক্ষার ফরম পূরণ সংক্রান্ত
+            বিজ্ঞপ্তি
+          </p>
+        </a>
+
+        <a class="date-time">
+          <div class="notice-date">
+            <img src="./assets/images/date.png" alt="date-bg" />
+            <p>
+              <span>{{ "July".length > 3 ? "July".slice(0, 3) : "July" }}</span>
+              <span>18</span>
+            </p>
+          </div>
+
+          <p>
+            ২০২৩ সালের উচ্চ মাধ্যমিক সার্টিফিকেট পরীক্ষার ফরম পূরণ সংক্রান্ত
+            বিজ্ঞপ্তি
+          </p>
+        </a>
+
+        <a class="date-time">
+          <div class="notice-date">
+            <img src="./assets/images/date.png" alt="date-bg" />
+            <p>
+              <span>{{
+                "December".length > 3 ? "December".slice(0, 3) : "December"
+              }}</span>
+              <span>18</span>
+            </p>
+          </div>
+
+          <p>
+            ২০২৩ সালের উচ্চ মাধ্যমিক সার্টিফিকেট পরীক্ষার ফরম পূরণ সংক্রান্ত
+            বিজ্ঞপ্তি
+          </p>
+        </a>
+
+        <a class="date-time">
+          <div class="notice-date">
+            <img src="./assets/images/date.png" alt="date-bg" />
+            <p>
+              <span>{{
+                "January".length > 3 ? "January".slice(0, 3) : "January"
+              }}</span>
+              <span>18</span>
+            </p>
+          </div>
+
+          <p>
+            ২০২৩ সালের উচ্চ মাধ্যমিক সার্টিফিকেট পরীক্ষার ফরম পূরণ সংক্রান্ত
+            বিজ্ঞপ্তি
+          </p>
+        </a>
+
+        <a class="date-time">
+          <div class="notice-date">
+            <img src="./assets/images/date.png" alt="date-bg" />
+            <p>
+              <span>{{
+                "January".length > 3 ? "January".slice(0, 3) : "January"
+              }}</span>
+              <span>18</span>
+            </p>
+          </div>
+
+          <p>
+            ২০২৩ সালের উচ্চ মাধ্যমিক সার্টিফিকেট পরীক্ষার ফরম পূরণ সংক্রান্ত
+            বিজ্ঞপ্তি
+          </p>
+        </a>
+
+        <div class="btn">
+          <button type="button">See Main Notice Board</button>
+        </div>
+      </div>
+      <!-- END of information -->
+    </div>
+    <!-- END of content -->
+  </div>
+</div>
+<!-- END! home-collage-notice -->
